@@ -8,6 +8,8 @@ var fs = require('fs');
 var device = require('express-device');
 var rs = require('randomstring');
 
+var liarliar = require("./games/liarliar.js")
+
 var app = express();
 httpServer = http.createServer(app);
 io = socketio(httpServer);
@@ -27,6 +29,15 @@ app.get('/', function(req,res) {
     res.send(fs.readFileSync('./host/index.html'));
   else
     res.send(fs.readFileSync('./client/index.html'));
+});
+
+app.get('/liarliar', function(req,res) {
+  var deviceType = req.device.type.toUpperCase();
+  res.setHeader('Content-Type', 'text/html');
+  if(deviceType == "DESKTOP")
+    res.send(fs.readFileSync('./host/liarliar/game.html'));
+  else
+    res.send(fs.readFileSync('./client/liarliar/game.html'));
 });
 
 // GameServer Logic
@@ -61,3 +72,5 @@ io.on('connection', function(socket){
     io.emit('client_drop', {id: socket.id});
   });
 });
+
+var game = new liarliar();
