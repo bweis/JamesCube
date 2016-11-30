@@ -1,7 +1,7 @@
 var socket = io();
 
 socket.emit('create_lobby', function(lobbyID) {
-  console.log(lobbyID);
+  document.getElementById("roomCode").innerHTML = lobbyID;
 });
 
 var context = document.getElementById('sheet').getContext("2d");
