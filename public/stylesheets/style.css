@@ -7,7 +7,6 @@ body,html {
 	height: 100%;
 	margin: 0 auto;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	color: #ffffff;
 }
 
 a {
@@ -80,3 +79,19 @@ pre {
 	margin: 0;
 }
 
+.centered {
+	text-align: center;
+}
+
+h3 {
+	color: #FFFFFF;
+}
+
+#roomCode {
+	color: #E9DBC0;
+	font-weight: bolder;
+}
+
+label {
+	color: #FFFFFF;
+}
