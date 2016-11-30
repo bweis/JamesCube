@@ -96,7 +96,14 @@ label {
 	color: #FFFFFF;
 }
 
-.roomUser {
-	max-height: 100px;
-	max-width: 100px;
+.roomUser img {
+	border-radius: 50%;
+	border: 2px black dashed;
+	max-height: 70px;
+	max-width: 70px;
+}
+
+.roomUser h4 {
+	text-align: justify;
+	color: #FFFFFF;
 }

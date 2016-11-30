@@ -12,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
 
-  <body>
+  <body style="min-width: 992px">
     <div class="row">
       <div class="col-md-6 col-md-offset-3 centered">
         <h3>
@@ -24,35 +24,77 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
-          <h3>dick</h3>
+        <div class="col-md-3 roomUser">
+          <img id="image1" src="/images/no_user.png"/>
+          <h4 id="user1">username</h4>
+        </div>
+        <div class="col-md-2 col-md-offset-7 roomUser">
+          <img id="image5" src="/images/no_user.png"/>
+          <h4 id="user5">username</h4>
         </div>
       </div>
       <div class="row">
         <div class="col-md-4">
-          <img class="roomUser" id="image1" src="../public/images/no_user.png"/>
-          <h4 id="user1"></h4>
+          <div class="row">
+            <div class="col-md-2 col-md-offset-6 roomUser">
+              <img id="image2" src="/images/no_user.png"/>
+              <h4 id="user2">username</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2 roomUser">
+              <img id="image3" src="/images/no_user.png"/>
+              <h4 id="user3">username</h4>
+            </div>
+          </div>
         </div>
         <div class="col-md-4 centered">
           <div class="col-md-10 col-md-offset-1 centered">
           <div class="btn-group-vertical btn-block" role="group" aria-label="...">
-            <button type="button" class="btn btn-default btn-block btn-lg">
+            <button type="button" id="game1Btn" class="btn btn-default btn-block btn-lg">
               Game 1
             </button>
-            <button type="button" class="btn btn-default btn-block btn-lg">
+            <button type="button" id="game2Btn" class="btn btn-default btn-block btn-lg">
               Game 2
             </button>
-            <button type="button" class="btn btn-default btn-block btn-lg">
+            <button type="button" id="game3Btn" class="btn btn-default btn-block btn-lg">
               Game 3
             </button>
-            <button type="button" class="btn btn-default btn-block btn-lg">
+            <button type="button" id="game4Btn" class="btn btn-default btn-block btn-lg">
               Game 4
             </button>
           </div>
+            <button type="button" id="playBtn" class="btn btn-success btn-block btn-lg">
+              Play Game
+            </button>
           </div>
         </div>
         <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-2 roomUser">
+              <img id="image6" src="/images/no_user.png"/>
+              <h4 id="user6">username</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2 col-md-offset-6 roomUser">
+              <img id="image7" src="/images/no_user.png"/>
+              <h4 id="user7">username</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
 
+      </div>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-2 roomUser">
+          <img id="image4" src="/images/no_user.png"/>
+          <h4 id="user4">username</h4>
+        </div>
+        <div class="col-md-2 col-md-offset-4 roomUser">
+          <img id="image8" src="/images/no_user.png"/>
+          <h4 id="user8">username</h4>
         </div>
       </div>
     </div>
