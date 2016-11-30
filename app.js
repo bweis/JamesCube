@@ -65,8 +65,7 @@ io.on('connection', function(socket){
   socket.on('start_game', function(data, fn) {
     if(data.gameType = 'lairliar') {
       io.to(data.room).emit('game_started', {gameUrl: '/liarliar', room: data.room});
-      activeGames[data.room] = new liarliar();
-
+      activeGames[data.room] = new liarliar(data.room, io);
       fn(true);
     }
   });
@@ -75,7 +74,7 @@ io.on('connection', function(socket){
   socket.on('join_game', function(data, fn) {
     if(data.room in activeGames) {
       socket.join(data.room);
-      fn(true)
+      fn(activeGames[data.room].data());
     } else {
       fn(false);
     }
@@ -83,7 +82,6 @@ io.on('connection', function(socket){
 
   // Client
   socket.on('join_lobby', function(data, fn){
-    console.log(data);
     var lobbyID = data.lobbyID.toUpperCase();
     if(lobbyID in io.sockets.adapter.rooms && !(lobbyID in activeGames)) {
       socket.join(lobbyID);

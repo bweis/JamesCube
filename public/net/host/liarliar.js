@@ -1,3 +1,4 @@
+var socket = io();
 
 $(document).ready(function() {
     // Instantiate a counter
@@ -10,8 +11,6 @@ $(document).ready(function() {
     clock.setTime(30);
 });
 
-var socket = io();
-
 if(decodeURI(window.location.search.substring(1)) == "") {
   window.location = "/";
 }
@@ -19,15 +18,14 @@ var data = JSON.parse('{"' + decodeURI(window.location.search.substring(1)).repl
 var room = data.room;
 window.history.pushState("", "", '/liarliar');
 
-console.log(room);
 if(room === undefined)
   window.location = "/";
 
 socket.emit('join_game', {room: room}, function(data) {
+  console.log(data)
   if(data) {
-    console.log('joined game');
+    $('#currentQuestion').html(data.question);
   }else {
     window.location = "/";
   }
 });
-
