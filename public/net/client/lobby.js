@@ -8,6 +8,7 @@ function joinRoom(form) {
       console.log('joined room');
       document.body.innerHTML = "";
     } else
+      alert('Room does not exist')
       console.log('could not join room');
   });
 }
