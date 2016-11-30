@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
   canvas.height = height;
 
   socket.on('draw_line', function(data) {
-    console.log(data);
     clickX.push(data.clickX * width);
     clickY.push(data.clickY * height);
     clickDrag.push(data.clickDrag);
