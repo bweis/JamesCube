@@ -40,6 +40,15 @@ app.get('/liarliar', function(req,res) {
     res.send(fs.readFileSync('./client/liarliar/game.html'));
 });
 
+app.get('/sketch', function(req,res) {
+  var deviceType = req.device.type.toUpperCase();
+  res.setHeader('Content-Type', 'text/html');
+  if(deviceType == "DESKTOP")
+    res.send(fs.readFileSync('./host/sketch/game.html'));
+  else
+    res.send(fs.readFileSync('./client/sketch/game.html'));
+});
+
 // GameServer Logic
 
 var activeGames = {};
@@ -85,9 +94,15 @@ io.on('connection', function(socket){
     }
   });
 
-  socket.on('draw_pic', function(data){
-    socket.broadcast.emit('draw_pic', data);
-  });
+  var clickX = [];
+  var clickY = [];
+  var clickDrag = [];
+  socket.on('draw_line', function (data) {
+      clickX.push(data.clickX);
+      clickY.push(data.clickY);
+      clickDrag.push(data.clickDrag);
+      io.emit('draw_line', data);
+   });
 
   socket.on('disconnect', function () {
     io.emit('client_drop', {id: socket.id});
