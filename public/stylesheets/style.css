@@ -90,6 +90,8 @@ h3 {
 #roomCode {
 	color: #E9DBC0;
 	font-weight: bolder;
+	font-size: 50px;
+	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 }
 
 label {
