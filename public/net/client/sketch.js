@@ -45,6 +45,13 @@ function configWindow() {
   // set canvas to full browser width/height
   canvas.width = width;
   canvas.height = height;
+
+  document.getElementById( "drawing" ).onwheel = function(event){
+    event.preventDefault();
+  };
+  document.getElementById( "drawing" ).onmousewheel = function(event){
+    event.preventDefault();
+  };
 }
 
 function createHandlers() {
