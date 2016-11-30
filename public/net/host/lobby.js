@@ -18,7 +18,7 @@ var paint;
 
 var users = {};
 socket.on('user_joined', function(userData){
-  for(var i = 1; i < 11; i++)
+  for(var i = 1; i < 9; i++)
     if(users[i] === undefined) {
       users[i] = userData;
       document.getElementById('image'+i).src = "http://eightbitavatar.herokuapp.com/?id="+userData.name+"&s="+userData.sex+"&size=100";
