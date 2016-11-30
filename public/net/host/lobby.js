@@ -16,13 +16,26 @@ var clickY = [];
 var clickDrag = [];
 var paint;
 
-var users = [];
+var users = {};
 socket.on('user_joined', function(userData){
-  // html render user joined
-  users.push(userData);
+  for(var i = 1; i < 11; i++)
+    if(users[i] === undefined) {
+      users[i] = userData;
+      document.getElementById('image'+i).src = "http://eightbitavatar.herokuapp.com/?id="+userData.name+"&s="+userData.sex+"&size=100";
+      document.getElementById('user'+i).innerHTML = userData.name;
+      break;
+    }
+});
 
-  document.getElementById('image'+users.length).src = "http://eightbitavatar.herokuapp.com/?id="+userData.name+"&s="+userData.sex+"&size=200";
-  document.getElementById('user'+users.length).innerHTML = userData.name;
+socket.on('client_drop', function(data){
+  for(var i = 1; i < 11; i++)
+    if(users[i] !== undefined && users[i].id == data.id) {
+      console.log('found')
+      users[i] = undefined;
+      document.getElementById('image'+i).src = "/images/no_user.png";
+      document.getElementById('user'+i).innerHTML = "";
+      break;
+    }
 });
 
 socket.on('draw_pic', function(data){

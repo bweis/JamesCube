@@ -46,7 +46,7 @@ io.on('connection', function(socket){
     var lobbyID = data.lobbyID.toUpperCase();
     if(lobbyID in io.sockets.adapter.rooms) {
       socket.join(lobbyID);
-      io.to(lobbyID).emit('user_joined', {name: data.name, sex: data.sex});
+      io.to(lobbyID).emit('user_joined', {id: socket.id, name: data.name, sex: data.sex});
       fn(true);
     } else {
       fn(false);
@@ -55,5 +55,9 @@ io.on('connection', function(socket){
 
   socket.on('draw_pic', function(data){
     socket.broadcast.emit('draw_pic', data);
+  });
+
+  socket.on('disconnect', function () {
+    io.emit('client_drop', {id: socket.id});
   });
 });
