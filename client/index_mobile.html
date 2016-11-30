@@ -21,15 +21,15 @@
   <h1 style="color: #E9DBC0; text-align: center">
     JamesCube
   </h1>
-  <form class="container-fluid" style="padding-top: 10%">
+  <form class="container-fluid" style="padding-top: 10%" action="#" onsubmit="joinRoom(this); return false;">
     <div class="form-group row">
       <div class="col-lg-4 col-lg-offset-4 centered">
-        <input type="text" class="form-control" id="joinCode" placeholder="Room Code">
+        <input type="text" class="form-control" name="joinCode" placeholder="Room Code" style="text-transform:uppercase">
       </div>
     </div>
     <div class="form-group row">
       <div class="col-lg-4 col-lg-offset-4 centered">
-        <input type="text" class="form-control" id="nickname" placeholder="Nickname">
+        <input type="text" class="form-control" name="nickname" placeholder="Nickname">
       </div>
     </div>
     <div class="form-group row">
@@ -49,6 +49,7 @@
 
   </body>
   <script src="net/socket.io/socket.io.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="net/client/lobby.js"></script>
 
   <script>

@@ -1,7 +1,17 @@
 var socket = io();
 
-socket.emit('join_lobby', {name: 'My Name', room:'TXZY'});
-
+function joinRoom(form) {
+  var dataSer = $(form).serialize()
+  var data = JSON.parse('{"' + decodeURI(dataSer).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}');
+  socket.emit('join_lobby', {lobbyID: data.joinCode, name: data.nickname, sex: data.sex}, function(data) {
+    if(data) {
+      console.log('joined room');
+      document.body.innerHTML = "";
+    } else
+      alert('Room does not exist')
+      console.log('could not join room');
+  });
+}
 
 var context = document.getElementById('sheet').getContext("2d");
 var canvas = document.getElementById('sheet');
