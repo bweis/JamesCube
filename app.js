@@ -24,9 +24,9 @@ app.get('/', function(req,res) {
   var deviceType = req.device.type.toUpperCase();
   res.setHeader('Content-Type', 'text/html');
   if(deviceType == "DESKTOP")
-    res.send(fs.readFileSync('./client/index_pc.html'));
+    res.send(fs.readFileSync('./host/index.html'));
   else
-    res.send(fs.readFileSync('./client/index_mobile.html'));
+    res.send(fs.readFileSync('./client/index.html'));
 });
 
 // GameServer Logic
