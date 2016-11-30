@@ -40,9 +40,10 @@ io.on('connection', function(socket){
   });
 
   // Client
-  socket.on('join_lobby', function(data){
+  socket.on('join_lobby', function(data, fn){
     console.log(data);
     socket.broadcast.emit('user_joined', {name: data.name});
+    fn(true);
   });
 
   socket.on('draw_pic', function(data){
