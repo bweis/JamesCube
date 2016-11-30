@@ -42,6 +42,8 @@ app.get('/liarliar', function(req,res) {
 
 // GameServer Logic
 
+var activeGames = {};
+
 io.on('connection', function(socket){
 
   // Host
@@ -53,16 +55,16 @@ io.on('connection', function(socket){
 
   socket.on('start_game', function(data, fn) {
     if(data.gameType = 'lairliar') {
-      for(room in socket.rooms)
-        io.to(room).emit('game_started', {gameUrl: '/liarliar'});
+      io.to(data.room).emit('game_started', {gameUrl: '/liarliar', room: data.room});
+      activeGames[data.room] = new liarliar();
 
-      // start game
       fn(true);
     }
   });
 
+  // Both
   socket.on('join_game', function(data, fn) {
-    if(data.room in io.sockets.adapter.rooms) {
+    if(data.room in activeGames) {
       socket.join(data.room);
       fn(true)
     } else {
@@ -91,5 +93,3 @@ io.on('connection', function(socket){
     io.emit('client_drop', {id: socket.id});
   });
 });
-
-var game = new liarliar();

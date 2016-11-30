@@ -20,7 +20,7 @@ function joinRoom(form) {
 }
 
 socket.on('game_started', function(data) {
-  window.location = data.gameUrl;
+  window.location = data.gameUrl + "?room="+data.room;
 })
 
 var context = document.getElementById('sheet').getContext("2d");

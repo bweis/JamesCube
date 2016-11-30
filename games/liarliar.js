@@ -1,7 +1,8 @@
 // constructor
-function liarliar() {
+function liarliar(room) {
   console.log("LiarLiar game created");
 
+  this.room = room;
   this.scores = {};
   this.rounds = {};
 }

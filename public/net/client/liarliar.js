@@ -7,7 +7,6 @@ var data = JSON.parse('{"' + decodeURI(window.location.search.substring(1)).repl
 var room = data.room;
 window.history.pushState("", "", '/liarliar');
 
-console.log(room);
 if(room === undefined)
   window.location = "/";
 
