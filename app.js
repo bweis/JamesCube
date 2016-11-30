@@ -8,7 +8,7 @@ var fs = require('fs');
 var device = require('express-device');
 var rs = require('randomstring');
 
-var liarliar = require("./games/liarliar.js")
+var liarliar = require("./games/liarliar/liarliar.js")
 
 var app = express();
 httpServer = http.createServer(app);
