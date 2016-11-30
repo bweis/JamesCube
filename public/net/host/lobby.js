@@ -16,9 +16,13 @@ var clickY = [];
 var clickDrag = [];
 var paint;
 
+var users = [];
 socket.on('user_joined', function(userData){
   // html render user joined
-  console.log(userData);
+  users.push(userData);
+
+  document.getElementById('image'+users.length).src = "http://eightbitavatar.herokuapp.com/?id="+userData.name+"&s="+userData.sex+"&size=200";
+  document.getElementById('user'+users.length).innerHTML = userData.name;
 });
 
 socket.on('draw_pic', function(data){

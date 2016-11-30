@@ -3,6 +3,11 @@ var socket = io();
 function joinRoom(form) {
   var dataSer = $(form).serialize()
   var data = JSON.parse('{"' + decodeURI(dataSer).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}');
+  if(data.sexSwitch == "on")
+    data.sex = "male";
+  else
+    data.sex = "female";
+  console.log(data);
   socket.emit('join_lobby', {lobbyID: data.joinCode, name: data.nickname, sex: data.sex}, function(data) {
     if(data) {
       console.log('joined room');
