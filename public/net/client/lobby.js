@@ -11,7 +11,9 @@ function joinRoom(form) {
   socket.emit('join_lobby', {lobbyID: data.joinCode, name: data.nickname, sex: data.sex}, function(data) {
     if(data) {
       console.log('joined room');
-      document.body.innerHTML = "";
+      $('#joinForm').css("display", "none");
+      $('#waitingPage').css("display", "inline-block");
+      $("#roomCode").html(data);
     } else {
       alert('Room does not exist')
       console.log('could not join room');

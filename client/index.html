@@ -17,33 +17,53 @@
 
   </head>
   <body>
-  <h1 style="color: #E9DBC0; text-align: center">
-    JamesCube
-  </h1>
-  <form class="container-fluid" style="padding-top: 10%" action="#" onsubmit="joinRoom(this); return false;">
-    <div class="form-group row">
-      <div class="col-lg-4 col-lg-offset-4 centered">
-        <input type="text" class="form-control" name="joinCode" placeholder="Room Code" style="text-transform:uppercase">
-      </div>
+    <div id="joinForm">
+      <h1 style="color: #E9DBC0; text-align: center">
+        JamesCube
+      </h1>
+      <form class="container-fluid" style="padding-top: 10%" action="#" onsubmit="joinRoom(this); return false;">
+        <div class="form-group row">
+          <div class="col-lg-4 col-lg-offset-4 centered">
+            <input type="text" class="form-control" name="joinCode" placeholder="Room Code" style="text-transform:uppercase">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-lg-4 col-lg-offset-4 centered">
+            <input type="text" class="form-control" name="nickname" placeholder="Nickname">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-lg-4 col-lg-offset-4 centered">
+            <label class="custom-control custom-radio">
+              <input id="sexSwitch" name="sexSwitch" type="checkbox">
+            </label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="offset-lg-4 col-lg-4 text-center">
+            <button type="submit" class="btn btn-success btn-block">Join</button>
+          </div>
+        </div>
+      </form>
     </div>
-    <div class="form-group row">
-      <div class="col-lg-4 col-lg-offset-4 centered">
-        <input type="text" class="form-control" name="nickname" placeholder="Nickname">
+    <div id="waitingPage" style="display:none;">
+      <div class="row">
+        <div class="col-md-8 centered">
+          <h3>
+            Waiting on game to start
+          </h3>
+          <h2 id="roomCode">
+          </h2>
+        </div>
       </div>
+      <form class="container-fluid" style="padding-top: 10%" action="/">
+        <div class="form-group row">
+          <div class="col-lg-4 col-lg-offset-4 centered">
+            <button type="submit" class="btn btn-danger btn-block">Leave</button>
+          </div>
+        </div>
+      </form>
     </div>
-    <div class="form-group row">
-      <div class="col-lg-4 col-lg-offset-4 centered">
-        <label class="custom-control custom-radio">
-          <input id="sexSwitch" name="sexSwitch" type="checkbox">
-        </label>
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="offset-lg-4 col-lg-4 text-center">
-        <button type="submit" class="btn btn-success btn-block">Join</button>
-      </div>
-    </div>
-  </form>
   </body>
   <script src="net/socket.io/socket.io.js"></script>
   <script src="net/client/lobby.js"></script>

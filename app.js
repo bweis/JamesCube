@@ -88,7 +88,7 @@ io.on('connection', function(socket){
     if(lobbyID in io.sockets.adapter.rooms) {
       socket.join(lobbyID);
       io.to(lobbyID).emit('user_joined', {id: socket.id, name: data.name, sex: data.sex});
-      fn(true);
+      fn(lobbyID);
     } else {
       fn(false);
     }
