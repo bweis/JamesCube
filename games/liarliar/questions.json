@@ -1,5 +1,5 @@
-[
-  {
+{
+  "0": {
     "alternate_spellings": [
       "an atheist",
       "atheist"
@@ -26,10 +26,9 @@
       "dart players",
       "ghosts"
     ],
-    "id": 0,
     "category": "Kickstarter"
   },
-  {
+  "1": {
     "alternate_spellings": [
       "Rod Stewert"
     ],
@@ -55,10 +54,9 @@
       "Geraldo Rivera",
       "Sean Connery"
     ],
-    "id": 1,
     "category": "Kevin Spacey"
   },
-  {
+  "2": {
     "alternate_spellings": [],
     "question": "Andrew Wilson, a man from Branson, Missouri, legally changed his name to simply <BLANK>.",
     "answer": "They",
@@ -82,10 +80,9 @@
       "Belt Buckle",
       "Muddin\u2019"
     ],
-    "id": 2,
     "category": "Branson"
   },
-  {
+  "3": {
     "alternate_spellings": [
       "mother in law",
       "mother-in law",
@@ -119,10 +116,9 @@
       "clothes",
       "toaster"
     ],
-    "id": 3,
     "category": "fear"
   },
-  {
+  "4": {
     "alternate_spellings": [
       "facial hair",
       "beards",
@@ -150,10 +146,9 @@
       "handkerchief",
       "dancing"
     ],
-    "id": 4,
     "category": "Peter"
   },
-  {
+  "5": {
     "alternate_spellings": [
       "railroad",
       "railroad tracks",
@@ -183,10 +178,9 @@
       "katana",
       "mechanical bull"
     ],
-    "id": 5,
     "category": "sex"
   },
-  {
+  "6": {
     "alternate_spellings": [],
     "question": "In the 16th century, gin was referred to as the Mother\u2019s <BLANK>.",
     "answer": "Ruin",
@@ -210,10 +204,9 @@
       "Lover",
       "Escape"
     ],
-    "id": 6,
     "category": "gin"
   },
-  {
+  "7": {
     "alternate_spellings": [
       "pickles"
     ],
@@ -239,10 +232,9 @@
       "soap",
       "chocolate"
     ],
-    "id": 7,
     "category": "America"
   },
-  {
+  "8": {
     "alternate_spellings": [
       "eight"
     ],
@@ -268,10 +260,9 @@
       "80",
       "70"
     ],
-    "id": 8,
     "category": "speeding ticket"
   },
-  {
+  "9": {
     "alternate_spellings": [
       "barby"
     ],
@@ -297,10 +288,9 @@
       "Satin Sheets",
       "Fergie"
     ],
-    "id": 9,
     "category": "drug cartel"
   },
-  {
+  "10": {
     "alternate_spellings": [
       "custodians",
       "a janitor",
@@ -328,10 +318,9 @@
       "berry pickers",
       "motivational speakers"
     ],
-    "id": 10,
     "category": "Mario and Luigi"
   },
-  {
+  "11": {
     "alternate_spellings": [
       "being dead",
       "not alive",
@@ -361,10 +350,9 @@
       "backwards",
       "standing"
     ],
-    "id": 11,
     "category": "jockey"
   },
-  {
+  "12": {
     "alternate_spellings": [
       "a bunch of cats",
       "wild cats",
@@ -394,10 +382,9 @@
       "models",
       "turtles"
     ],
-    "id": 12,
     "category": "Japan"
   },
-  {
+  "13": {
     "alternate_spellings": [],
     "question": "The Isle of Man flag depicts three <BLANK> interlinked together.",
     "answer": "legs",
@@ -421,10 +408,9 @@
       "licorice sticks",
       "bikinis"
     ],
-    "id": 13,
     "category": "Isle of Man"
   },
-  {
+  "14": {
     "alternate_spellings": [
       "Nick Cage",
       "Nicholas Cage"
@@ -451,10 +437,9 @@
       "Stuck",
       "Some Dude"
     ],
-    "id": 14,
     "category": "Eye Shadow"
   },
-  {
+  "15": {
     "alternate_spellings": [
       "the joust",
       "joust"
@@ -481,10 +466,9 @@
       "chess",
       "disc golf"
     ],
-    "id": 15,
     "category": "Maryland"
   },
-  {
+  "16": {
     "alternate_spellings": [
       "brand of foot powder",
       "foot medicine"
@@ -511,10 +495,9 @@
       "statue",
       "portrait"
     ],
-    "id": 16,
     "category": "Ecuador"
   },
-  {
+  "17": {
     "alternate_spellings": [
       "parking meter fees",
       "parking fees",
@@ -544,10 +527,9 @@
       "diapers",
       "wedding licenses"
     ],
-    "id": 17,
     "category": "New Hampshire"
   },
-  {
+  "18": {
     "alternate_spellings": [
       "teddy bear toys",
       "teddy bear",
@@ -575,10 +557,9 @@
       "guns",
       "lipstick containers"
     ],
-    "id": 18,
     "category": "Swedish"
   },
-  {
+  "19": {
     "alternate_spellings": [
       "lawnmower"
     ],
@@ -604,10 +585,9 @@
       "go cart",
       "hot-air balloon"
     ],
-    "id": 19,
     "category": "DUI"
   },
-  {
+  "20": {
     "alternate_spellings": [],
     "question": "Anatidaephobia is the fear that somewhere in the world a <BLANK> is watching you.",
     "answer": "duck",
@@ -631,10 +611,9 @@
       "gym teacher",
       "garden gnome"
     ],
-    "id": 20,
     "category": "Fear"
   },
-  {
+  "21": {
     "alternate_spellings": [
       "weed",
       "grass",
@@ -665,10 +644,9 @@
       "antique spoons",
       "gasoline"
     ],
-    "id": 21,
     "category": "John Larroquette"
   },
-  {
+  "22": {
     "alternate_spellings": [],
     "question": "Famed American poet Charles Bukowski\u2019s tombstone is engraved with the words \u201CDon\u2019t <BLANK>.\u201D",
     "answer": "Try",
@@ -692,10 +670,9 @@
       "Be",
       "Smoke"
     ],
-    "id": 22,
     "category": "Charles Bukowski"
   },
-  {
+  "23": {
     "alternate_spellings": [
       "tweet pee"
     ],
@@ -721,10 +698,9 @@
       "Huggie Buddy",
       "Waaaaaaah!!!"
     ],
-    "id": 23,
     "category": "Huggies"
   },
-  {
+  "24": {
     "alternate_spellings": [
       "vanilla flavoring",
       "vanilla flavor",
@@ -754,10 +730,9 @@
       "lime juice",
       "saffron"
     ],
-    "id": 24,
     "category": "Anal Secretions"
   },
-  {
+  "25": {
     "alternate_spellings": [
       "yawns",
       "a yawn"
@@ -784,10 +759,9 @@
       "gasping",
       "hiccuping"
     ],
-    "id": 25,
     "category": "Illinois"
   },
-  {
+  "26": {
     "alternate_spellings": [
       "a robot",
       "a robot groundhog",
@@ -819,10 +793,9 @@
       "a carrot",
       "a giant number 2"
     ],
-    "id": 26,
     "category": "Punxsutawney Phil"
   },
-  {
+  "27": {
     "alternate_spellings": [],
     "question": "The German Primate Center conducted a study called \u201CWhy Female Monkeys <BLANK> During Sex.\u201D",
     "answer": "Shout",
@@ -846,10 +819,9 @@
       "Squat",
       "Stand"
     ],
-    "id": 27,
     "category": "Monkey"
   },
-  {
+  "28": {
     "alternate_spellings": [
       "refrigerator"
     ],
@@ -875,10 +847,9 @@
       "shed",
       "medicine cabinet"
     ],
-    "id": 28,
     "category": "remote controls"
   },
-  {
+  "29": {
     "alternate_spellings": [
       "garlic bulbs"
     ],
@@ -904,10 +875,9 @@
       "candles",
       "cotton candy"
     ],
-    "id": 29,
     "category": "Smuggle"
   },
-  {
+  "30": {
     "alternate_spellings": [
       "Farts"
     ],
@@ -933,10 +903,9 @@
       "Chin",
       "Humor"
     ],
-    "id": 30,
     "category": "Nun"
   },
-  {
+  "31": {
     "alternate_spellings": [
       "tardarsauce",
       "tartar sauce",
@@ -965,10 +934,9 @@
       "Thor",
       "Gatsby"
     ],
-    "id": 31,
     "category": "Grumpy"
   },
-  {
+  "32": {
     "alternate_spellings": [
       "chest nuts"
     ],
@@ -994,10 +962,9 @@
       "poop",
       "coupons for massages"
     ],
-    "id": 32,
     "category": "parking"
   },
-  {
+  "33": {
     "alternate_spellings": [],
     "question": "In 1989, a special edition of the Mitsubishi Minica was produced. The car included a liftgate, and it was oddly named the Mitsubishi Minica <BLANK>.",
     "answer": "Lettuce",
@@ -1021,10 +988,9 @@
       "Broken",
       "Coronary Artery"
     ],
-    "id": 33,
     "category": "Mitsubishi"
   },
-  {
+  "34": {
     "alternate_spellings": [
       "shave their faces",
       "shave their beards",
@@ -1055,10 +1021,9 @@
       "read",
       "drink"
     ],
-    "id": 34,
     "category": "Alexander the Great"
   },
-  {
+  "35": {
     "alternate_spellings": [
       "gunfight",
       "shoot out",
@@ -1086,10 +1051,9 @@
       "running of the bulls",
       "flash mob"
     ],
-    "id": 35,
     "category": "107"
   },
-  {
+  "36": {
     "alternate_spellings": [
       "porn mags",
       "pron magazines",
@@ -1126,10 +1090,9 @@
       "live tuna",
       "dandelions"
     ],
-    "id": 36,
     "category": "Vending Machine"
   },
-  {
+  "37": {
     "alternate_spellings": [
       "shins",
       "shin-",
@@ -1157,10 +1120,9 @@
       "popcorn",
       "fire"
     ],
-    "id": 37,
     "category": "Kicking"
   },
-  {
+  "38": {
     "alternate_spellings": [
       "Hawaian"
     ],
@@ -1186,10 +1148,9 @@
       "Senile",
       "Bananas"
     ],
-    "id": 38,
     "category": "Beetlejuice"
   },
-  {
+  "39": {
     "alternate_spellings": [
       "lego figurine",
       "lego guy",
@@ -1218,10 +1179,9 @@
       "pink flamingo",
       "skeleton"
     ],
-    "id": 39,
     "category": "Florida"
   },
-  {
+  "40": {
     "alternate_spellings": [
       "lama"
     ],
@@ -1247,10 +1207,9 @@
       "falcon",
       "drifter"
     ],
-    "id": 40,
     "category": "Mercury"
   },
-  {
+  "41": {
     "alternate_spellings": [
       "ninja warriors",
       "ninja",
@@ -1278,10 +1237,9 @@
       "referees",
       "big ears"
     ],
-    "id": 41,
     "category": "Cell phones"
   },
-  {
+  "42": {
     "alternate_spellings": [
       "a pumpkin"
     ],
@@ -1307,10 +1265,9 @@
       "doll houses",
       "garbage bins"
     ],
-    "id": 42,
     "category": "boats"
   },
-  {
+  "43": {
     "alternate_spellings": [
       "a couch",
       "sofa",
@@ -1338,10 +1295,9 @@
       "butt",
       "turd"
     ],
-    "id": 43,
     "category": "tombstone"
   },
-  {
+  "44": {
     "alternate_spellings": [
       "nessie",
       "nessie the loch nes monster",
@@ -1378,10 +1334,9 @@
       "flounder",
       "the Titanic"
     ],
-    "id": 44,
     "category": "Cruises"
   },
-  {
+  "45": {
     "alternate_spellings": [],
     "question": "Product name of the \u201Cgas neutralizer\u201D pad that you insert into your underwear, made by the Solutions That Stick company.",
     "answer": "Subtle Butt",
@@ -1405,10 +1360,9 @@
       "Gas What?",
       "Fart Be It"
     ],
-    "id": 45,
     "category": "underwear"
   },
-  {
+  "46": {
     "alternate_spellings": [],
     "question": "Forest Whitaker has three daughters (Sonnet, True and Autumn) and a son named <BLANK>.",
     "answer": "Ocean",
@@ -1432,10 +1386,9 @@
       "Mountain",
       "Volcano"
     ],
-    "id": 46,
     "category": "Forest"
   },
-  {
+  "47": {
     "alternate_spellings": [
       "a bunch of cars",
       "autos",
@@ -1464,10 +1417,9 @@
       "Wrangler jeans",
       "bones"
     ],
-    "id": 47,
     "category": "Stonehenge"
   },
-  {
+  "48": {
     "alternate_spellings": [
       "gun",
       "shot gun"
@@ -1494,10 +1446,9 @@
       "rake",
       "meat thermometer"
     ],
-    "id": 48,
     "category": "callus"
   },
-  {
+  "49": {
     "alternate_spellings": [
       "snake"
     ],
@@ -1523,10 +1474,9 @@
       "vacation",
       "Beanie Baby"
     ],
-    "id": 49,
     "category": "cockroaches"
   },
-  {
+  "50": {
     "alternate_spellings": [],
     "question": "At the Sao Joao festival in Portugal, you hit people over the head with a <BLANK>.",
     "answer": "hammer",
@@ -1550,10 +1500,9 @@
       "book",
       "bowling ball"
     ],
-    "id": 50,
     "category": "Portugal"
   },
-  {
+  "51": {
     "alternate_spellings": [
       "Jesus Christ"
     ],
@@ -1579,10 +1528,9 @@
       "Fagin",
       "Spiderman"
     ],
-    "id": 51,
     "category": "Denzel"
   },
-  {
+  "52": {
     "alternate_spellings": [
       "his kidney stone",
       "kidneystone",
@@ -1610,10 +1558,9 @@
       "middle name",
       "teddy bear"
     ],
-    "id": 52,
     "category": "$25,000"
   },
-  {
+  "53": {
     "alternate_spellings": [],
     "question": "For one day in 1998, Topeka, Kansas renamed itself <BLANK>.",
     "answer": "ToPikachu",
@@ -1637,10 +1584,9 @@
       "Kansas Town",
       "Target"
     ],
-    "id": 53,
     "category": "Topeka"
   },
-  {
+  "54": {
     "alternate_spellings": [],
     "question": "There was once a fourth member of Kellogg\u2019s Rice Krispies mascot gang. Originally it was Snap, Crackle, Pop and <BLANK>.",
     "answer": "Pow",
@@ -1665,10 +1611,9 @@
       "Yoink",
       "Roar"
     ],
-    "id": 54,
     "category": "Gang"
   },
-  {
+  "55": {
     "alternate_spellings": [],
     "question": "In 2006, the wax museum Madame Tussaud\u2019s in New York City introduced its first wax <BLANK>.",
     "answer": "baby",
@@ -1692,10 +1637,9 @@
       "president",
       "lizard"
     ],
-    "id": 55,
     "category": "wax"
   },
-  {
+  "56": {
     "alternate_spellings": [
       "eiffel tower",
       "the eiffle tower",
@@ -1723,10 +1667,9 @@
       "a pizza",
       "a bowling trophy"
     ],
-    "id": 56,
     "category": "married"
   },
-  {
+  "57": {
     "alternate_spellings": [],
     "question": "On his own website, magician David Blaine once wrote, \u201CThe most courageous act a man can do is <BLANK>.\u201D",
     "answer": "cry",
@@ -1750,10 +1693,9 @@
       "punch a raccoon",
       "scrapbook"
     ],
-    "id": 57,
     "category": "magician"
   },
-  {
+  "58": {
     "alternate_spellings": [
       "the grobanites"
     ],
@@ -1779,10 +1721,9 @@
       "Color Changers",
       "Groboholics"
     ],
-    "id": 58,
     "category": "Josh"
   },
-  {
+  "59": {
     "alternate_spellings": [
       "jello",
       "gelatin",
@@ -1811,10 +1752,9 @@
       "bubble wrap",
       "teddy bears"
     ],
-    "id": 59,
     "category": "E.T."
   },
-  {
+  "60": {
     "alternate_spellings": [
       "Detroit Michigan",
       "detroit",
@@ -1845,10 +1785,9 @@
       "the moon",
       "Santa Fe"
     ],
-    "id": 60,
     "category": "Saddam"
   },
-  {
+  "61": {
     "alternate_spellings": [],
     "question": "Britt, Iowa annually crowns a King and Queen <BLANK>.",
     "answer": "Hobo",
@@ -1872,10 +1811,9 @@
       "Grocer",
       "corn on the cob"
     ],
-    "id": 61,
     "category": "Iowa"
   },
-  {
+  "62": {
     "alternate_spellings": [
       "bat-man"
     ],
@@ -1901,10 +1839,9 @@
       "Cheating",
       "Wedgies"
     ],
-    "id": 62,
     "category": "physical"
   },
-  {
+  "63": {
     "alternate_spellings": [
       "child",
       "kid"
@@ -1931,10 +1868,9 @@
       "Bin Laden doll",
       "prostitute"
     ],
-    "id": 63,
     "category": "prize"
   },
-  {
+  "64": {
     "alternate_spellings": [
       "funeral service",
       "funereal service"
@@ -1961,10 +1897,9 @@
       "party clown",
       "taser"
     ],
-    "id": 64,
     "category": "voucher"
   },
-  {
+  "65": {
     "alternate_spellings": [
       "an orange",
       "a bunch of oranges"
@@ -1991,10 +1926,9 @@
       "feathers",
       "insults"
     ],
-    "id": 65,
     "category": "weapons"
   },
-  {
+  "66": {
     "alternate_spellings": [],
     "question": "Hugh Grant\u2019s full name is Hugh John <BLANK> Grant.",
     "answer": "Mungo",
@@ -2018,10 +1952,9 @@
       "Lord",
       "Butter"
     ],
-    "id": 66,
     "category": "John"
   },
-  {
+  "67": {
     "alternate_spellings": [
       "canine",
       "a dog"
@@ -2048,10 +1981,9 @@
       "opera singer",
       "mime"
     ],
-    "id": 67,
     "category": "Hash"
   },
-  {
+  "68": {
     "alternate_spellings": [],
     "question": "Nigeria\u2019s version of Cookie Monster can\u2019t stop eating <BLANK>.",
     "answer": "yams",
@@ -2075,10 +2007,9 @@
       "dimes",
       "breadsticks"
     ],
-    "id": 68,
     "category": "Nigeria"
   },
-  {
+  "69": {
     "alternate_spellings": [],
     "question": "While president of the United States, John Adams had a dog named Juno and a dog named <BLANK>.",
     "answer": "Satan",
@@ -2102,10 +2033,9 @@
       "Obama",
       "Booger"
     ],
-    "id": 69,
     "category": "Juno"
   },
-  {
+  "70": {
     "alternate_spellings": [],
     "question": "Tara Reid once said, \u201CI make Jessica Simpson look like a <BLANK> scientist.\u201D",
     "answer": "rock",
@@ -2129,10 +2059,9 @@
       "mind",
       "doctor"
     ],
-    "id": 70,
     "category": "Tara"
   },
-  {
+  "71": {
     "alternate_spellings": [
       "the cow population",
       "bovines",
@@ -2161,10 +2090,9 @@
       "weightlifters",
       "presidents"
     ],
-    "id": 71,
     "category": "Technology"
   },
-  {
+  "72": {
     "alternate_spellings": [
       "baby dolls",
       "babydolls",
@@ -2192,10 +2120,9 @@
       "spoons",
       "gumballs"
     ],
-    "id": 72,
     "category": "hanging"
   },
-  {
+  "73": {
     "alternate_spellings": [
       "a baby",
       "a bunch of babies"
@@ -2222,10 +2149,9 @@
       "toilets",
       "pitchforks"
     ],
-    "id": 73,
     "category": "devil"
   },
-  {
+  "74": {
     "alternate_spellings": [
       "egg roll",
       "eggrolls",
@@ -2253,10 +2179,9 @@
       "futons",
       "high heel shoes"
     ],
-    "id": 74,
     "category": "citizenship"
   },
-  {
+  "75": {
     "alternate_spellings": [
       "bomb"
     ],
@@ -2282,10 +2207,9 @@
       "bong",
       "syringe of heroin"
     ],
-    "id": 75,
     "category": "arrested"
   },
-  {
+  "76": {
     "alternate_spellings": [
       "Vomit",
       "Vomitting"
@@ -2312,10 +2236,9 @@
       "Patient 12",
       "Glutton"
     ],
-    "id": 76,
     "category": "Safety"
   },
-  {
+  "77": {
     "alternate_spellings": [],
     "question": "Utah\u2019s Lehi City Council approved a request to change the name of <BLANK> Road because it sounded sort of dirty.",
     "answer": "Morning Glory",
@@ -2339,10 +2262,9 @@
       "Glory Hole",
       "Bulger"
     ],
-    "id": 77,
     "category": "dirty"
   },
-  {
+  "78": {
     "alternate_spellings": [
       "cuddle",
       "spoon",
@@ -2371,10 +2293,9 @@
       "paint doghouses",
       "break furniture"
     ],
-    "id": 78,
     "category": "hour"
   },
-  {
+  "79": {
     "alternate_spellings": [
       "i am jack sparrow",
       "im jack sparrow",
@@ -2404,10 +2325,9 @@
       "Who let the dogs out",
       "I am a golden god"
     ],
-    "id": 79,
     "category": "yelling"
   },
-  {
+  "80": {
     "alternate_spellings": [],
     "question": "The name of the dog that won the 2012 World\u2019s Ugliest Dog Competition.",
     "answer": "Mugly",
@@ -2431,10 +2351,9 @@
       "Rat Face",
       "Dysentery"
     ],
-    "id": 80,
     "category": "Dog"
   },
-  {
+  "81": {
     "alternate_spellings": [
       "canadains"
     ],
@@ -2460,10 +2379,9 @@
       "dogs",
       "alcoholics"
     ],
-    "id": 81,
     "category": "beer"
   },
-  {
+  "82": {
     "alternate_spellings": [
       "George Bush",
       "George H. W. Bush",
@@ -2499,10 +2417,9 @@
       "Bob Costas",
       "Marilyn Monroe"
     ],
-    "id": 82,
     "category": "Halloween"
   },
-  {
+  "83": {
     "alternate_spellings": [],
     "question": "The movie <i>G.I. Jane<\/i> was translated to <i><BLANK> Female Soldier<\/i> in China.",
     "answer": "Satan",
@@ -2526,10 +2443,9 @@
       "Vixen",
       "Cleavage"
     ],
-    "id": 83,
     "category": "translated"
   },
-  {
+  "84": {
     "alternate_spellings": [],
     "question": "According to Forbes, the average income for an \u201Cice cream taster\u201D is $<BLANK> a year.",
     "answer": "56000",
@@ -2553,10 +2469,9 @@
       "14000",
       "12 thousand"
     ],
-    "id": 84,
     "category": "income"
   },
-  {
+  "85": {
     "alternate_spellings": [],
     "question": "During a famous fire in 1567, a Norwegian man named Hans Steininger died after tripping over a <BLANK>.",
     "answer": "beard",
@@ -2580,10 +2495,9 @@
       "carpet",
       "fire extinguisher"
     ],
-    "id": 85,
     "category": "fire"
   },
-  {
+  "86": {
     "alternate_spellings": [],
     "question": "The inventor of the laxative Ex-Lax has the unusual name Max <BLANK>.",
     "answer": "Kiss",
@@ -2607,10 +2521,9 @@
       "Urine",
       "Turpentine"
     ],
-    "id": 86,
     "category": "inventor"
   },
-  {
+  "87": {
     "alternate_spellings": [
       "pppppppppprice",
       "ppppppppprice",
@@ -2641,10 +2554,9 @@
       "Spknpg",
       "Uyuyuyuy"
     ],
-    "id": 87,
     "category": "telemarketers"
   },
-  {
+  "88": {
     "alternate_spellings": [
       "Cavity",
       "Cavities"
@@ -2671,10 +2583,9 @@
       "Satan",
       "President"
     ],
-    "id": 88,
     "category": "Gang"
   },
-  {
+  "89": {
     "alternate_spellings": [
       "cafee"
     ],
@@ -2700,10 +2611,9 @@
       "Gala",
       "Sausage Fest"
     ],
-    "id": 89,
     "category": "Pacific"
   },
-  {
+  "90": {
     "alternate_spellings": [
       "puppies",
       "puppy cuddling",
@@ -2733,10 +2643,9 @@
       "Bunny",
       "Fight Club"
     ],
-    "id": 90,
     "category": "stress"
   },
-  {
+  "91": {
     "alternate_spellings": [
       "duck calling",
       "duckcalls"
@@ -2763,10 +2672,9 @@
       "skipping stones",
       "dog walking"
     ],
-    "id": 91,
     "category": "memorial"
   },
-  {
+  "92": {
     "alternate_spellings": [
       "duck tape"
     ],
@@ -2792,10 +2700,9 @@
       "bikinis",
       "Kleenex boxes"
     ],
-    "id": 92,
     "category": "prom"
   },
-  {
+  "93": {
     "alternate_spellings": [],
     "question": "Loyola University offers a scholarship to any Catholic students with the last name <BLANK>.",
     "answer": "Zolp",
@@ -2819,10 +2726,9 @@
       "Ubernostrum",
       "Quackenbush"
     ],
-    "id": 93,
     "category": "last"
   },
-  {
+  "94": {
     "alternate_spellings": [
       "automobiles",
       "autos"
@@ -2849,10 +2755,9 @@
       "Furbys",
       "ghosts"
     ],
-    "id": 94,
     "category": "1,000"
   },
-  {
+  "95": {
     "alternate_spellings": [
       "t.p."
     ],
@@ -2878,10 +2783,9 @@
       "scarves",
       "socks"
     ],
-    "id": 95,
     "category": "dresses"
   },
-  {
+  "96": {
     "alternate_spellings": [
       "his horse"
     ],
@@ -2907,10 +2811,9 @@
       "helmet",
       "coffee"
     ],
-    "id": 96,
     "category": "police"
   },
-  {
+  "97": {
     "alternate_spellings": [],
     "question": "Located near the town of Stanley, there\u2019s a small village in England called No <BLANK>.",
     "answer": "Place",
@@ -2934,10 +2837,9 @@
       "Sir",
       "Democracy"
     ],
-    "id": 97,
     "category": "village"
   },
-  {
+  "98": {
     "alternate_spellings": [
       "cats",
       "pussy cat",
@@ -2966,10 +2868,9 @@
       "baseball bat",
       "riding lawnmower"
     ],
-    "id": 98,
     "category": "strip"
   },
-  {
+  "99": {
     "alternate_spellings": [
       "circumsizeing",
       "circumsizes"
@@ -2996,10 +2897,9 @@
       "masking",
       "macho"
     ],
-    "id": 99,
     "category": "Joy"
   },
-  {
+  "100": {
     "alternate_spellings": [],
     "question": "In 2007, to make a point, Nebraska State Sen. Ernie Chambers filed a frivolous lawsuit against <BLANK>.",
     "answer": "God",
@@ -3023,10 +2923,9 @@
       "Cupid",
       "Betty Boop"
     ],
-    "id": 100,
     "category": "Nebraska"
   },
-  {
+  "101": {
     "alternate_spellings": [
       "bird droppings",
       "bird shit",
@@ -3055,10 +2954,9 @@
       "mustard",
       "skunk tail"
     ],
-    "id": 101,
     "category": "facial"
   },
-  {
+  "102": {
     "alternate_spellings": [
       "the thimble"
     ],
@@ -3084,10 +2982,9 @@
       "Lint",
       "Coasters"
     ],
-    "id": 102,
     "category": "wrote"
   },
-  {
+  "103": {
     "alternate_spellings": [
       "tooth brushes"
     ],
@@ -3113,10 +3010,9 @@
       "Daggers",
       "Dolls"
     ],
-    "id": 103,
     "category": "Bone"
   },
-  {
+  "104": {
     "alternate_spellings": [],
     "question": "Chad Orzel wrote the book <i>How to Teach <BLANK> to Your Dog<\/i>.",
     "answer": "Physics",
@@ -3140,10 +3036,9 @@
       "Basketball",
       "Refrigerator Science"
     ],
-    "id": 104,
     "category": "Chad"
   },
-  {
+  "105": {
     "alternate_spellings": [
       "Coffin"
     ],
@@ -3169,10 +3064,9 @@
       "Lady Friends",
       "Calculators"
     ],
-    "id": 105,
     "category": "Fancy"
   },
-  {
+  "106": {
     "alternate_spellings": [],
     "question": "Haribo sells a gummi in Germany that depicts a human butt with <BLANK> growing out of it.",
     "answer": "ears",
@@ -3196,10 +3090,9 @@
       "grapevines",
       "eggs"
     ],
-    "id": 106,
     "category": "gummi"
   },
-  {
+  "107": {
     "alternate_spellings": [],
     "question": "The 1995 Diagram Prize for Oddest Book Title of the Year went to the book <i>Reusing Old <BLANK><\/i>.",
     "answer": "Graves",
@@ -3223,10 +3116,9 @@
       "Cars",
       "Grass"
     ],
-    "id": 107,
     "category": "Prize"
   },
-  {
+  "108": {
     "alternate_spellings": [
       "giggling"
     ],
@@ -3253,10 +3145,9 @@
       "saying \u201CThat\u2019s what she said.\u201D",
       "scatting"
     ],
-    "id": 108,
     "category": "hip"
   },
-  {
+  "109": {
     "alternate_spellings": [],
     "question": "Leo Granit Kraft is a world champion in an unusual sport that combines boxing and <BLANK>.",
     "answer": "chess",
@@ -3280,10 +3171,9 @@
       "gymnastics",
       "debating"
     ],
-    "id": 109,
     "category": "boxing"
   },
-  {
+  "110": {
     "alternate_spellings": [],
     "question": "Only about 14 games were ever made for the Gizmondo game system, including the game \u201C<BLANK> Balls.\u201D",
     "answer": "Sticky",
@@ -3307,10 +3197,9 @@
       "Family",
       "Hero"
     ],
-    "id": 110,
     "category": "Balls"
   },
-  {
+  "111": {
     "alternate_spellings": [],
     "question": "The Nintendo DS had a dictionary program with the unfortunate name \u201C<BLANK> Dic.\u201D",
     "answer": "Touch",
@@ -3334,10 +3223,9 @@
       "My",
       "Tiny"
     ],
-    "id": 111,
     "category": "dictionary"
   },
-  {
+  "112": {
     "alternate_spellings": [
       "ostrich",
       "a ostrich"
@@ -3364,10 +3252,9 @@
       "zombies",
       "Mormons"
     ],
-    "id": 112,
     "category": "Blake"
   },
-  {
+  "113": {
     "alternate_spellings": [
       "hooker",
       "hookers"
@@ -3394,10 +3281,9 @@
       "Horny",
       "Butt"
     ],
-    "id": 113,
     "category": "Lips"
   },
-  {
+  "114": {
     "alternate_spellings": [],
     "question": "During the summer of 2007, Pepsi sold a green-tinted cola in Japan called Pepsi Ice <BLANK>.",
     "answer": "Cucumber",
@@ -3421,10 +3307,9 @@
       "Christmas",
       "Godzilla"
     ],
-    "id": 114,
     "category": "Pepsi"
   },
-  {
+  "115": {
     "alternate_spellings": [
       "tooth picks"
     ],
@@ -3450,10 +3335,9 @@
       "darts",
       "wind chimes"
     ],
-    "id": 115,
     "category": "San Francisco"
   },
-  {
+  "116": {
     "alternate_spellings": [
       "Whisky"
     ],
@@ -3479,10 +3363,9 @@
       "Bald",
       "Angry"
     ],
-    "id": 116,
     "category": "Mountain"
   },
-  {
+  "117": {
     "alternate_spellings": [
       "glasses of beer",
       "glass of beer",
@@ -3512,10 +3395,9 @@
       "Halloween candy",
       "John Belushi poster"
     ],
-    "id": 117,
     "category": "burning"
   },
-  {
+  "118": {
     "alternate_spellings": [
       "stripclub",
       "nude bar",
@@ -3543,10 +3425,9 @@
       "sex change operation",
       "Lowe\u2019s"
     ],
-    "id": 118,
     "category": "field trip"
   },
-  {
+  "119": {
     "alternate_spellings": [
       "toy animals"
     ],
@@ -3572,10 +3453,9 @@
       "clothes",
       "car"
     ],
-    "id": 119,
     "category": "vacations"
   },
-  {
+  "120": {
     "alternate_spellings": [],
     "question": "Scottsdale Community College\u2019s sports teams are oddly named the Fighting <BLANK>.",
     "answer": "Artichokes",
@@ -3599,10 +3479,9 @@
       "Paper Towels",
       "Skulls"
     ],
-    "id": 120,
     "category": "Fighting"
   },
-  {
+  "121": {
     "alternate_spellings": [
       "Mary Hart",
       "the voice of Mary Hart"
@@ -3629,10 +3508,9 @@
       "MC Hammer",
       "tap dancing"
     ],
-    "id": 121,
     "category": "seizures"
   },
-  {
+  "122": {
     "alternate_spellings": [
       "cematary",
       "cemetery",
@@ -3660,10 +3538,9 @@
       "hospital",
       "train caboose"
     ],
-    "id": 122,
     "category": "Queens"
   },
-  {
+  "123": {
     "alternate_spellings": [
       "Capt. Beany",
       "Cptn. Beany",
@@ -3691,10 +3568,9 @@
       "Beanigan",
       "Magical Fruit"
     ],
-    "id": 123,
     "category": "beans"
   },
-  {
+  "124": {
     "alternate_spellings": [],
     "question": "In 1979, Clairol introduced and then almost immediately discontinued the oddly named \u201CTouch of <BLANK>\u201D shampoo.",
     "answer": "Yogurt",
@@ -3718,10 +3594,9 @@
       "Beaver",
       "Bark"
     ],
-    "id": 124,
     "category": "shampoo"
   },
-  {
+  "125": {
     "alternate_spellings": [
       "chicken mcnuggets"
     ],
@@ -3747,10 +3622,9 @@
       "pizza slices",
       "fish sticks"
     ],
-    "id": 125,
     "category": "Bolt"
   },
-  {
+  "126": {
     "alternate_spellings": [
       "space",
       "outerspace"
@@ -3777,10 +3651,9 @@
       "Ellis Island",
       "Universal Studios Orlando"
     ],
-    "id": 126,
     "category": "Schwarz"
   },
-  {
+  "127": {
     "alternate_spellings": [
       "how to knit",
       "needlepoint"
@@ -3807,10 +3680,9 @@
       "vacuuming",
       "jogging"
     ],
-    "id": 127,
     "category": "Norway"
   },
-  {
+  "128": {
     "alternate_spellings": [
       "chain saw"
     ],
@@ -3836,10 +3708,9 @@
       "shoe",
       "lamp"
     ],
-    "id": 128,
     "category": "record"
   },
-  {
+  "129": {
     "alternate_spellings": [
       "a pub"
     ],
@@ -3865,10 +3736,9 @@
       "Train",
       "old Blockbuster Video"
     ],
-    "id": 129,
     "category": "Calvary"
   },
-  {
+  "130": {
     "alternate_spellings": [
       "lesbo",
       "lezbian",
@@ -3897,10 +3767,9 @@
       "overpowering",
       "threesome"
     ],
-    "id": 130,
     "category": "mating"
   },
-  {
+  "131": {
     "alternate_spellings": [
       "a chicken"
     ],
@@ -3926,10 +3795,9 @@
       "Mime",
       "Test"
     ],
-    "id": 131,
     "category": "Oh"
   },
-  {
+  "132": {
     "alternate_spellings": [
       "pot",
       "weed",
@@ -3958,10 +3826,9 @@
       "bacon-wrapped dates",
       "gum"
     ],
-    "id": 132,
     "category": "pigs"
   },
-  {
+  "133": {
     "alternate_spellings": [
       "bagles"
     ],
@@ -3987,10 +3854,9 @@
       "whiskey",
       "purses"
     ],
-    "id": 133,
     "category": "ice cream"
   },
-  {
+  "134": {
     "alternate_spellings": [
       "holacaust",
       "holocost",
@@ -4019,10 +3885,9 @@
       "Eating Competition",
       "Police"
     ],
-    "id": 134,
     "category": "Board"
   },
-  {
+  "135": {
     "alternate_spellings": [
       "hippys",
       "hippie",
@@ -4050,10 +3915,9 @@
       "Russians",
       "Spies"
     ],
-    "id": 135,
     "category": "Kill"
   },
-  {
+  "136": {
     "alternate_spellings": [
       "bisons"
     ],
@@ -4079,10 +3943,9 @@
       "telescopes",
       "mirrors"
     ],
-    "id": 136,
     "category": "55,000"
   },
-  {
+  "137": {
     "alternate_spellings": [
       "lazer pointer",
       "laser light pointer",
@@ -4110,10 +3973,9 @@
       "chandelier",
       "window"
     ],
-    "id": 137,
     "category": "eBay"
   },
-  {
+  "138": {
     "alternate_spellings": [],
     "question": "The Dutch version of Santa Claus has a helper named <BLANK> Pete.",
     "answer": "Black",
@@ -4137,10 +3999,9 @@
       "Strange",
       "Backwards"
     ],
-    "id": 138,
     "category": "Santa"
   },
-  {
+  "139": {
     "alternate_spellings": [],
     "question": "Patented in 1890, U.S. Patent US435748 is for a mustache <BLANK>.",
     "answer": "guard",
@@ -4164,10 +4025,9 @@
       "camera",
       "knicker"
     ],
-    "id": 139,
     "category": "mustache"
   },
-  {
+  "140": {
     "alternate_spellings": [
       "eat",
       "eat this",
@@ -4195,10 +4055,9 @@
       "trade",
       "tickle"
     ],
-    "id": 140,
     "category": "iPod"
   },
-  {
+  "141": {
     "alternate_spellings": [
       "asleep",
       "you\u2019re sleeping",
@@ -4230,10 +4089,9 @@
       "thinking",
       "swimming"
     ],
-    "id": 141,
     "category": "hair"
   },
-  {
+  "142": {
     "alternate_spellings": [
       "you\u2019re pregnant",
       "your pregnant",
@@ -4265,10 +4123,9 @@
       "under 40",
       "ugly"
     ],
-    "id": 142,
     "category": "supplement"
   },
-  {
+  "143": {
     "alternate_spellings": [
       "hat"
     ],
@@ -4294,10 +4151,9 @@
       "horse",
       "strawberry"
     ],
-    "id": 143,
     "category": "Paris"
   },
-  {
+  "144": {
     "alternate_spellings": [
       "boots"
     ],
@@ -4323,10 +4179,9 @@
       "face paint",
       "press-on nails"
     ],
-    "id": 144,
     "category": "Cemetery"
   },
-  {
+  "145": {
     "alternate_spellings": [],
     "question": "Scooby-Doo\u2019s sister, <BLANK>-Doo, is Scrappy-Doo\u2019s mother.",
     "answer": "Ruby",
@@ -4350,10 +4205,9 @@
       "Skimpy",
       "Booby"
     ],
-    "id": 145,
     "category": "Doo"
   },
-  {
+  "146": {
     "alternate_spellings": [
       "church",
       "catholic church",
@@ -4382,10 +4236,9 @@
       "dentist",
       "book store"
     ],
-    "id": 146,
     "category": "lick"
   },
-  {
+  "147": {
     "alternate_spellings": [],
     "question": "<i>Chosen,<\/i> <i>Shunned<\/i> and <i>Reckoning<\/i> are all books in an unusual series about <BLANK> vampires.",
     "answer": "Amish",
@@ -4409,10 +4262,9 @@
       "Rastafarian",
       "alcoholic"
     ],
-    "id": 147,
     "category": "reckoning"
   },
-  {
+  "148": {
     "alternate_spellings": [
       "finger",
       "give the finger",
@@ -4441,10 +4293,9 @@
       "turd",
       "rainbow"
     ],
-    "id": 148,
     "category": "erected"
   },
-  {
+  "149": {
     "alternate_spellings": [],
     "question": "There\u2019s a novelty museum in Arlington, Massachusetts that only collects food that has been <BLANK>.",
     "answer": "burnt",
@@ -4468,10 +4319,9 @@
       "in movies",
       "sat on"
     ],
-    "id": 149,
     "category": "food"
   },
-  {
+  "150": {
     "alternate_spellings": [
       "bar bouncer"
     ],
@@ -4497,10 +4347,9 @@
       "chef",
       "singing telegram"
     ],
-    "id": 150,
     "category": "Buenos Aires"
   },
-  {
+  "151": {
     "alternate_spellings": [
       "hoky coky",
       "hokey coky",
@@ -4534,10 +4383,9 @@
       "The Scrummy",
       "Wankerdoodle"
     ],
-    "id": 151,
     "category": "Pokey"
   },
-  {
+  "152": {
     "alternate_spellings": [],
     "question": "The Oxford Dictionaries\u2019 \u201Cword of the year\u201D for 2013.",
     "answer": "selfie",
@@ -4561,10 +4409,9 @@
       "redonkulous",
       "twinsies"
     ],
-    "id": 152,
     "category": "Oxford"
   },
-  {
+  "153": {
     "alternate_spellings": [
       "ouiji board",
       "ouja board",
@@ -4594,10 +4441,9 @@
       "karaoke machine",
       "sea monster"
     ],
-    "id": 153,
     "category": "stabbed"
   },
-  {
+  "154": {
     "alternate_spellings": [
       "back rub"
     ],
@@ -4623,10 +4469,9 @@
       "Wherezit",
       "Zilla"
     ],
-    "id": 154,
     "category": "search"
   },
-  {
+  "155": {
     "alternate_spellings": [],
     "question": "The name of the Kermit the Frog-inspired cologne made by January Productions in 1995.",
     "answer": "Amphibia",
@@ -4650,10 +4495,9 @@
       "Jump",
       "Green Bouqet"
     ],
-    "id": 155,
     "category": "Kermit"
   },
-  {
+  "156": {
     "alternate_spellings": [
       "leg",
       "lady\u2019s leg",
@@ -4685,10 +4529,9 @@
       "mustache",
       "didgeridoo"
     ],
-    "id": 156,
     "category": "sundial"
   },
-  {
+  "157": {
     "alternate_spellings": [],
     "question": "Phil Shaw is the founder of the bizarre sport called Extreme <BLANK>.",
     "answer": "Ironing",
@@ -4712,10 +4555,9 @@
       "Square Dancing",
       "Petting"
     ],
-    "id": 157,
     "category": "founder"
   },
-  {
+  "158": {
     "alternate_spellings": [
       "dandelyon",
       "dandylion",
@@ -4743,10 +4585,9 @@
       "toe",
       "diamond"
     ],
-    "id": 158,
     "category": "ear"
   },
-  {
+  "159": {
     "alternate_spellings": [],
     "question": "CELEBRITY TWEET!    9:43 PM - 1 Oct 13   @MikeTyson tweeted, \u201CI\u2019m a bad <BLANK>.\u201D",
     "answer": "bowler",
@@ -4770,10 +4611,9 @@
       "poet",
       "horse whisperer"
     ],
-    "id": 159,
     "category": "bad"
   },
-  {
+  "160": {
     "alternate_spellings": [],
     "question": "CELEBRITY TWEET!    2:44 PM - 10 May 11   @THEGaryBusey tweeted, \u201CI wish my ears were <BLANK>.\u201D",
     "answer": "cameras",
@@ -4797,10 +4637,9 @@
       "friendlier",
       "wings"
     ],
-    "id": 160,
     "category": "ears"
   },
-  {
+  "161": {
     "alternate_spellings": [
       "Girl Scouts cookies"
     ],
@@ -4826,10 +4665,9 @@
       "cigars",
       "cologne"
     ],
-    "id": 161,
     "category": "Afghanistan"
   },
-  {
+  "162": {
     "alternate_spellings": [],
     "question": "The first text message ever sent was by Neil Papworth in 1992. He texted, \u201C<BLANK>.\u201D",
     "answer": "Merry Christmas",
@@ -4854,10 +4692,9 @@
       "It works",
       "Haba-duey"
     ],
-    "id": 162,
     "category": "text message"
   },
-  {
+  "163": {
     "alternate_spellings": [],
     "question": "In 2013, a 51-year-old Swedish inmate broke out of prison a day before his scheduled release so he could go see a <BLANK>.",
     "answer": "dentist",
@@ -4881,10 +4718,9 @@
       "ballet",
       "man about a dog"
     ],
-    "id": 163,
     "category": "release"
   },
-  {
+  "164": {
     "alternate_spellings": [],
     "question": "The original brand name for Kool-Aid.",
     "answer": "Fruit Smack",
@@ -4908,10 +4744,9 @@
       "Powered Rainbow",
       "Cool Aide"
     ],
-    "id": 164,
     "category": "Kool-Aid"
   },
-  {
+  "165": {
     "alternate_spellings": [
       "qtips",
       "qtip",
@@ -4939,10 +4774,9 @@
       "Pringles",
       "Scope"
     ],
-    "id": 165,
     "category": "brand-name"
   },
-  {
+  "166": {
     "alternate_spellings": [
       "dancers",
       "dancing",
@@ -4970,10 +4804,9 @@
       "vice president",
       "Marine Biologists"
     ],
-    "id": 166,
     "category": "divorce"
   },
-  {
+  "167": {
     "alternate_spellings": [],
     "question": "Cap\u2019n Crunch\u2019s first name.",
     "answer": "Horatio",
@@ -4997,10 +4830,9 @@
       "Jody",
       "Gerald"
     ],
-    "id": 167,
     "category": "Crunch"
   },
-  {
+  "168": {
     "alternate_spellings": [
       "cardiac arrest"
     ],
@@ -5026,10 +4858,9 @@
       "lung collapse",
       "decapitation"
     ],
-    "id": 168,
     "category": "ponytail"
   },
-  {
+  "169": {
     "alternate_spellings": [
       "nut shellz",
       "nutshells",
@@ -5057,10 +4888,9 @@
       "Nut Hutts",
       "Lock Box"
     ],
-    "id": 169,
     "category": "groin"
   },
-  {
+  "170": {
     "alternate_spellings": [
       "Aria"
     ],
@@ -5086,10 +4916,9 @@
       "Miranda",
       "Marcy"
     ],
-    "id": 170,
     "category": "girls"
   },
-  {
+  "171": {
     "alternate_spellings": [],
     "question": "Miley Cyrus\u2019s real first name.",
     "answer": "Destiny",
@@ -5113,10 +4942,9 @@
       "Ray",
       "Buffy"
     ],
-    "id": 171,
     "category": "Miley"
   },
-  {
+  "172": {
     "alternate_spellings": [
       "Veterinarians",
       "vetrinarian",
@@ -5146,10 +4974,9 @@
       "Pilot",
       "Programmer"
     ],
-    "id": 172,
     "category": "white people"
   },
-  {
+  "173": {
     "alternate_spellings": [
       "hamm"
     ],
@@ -5175,10 +5002,9 @@
       "Captain",
       "Mr. Patty"
     ],
-    "id": 173,
     "category": "chimp"
   },
-  {
+  "174": {
     "alternate_spellings": [
       "buckingam phallus",
       "buckingham fallus",
@@ -5206,10 +5032,9 @@
       "The Throne",
       "Royal Helpe"
     ],
-    "id": 174,
     "category": "queen"
   },
-  {
+  "175": {
     "alternate_spellings": [
       "nerds",
       "a nerd"
@@ -5236,10 +5061,9 @@
       "dingleberry",
       "dope"
     ],
-    "id": 175,
     "category": "derogatory"
   },
-  {
+  "176": {
     "alternate_spellings": [],
     "question": "Samsung started out as a company that made this completely low-tech product.",
     "answer": "noodles",
@@ -5263,10 +5087,9 @@
       "mugs",
       "mailboxes"
     ],
-    "id": 176,
     "category": "Samsung"
   },
-  {
+  "177": {
     "alternate_spellings": [
       "a cube"
     ],
@@ -5292,10 +5115,9 @@
       "L",
       "decagon"
     ],
-    "id": 177,
     "category": "poop"
   },
-  {
+  "178": {
     "alternate_spellings": [
       "armagedon"
     ],
@@ -5321,10 +5143,9 @@
       "Dandelion",
       "Sally"
     ],
-    "id": 178,
     "category": "Brewmeister"
   },
-  {
+  "179": {
     "alternate_spellings": [],
     "question": "Michael J. Fox\u2019s middle name.",
     "answer": "Andrew",
@@ -5348,10 +5169,9 @@
       "Malibou",
       "Jayson"
     ],
-    "id": 179,
     "category": "J."
   },
-  {
+  "180": {
     "alternate_spellings": [],
     "question": "Donald Duck\u2019s middle name.",
     "answer": "Fauntleroy",
@@ -5375,10 +5195,9 @@
       "Isa",
       "Orville"
     ],
-    "id": 180,
     "category": "Duck\u2019s"
   },
-  {
+  "181": {
     "alternate_spellings": [
       "psychic"
     ],
@@ -5404,10 +5223,9 @@
       "senators",
       "critics"
     ],
-    "id": 181,
     "category": "Houdini"
   },
-  {
+  "182": {
     "alternate_spellings": [
       "robot"
     ],
@@ -5433,10 +5251,9 @@
       "butlers",
       "machine stars"
     ],
-    "id": 182,
     "category": "traffic"
   },
-  {
+  "183": {
     "alternate_spellings": [],
     "question": "Jim Henson\u2019s original name for <i>Fraggle Rock<\/i>.",
     "answer": "Woozle World",
@@ -5460,10 +5277,9 @@
       "Groggle Stone",
       "Down Down Town"
     ],
-    "id": 183,
     "category": "Fraggle"
   },
-  {
+  "184": {
     "alternate_spellings": [
       "bean-o",
       "beeno",
@@ -5491,10 +5307,9 @@
       "squares",
       "random cards"
     ],
-    "id": 184,
     "category": "bingo"
   },
-  {
+  "185": {
     "alternate_spellings": [
       "The Yorktown",
       "Yorkton",
@@ -5522,10 +5337,9 @@
       "Furnace",
       "Beagle"
     ],
-    "id": 185,
     "category": "starship"
   },
-  {
+  "186": {
     "alternate_spellings": [],
     "question": "The name for the random symbols used to indicate swearing in comic strips.",
     "answer": "grawlix",
@@ -5549,10 +5363,9 @@
       "profass",
       "blimpo"
     ],
-    "id": 186,
     "category": "swearing"
   },
-  {
+  "187": {
     "alternate_spellings": [
       "Disappointment",
       "Dissappointment Island",
@@ -5583,10 +5396,9 @@
       "Pantaloon Island",
       "Carpenter Jeans"
     ],
-    "id": 187,
     "category": "island"
   },
-  {
+  "188": {
     "alternate_spellings": [],
     "question": "~~8-0 is the obscure emoticon that stands for <BLANK>.",
     "answer": "bad hair day",
@@ -5610,10 +5422,9 @@
       "sausage party",
       "your fly is open"
     ],
-    "id": 188,
     "category": "8"
   },
-  {
+  "189": {
     "alternate_spellings": [
       "whale",
       "beached whale"
@@ -5640,10 +5451,9 @@
       "ferris wheel",
       "duck"
     ],
-    "id": 189,
     "category": "blowing"
   },
-  {
+  "190": {
     "alternate_spellings": [
       "popcorn",
       "popcorn with butter"
@@ -5670,10 +5480,9 @@
       "ham",
       "licorice"
     ],
-    "id": 190,
     "category": "urine"
   },
-  {
+  "191": {
     "alternate_spellings": [],
     "question": "CELEBRITY TWEET!   1:07 AM - 2 Aug 13   @taylorswift13 Tweeted \u201CThank you for tonight, Des Moines. I found endless amounts of <BLANK> on my arms from hugging lots of you tonight.\u201D",
     "answer": "glitter",
@@ -5697,10 +5506,9 @@
       "bruises",
       "warts"
     ],
-    "id": 191,
     "category": "hugging"
   },
-  {
+  "192": {
     "alternate_spellings": [],
     "question": "Because of a metal shortage during the war, the Oscar statuettes given out during World War II were made out of <BLANK>.",
     "answer": "plaster",
@@ -5724,10 +5532,9 @@
       "rubber",
       "cloth"
     ],
-    "id": 192,
     "category": "Oscar"
   },
-  {
+  "193": {
     "alternate_spellings": [
       "giving hugs to",
       "and I\u2019m huigging",
@@ -5755,10 +5562,9 @@
       "annoying",
       "goosing"
     ],
-    "id": 193,
     "category": "Simmons"
   },
-  {
+  "194": {
     "alternate_spellings": [],
     "question": "In 2000, Australia had its largest ever online petition, which called for an end to rising <BLANK> prices.",
     "answer": "beer",
@@ -5782,10 +5588,9 @@
       "cracker",
       "DVD"
     ],
-    "id": 194,
     "category": "petition"
   },
-  {
+  "195": {
     "alternate_spellings": [],
     "question": "When Paul Nelson and Andrew Hunter climbed Britain\u2019s highest mountain in 2006, they made an unusual discovery hidden behind a pile of stones. It was a <BLANK>.",
     "answer": "piano",
@@ -5809,10 +5614,9 @@
       "hot tub",
       "tool shed"
     ],
-    "id": 195,
     "category": "pile"
   },
-  {
+  "196": {
     "alternate_spellings": [],
     "question": "The App of Icelanders is a phone app that warns you if the person you\u2019re romantically interested in is a <BLANK>.",
     "answer": "relative",
@@ -5836,10 +5640,9 @@
       "police officer",
       "cook"
     ],
-    "id": 196,
     "category": "warns"
   },
-  {
+  "197": {
     "alternate_spellings": [
       "electric chair",
       "the chair"
@@ -5866,10 +5669,9 @@
       "Antarctica",
       "Heaven"
     ],
-    "id": 197,
     "category": "Stallone"
   },
-  {
+  "198": {
     "alternate_spellings": [],
     "question": "Benjamin Moore paint color 787 has the strange name Grandma\u2019s <BLANK>.",
     "answer": "Sweater",
@@ -5893,10 +5695,9 @@
       "Mistake",
       "Ham Dinner"
     ],
-    "id": 198,
     "category": "787"
   },
-  {
+  "199": {
     "alternate_spellings": [
       "noname"
     ],
@@ -5922,10 +5723,9 @@
       "Pauper",
       "Commoner"
     ],
-    "id": 199,
     "category": "crying"
   },
-  {
+  "200": {
     "alternate_spellings": [],
     "question": "The electric chair was invented by a professional <BLANK> named Alfred Southwick.",
     "answer": "dentist",
@@ -5949,10 +5749,9 @@
       "wrestler",
       "pimp"
     ],
-    "id": 200,
     "category": "Alfred"
   },
-  {
+  "201": {
     "alternate_spellings": [],
     "question": "Although gross, chemist Sir Robert Cheseborough claimed he ate a spoonful of his invention, <BLANK>, every day.",
     "answer": "Vaseline",
@@ -5976,10 +5775,9 @@
       "carpet",
       "contact solution"
     ],
-    "id": 201,
     "category": "spoonful"
   },
-  {
+  "202": {
     "alternate_spellings": [],
     "question": "The first thing eaten in outer space was <BLANK>.",
     "answer": "applesauce",
@@ -6003,10 +5801,9 @@
       "sauerkraut",
       "zesty chicken wraps"
     ],
-    "id": 202,
     "category": "space"
   },
-  {
+  "203": {
     "alternate_spellings": [
       "Brads Drink"
     ],
@@ -6032,10 +5829,9 @@
       "6-Up",
       "America Cola"
     ],
-    "id": 203,
     "category": "Pepsi"
   },
-  {
+  "204": {
     "alternate_spellings": [],
     "question": "The name of the man on the Quaker Oats label.",
     "answer": "Larry",
@@ -6059,10 +5855,9 @@
       "Cyrus",
       "Sebastian"
     ],
-    "id": 204,
     "category": "Oats"
   },
-  {
+  "205": {
     "alternate_spellings": [],
     "question": "The color of the Golden Gate Bridge is officially called <BLANK> Orange.",
     "answer": "International",
@@ -6086,10 +5881,9 @@
       "Hunter Vest",
       "Grapefruit"
     ],
-    "id": 205,
     "category": "Orange"
   },
-  {
+  "206": {
     "alternate_spellings": [],
     "question": "According to the International Code of Disease, the code Y92250 is the code for \u201Cwhen a patient is injured in an <BLANK>.\u201D",
     "answer": "art gallery",
@@ -6113,10 +5907,9 @@
       "Outback Steakhouse",
       "Olive Garden"
     ],
-    "id": 206,
     "category": "injured"
   },
-  {
+  "207": {
     "alternate_spellings": [
       "hairdryer",
       "blow dryer",
@@ -6148,10 +5941,9 @@
       "car engine",
       "cigarette lighter"
     ],
-    "id": 207,
     "category": "duck"
   },
-  {
+  "208": {
     "alternate_spellings": [
       "become blue",
       "turn bluish",
@@ -6181,10 +5973,9 @@
       "grow excess hair",
       "get moldy"
     ],
-    "id": 208,
     "category": "skin"
   },
-  {
+  "209": {
     "alternate_spellings": [
       "chemical engineer"
     ],
@@ -6210,10 +6001,9 @@
       "Military History",
       "Agriculture"
     ],
-    "id": 209,
     "category": "Gallagher"
   },
-  {
+  "210": {
     "alternate_spellings": [
       "heroine"
     ],
@@ -6239,10 +6029,9 @@
       "shaving",
       "karaoke"
     ],
-    "id": 210,
     "category": "Rather"
   },
-  {
+  "211": {
     "alternate_spellings": [
       "cow pee",
       "cow piss"
@@ -6269,10 +6058,9 @@
       "rotten eggs",
       "cocaine"
     ],
-    "id": 211,
     "category": "India"
   },
-  {
+  "212": {
     "alternate_spellings": [
       "brick driveway",
       "drive way"
@@ -6299,10 +6087,9 @@
       "breast milk",
       "unicycle"
     ],
-    "id": 212,
     "category": "stolen"
   },
-  {
+  "213": {
     "alternate_spellings": [],
     "question": "The sports teams at Freeport High School in Illinois are oddly named after an inanimate object. The teams are called the Freeport <BLANK>.",
     "answer": "Pretzels",
@@ -6326,10 +6113,9 @@
       "Tissues",
       "Wigs"
     ],
-    "id": 213,
     "category": "Illinois"
   },
-  {
+  "214": {
     "alternate_spellings": [
       "their own boogers",
       "their boogers",
@@ -6361,10 +6147,9 @@
       "grass",
       "couch filling"
     ],
-    "id": 214,
     "category": "44%"
   },
-  {
+  "215": {
     "alternate_spellings": [
       "playing Donkey Kong",
       "Donky Kong"
@@ -6391,10 +6176,9 @@
       "sewing",
       "making dolls"
     ],
-    "id": 215,
     "category": "Eminem"
   },
-  {
+  "216": {
     "alternate_spellings": [
       "bergybits"
     ],
@@ -6420,10 +6204,9 @@
       "pappy palettes",
       "fresh fancies"
     ],
-    "id": 216,
     "category": "growlers"
   },
-  {
+  "217": {
     "alternate_spellings": [],
     "question": "In 1990, before \u201CEverybody Loves Raymond,\u201D actor Peter Boyle starred in a failed TV pilot called <BLANK> about a cop who turns into a talking bulldog.",
     "answer": "Poochinski",
@@ -6449,10 +6232,9 @@
       "Woof!",
       "That\u2019s No Bull(Dog)"
     ],
-    "id": 217,
     "category": "bulldog"
   },
-  {
+  "218": {
     "alternate_spellings": [
       "taters",
       "potatos"
@@ -6479,10 +6261,9 @@
       "chickens",
       "prostitutes"
     ],
-    "id": 218,
     "category": "gift"
   },
-  {
+  "219": {
     "alternate_spellings": [],
     "question": "The first and only dog to be given rank in the United States Armed Forces was named Sergeant <BLANK>.",
     "answer": "Stubby",
@@ -6506,10 +6287,9 @@
       "Mutt",
       "Biter"
     ],
-    "id": 219,
     "category": "Sergeant"
   },
-  {
+  "220": {
     "alternate_spellings": [],
     "question": "During the mid to late-nineties, the town of Glastonbury was on a manhunt for the odd house intruder known as \u201CThe <BLANK>.\u201D",
     "answer": "Tickler",
@@ -6533,10 +6313,9 @@
       "Bather",
       "CD Organizer"
     ],
-    "id": 220,
     "category": "Glastonbury"
   },
-  {
+  "221": {
     "alternate_spellings": [
       "speedy weeny",
       "speedie weenie",
@@ -6566,10 +6345,9 @@
       "Jeff Hansen",
       "Food Electrocutor"
     ],
-    "id": 221,
     "category": "secret code"
   },
-  {
+  "222": {
     "alternate_spellings": [
       "identical twins"
     ],
@@ -6595,10 +6373,9 @@
       "robots",
       "people who think they\u2019re wizards"
     ],
-    "id": 222,
     "category": "riot"
   },
-  {
+  "223": {
     "alternate_spellings": [],
     "question": "The lead singer of the heavy metal band Hatebeak is <BLANK>.",
     "answer": "a parrot",
@@ -6622,10 +6399,9 @@
       "a microphone",
       "Andre Agassi"
     ],
-    "id": 223,
     "category": "heavy metal"
   },
-  {
+  "224": {
     "alternate_spellings": [
       "floss"
     ],
@@ -6651,10 +6427,9 @@
       "reading glasses",
       "fingernail clippers"
     ],
-    "id": 224,
     "category": "Italian prison"
   },
-  {
+  "225": {
     "alternate_spellings": [],
     "question": "Located within the municipal boundaries of Kirkland Lake, Ontario, there lies the controversially named village of <BLANK>.",
     "answer": "Swastika",
@@ -6678,10 +6453,9 @@
       "Dumb Hicks",
       "Fart"
     ],
-    "id": 225,
     "category": "village"
   },
-  {
+  "226": {
     "alternate_spellings": [
       "bum",
       "homeless guy",
@@ -6710,10 +6484,9 @@
       "rabbit",
       "construction worker"
     ],
-    "id": 226,
     "category": "wine"
   },
-  {
+  "227": {
     "alternate_spellings": [
       "monkies"
     ],
@@ -6736,12 +6509,12 @@
       "poems",
       "ladders",
       "pillows",
+      "wrestlers",
       "DVD players"
     ],
-    "id": 227,
     "category": "Morocco"
   },
-  {
+  "228": {
     "alternate_spellings": [
       "coathanger",
       "wire hanger",
@@ -6769,10 +6542,9 @@
       "watch",
       "tiny beverage cup"
     ],
-    "id": 228,
     "category": "drain"
   },
-  {
+  "229": {
     "alternate_spellings": [
       "deposit box",
       "safe deposit"
@@ -6799,10 +6571,9 @@
       "fountain",
       "bodega"
     ],
-    "id": 229,
     "category": "Einstein"
   },
-  {
+  "230": {
     "alternate_spellings": [
       "hair on the",
       "hair on your",
@@ -6831,10 +6602,9 @@
       "terrifying",
       "squeezable"
     ],
-    "id": 230,
     "category": "buttocks"
   },
-  {
+  "231": {
     "alternate_spellings": [
       "a prickle"
     ],
@@ -6860,10 +6630,9 @@
       "van",
       "board"
     ],
-    "id": 231,
     "category": "porcupines"
   },
-  {
+  "232": {
     "alternate_spellings": [
       "hip sters",
       "hipster",
@@ -6891,10 +6660,9 @@
       "Floridians",
       "dentists"
     ],
-    "id": 232,
     "category": "annoying"
   },
-  {
+  "233": {
     "alternate_spellings": [],
     "question": "King Henry IV of Castile had the embarrassing nickname \u201CHenry the <BLANK>.\u201D",
     "answer": "Impotent",
@@ -6918,10 +6686,9 @@
       "useless",
       "fancy pants"
     ],
-    "id": 233,
     "category": "embarrassing"
   },
-  {
+  "234": {
     "alternate_spellings": [
       "curse",
       "curse word",
@@ -6952,10 +6719,9 @@
       "Fart",
       "Lower Back Tattoo"
     ],
-    "id": 234,
     "category": "Nepal"
   },
-  {
+  "235": {
     "alternate_spellings": [],
     "question": "Reg Mellor is the reigning champion of a sport that just involves keeping a <BLANK> in your pants.",
     "answer": "ferret",
@@ -6979,10 +6745,9 @@
       "fish",
       "mouse"
     ],
-    "id": 235,
     "category": "pants"
   },
-  {
+  "236": {
     "alternate_spellings": [
       "2 lovers"
     ],
@@ -7008,10 +6773,9 @@
       "Bedposts",
       "Kinky Nun"
     ],
-    "id": 236,
     "category": "Pope Pius II"
   },
-  {
+  "237": {
     "alternate_spellings": [
       "spank-o",
       "spanko!",
@@ -7041,10 +6805,9 @@
       "Sassy",
       "I am king!"
     ],
-    "id": 237,
     "category": "spank"
   },
-  {
+  "238": {
     "alternate_spellings": [
       "jazz player",
       "musician"
@@ -7071,10 +6834,9 @@
       "cartoonist",
       "mime"
     ],
-    "id": 238,
     "category": "Mussolini"
   },
-  {
+  "239": {
     "alternate_spellings": [
       "life supply of chocolate",
       "life\u2019s supply of chocolate",
@@ -7119,10 +6881,9 @@
       "new baking oven",
       "set of steak knives"
     ],
-    "id": 239,
     "category": "chocolate chip"
   },
-  {
+  "240": {
     "alternate_spellings": [
       "bee keeping",
       "bees",
@@ -7152,10 +6913,9 @@
       "women\u2019s fashion",
       "boating"
     ],
-    "id": 240,
     "category": "flight"
   },
-  {
+  "241": {
     "alternate_spellings": [],
     "question": "When Milton Bradley first acquired the rights to it, the game Twister was called this.",
     "answer": "Pretzel",
@@ -7179,10 +6939,9 @@
       "Cuddle Buddy",
       "Testy Twisties"
     ],
-    "id": 241,
     "category": "game"
   },
-  {
+  "242": {
     "alternate_spellings": [],
     "question": "The band Queen\u2019s original name.",
     "answer": "Smile",
@@ -7206,10 +6965,9 @@
       "Bigfoot",
       "Pumpernickle"
     ],
-    "id": 242,
     "category": "Queen"
   },
-  {
+  "243": {
     "alternate_spellings": [
       "an egg"
     ],
@@ -7235,10 +6993,9 @@
       "rabbits",
       "hat racks"
     ],
-    "id": 243,
     "category": "Hitchcock"
   },
-  {
+  "244": {
     "alternate_spellings": [
       "canue",
       "kayak"
@@ -7265,10 +7022,9 @@
       "chimney",
       "brewery"
     ],
-    "id": 244,
     "category": "Playtex"
   },
-  {
+  "245": {
     "alternate_spellings": [
       "Trace Adkins lookalike",
       "lookalike of himself",
@@ -7296,10 +7052,9 @@
       "singing magician",
       "guy dressed like a pirate"
     ],
-    "id": 245,
     "category": "rehab"
   },
-  {
+  "246": {
     "alternate_spellings": [],
     "question": "In 2014, Lisa McIntire received a Bank of America credit card offer, but the letter surprisingly addressed her as \u201CLisa <BLANK> McIntire\u201D.",
     "answer": "Is a Slut",
@@ -7323,10 +7078,9 @@
       "\u201CThe Town Ho\u201D",
       "Will You Marry Me"
     ],
-    "id": 246,
     "category": "credit card"
   },
-  {
+  "247": {
     "alternate_spellings": [
       "woodchipper"
     ],
@@ -7352,10 +7106,9 @@
       "NASCAR track",
       "concrete mixer"
     ],
-    "id": 247,
     "category": "stuck"
   },
-  {
+  "248": {
     "alternate_spellings": [],
     "question": "Russian president Vladimir Putin released a DVD in 2008 called <i>Let\u2019s Learn <BLANK> with Vladimir Putin<\/i>.",
     "answer": "Judo",
@@ -7379,10 +7132,9 @@
       "How To Smile",
       "HTML"
     ],
-    "id": 248,
     "category": "Putin"
   },
-  {
+  "249": {
     "alternate_spellings": [],
     "question": "One of Kim Jong Il\u2019s many titles was \u201CInvicible and Ever-Triumphant General and Highest Incarnation of the Revolutionary Comradely <BLANK>\u201D.",
     "answer": "Love",
@@ -7406,10 +7158,9 @@
       "Spirit",
       "Wizard"
     ],
-    "id": 249,
     "category": "Invicible"
   },
-  {
+  "250": {
     "alternate_spellings": [
       "wifi",
       "wifi service",
@@ -7441,10 +7192,9 @@
       "beer",
       "air fresheners"
     ],
-    "id": 250,
     "category": "dog poop"
   },
-  {
+  "251": {
     "alternate_spellings": [
       "flushed toilet",
       "flushing toilet",
@@ -7474,10 +7224,9 @@
       "pair of pantyhose",
       "nipple"
     ],
-    "id": 251,
     "category": "Psycho"
   },
-  {
+  "252": {
     "alternate_spellings": [
       "funereal home",
       "funeral parlor",
@@ -7505,10 +7254,9 @@
       "windmill",
       "shooting range"
     ],
-    "id": 252,
     "category": "miniature"
   },
-  {
+  "253": {
     "alternate_spellings": [
       "tree",
       "trees"
@@ -7535,10 +7283,9 @@
       "fake mustache",
       "headband"
     ],
-    "id": 253,
     "category": "Olympics"
   },
-  {
+  "254": {
     "alternate_spellings": [
       "moon bounce",
       "bouncey house",
@@ -7566,10 +7313,9 @@
       "sledgehammer",
       "nun"
     ],
-    "id": 254,
     "category": "injured"
   },
-  {
+  "255": {
     "alternate_spellings": [],
     "question": "Coca-Cola once commissioned a video game from Atari called <i>Pepsi <BLANK><\/i>.",
     "answer": "Invaders",
@@ -7593,10 +7339,9 @@
       "Fallout",
       "Loses"
     ],
-    "id": 255,
     "category": "Coca-Cola"
   },
-  {
+  "256": {
     "alternate_spellings": [],
     "question": "The mountain logo on a package of Toblerone chocolate contains a hidden image of a <BLANK>.",
     "answer": "bear",
@@ -7620,10 +7365,9 @@
       "gun",
       "syringe"
     ],
-    "id": 256,
     "category": "Toblerone"
   },
-  {
+  "257": {
     "alternate_spellings": [
       "card board"
     ],
@@ -7649,10 +7393,9 @@
       "beer cans",
       "lava"
     ],
-    "id": 257,
     "category": "cathedral"
   },
-  {
+  "258": {
     "alternate_spellings": [
       "fireants"
     ],
@@ -7678,10 +7421,9 @@
       "diapers",
       "broken glass"
     ],
-    "id": 258,
     "category": "rags"
   },
-  {
+  "259": {
     "alternate_spellings": [],
     "question": "Actor Eddie Murphy released a dance song in 1982 titled \u201CBoogie in <BLANK>.\u201D",
     "answer": "Your Butt",
@@ -7705,10 +7447,9 @@
       "your mustache",
       "Sanity"
     ],
-    "id": 259,
     "category": "Eddie Murphy"
   },
-  {
+  "260": {
     "alternate_spellings": [
       "fork lift"
     ],
@@ -7734,10 +7475,9 @@
       "coworker",
       "crowbar"
     ],
-    "id": 260,
     "category": "Twix"
   },
-  {
+  "261": {
     "alternate_spellings": [
       "the hair of George Washington",
       "Washington\u2019s hair"
@@ -7764,10 +7504,9 @@
       "mummy teeth",
       "$100 bills"
     ],
-    "id": 261,
     "category": "baseball"
   },
-  {
+  "262": {
     "alternate_spellings": [
       "nude",
       "unclothed",
@@ -7795,10 +7534,9 @@
       "zombie",
       "garbage"
     ],
-    "id": 262,
     "category": "sleepwalkers"
   },
-  {
+  "263": {
     "alternate_spellings": [
       "own finger",
       "little finger",
@@ -7829,10 +7567,9 @@
       "sister\u2019s dog",
       "bed"
     ],
-    "id": 263,
     "category": "wages"
   },
-  {
+  "264": {
     "alternate_spellings": [
       "female lap",
       "female\u2019s lap",
@@ -7862,10 +7599,9 @@
       "family of cartoon fish",
       "talking doughnut"
     ],
-    "id": 264,
     "category": "loneliness"
   },
-  {
+  "265": {
     "alternate_spellings": [],
     "question": "Pam Anderson wrote a book of recipes with the title <i>How to Cook Without a <BLANK><\/i>.",
     "answer": "Book",
@@ -7889,10 +7625,9 @@
       "Face",
       "Maid"
     ],
-    "id": 265,
     "category": "recipes"
   },
-  {
+  "266": {
     "alternate_spellings": [],
     "question": "In 2013, researchers at the University of Tokyo developed the incendiary reflection, a mirror that makes it look like you\u2019re <BLANK>.",
     "answer": "smiling",
@@ -7916,10 +7651,9 @@
       "successful",
       "a cartoon character"
     ],
-    "id": 266,
     "category": "mirror"
   },
-  {
+  "267": {
     "alternate_spellings": [
       "fortune tellers",
       "their witches",
@@ -7951,10 +7685,9 @@
       "shoe shiners",
       "mimes"
     ],
-    "id": 267,
     "category": "Romanian"
   },
-  {
+  "268": {
     "alternate_spellings": [
       "pain less"
     ],
@@ -7980,10 +7713,9 @@
       "Calming",
       "Loving Hands"
     ],
-    "id": 268,
     "category": "dental"
   },
-  {
+  "269": {
     "alternate_spellings": [],
     "question": "Although common today, the <BLANK> was such a status symbol in 18th century England that you could rent one for a night in order to show it off at a party.",
     "answer": "pineapple",
@@ -8007,10 +7739,9 @@
       "zipper",
       "comb"
     ],
-    "id": 269,
     "category": "party"
   },
-  {
+  "270": {
     "alternate_spellings": [],
     "question": "Instead of having guard dogs, police in rural parts of China\u2019s Xinjiang Province use <BLANK>.",
     "answer": "geese",
@@ -8034,10 +7765,9 @@
       "goats",
       "land mines"
     ],
-    "id": 270,
     "category": "rural parts"
   },
-  {
+  "271": {
     "alternate_spellings": [
       "play accordion",
       "play the accordian",
@@ -8067,10 +7797,9 @@
       "wrestle",
       "hunt"
     ],
-    "id": 271,
     "category": "teachers"
   },
-  {
+  "272": {
     "alternate_spellings": [
       "sink"
     ],
@@ -8096,10 +7825,9 @@
       "litter box",
       "DVD of \u201CRocky\u201D"
     ],
-    "id": 272,
     "category": "Netflix"
   },
-  {
+  "273": {
     "alternate_spellings": [
       "cornflake",
       "corn cereal",
@@ -8128,10 +7856,9 @@
       "tampon",
       "pine cone"
     ],
-    "id": 273,
     "category": "single"
   },
-  {
+  "274": {
     "alternate_spellings": [],
     "question": "Blair Tolman wrote a self-help book called <i><BLANK> for Under a Dollar: 301 Ideas<\/i>.",
     "answer": "Dating",
@@ -8155,10 +7882,9 @@
       "Build a Hot Tub",
       "Buying a Home"
     ],
-    "id": 274,
     "category": "self-help"
   },
-  {
+  "275": {
     "alternate_spellings": [
       "umbrellas",
       "an umbrella"
@@ -8185,10 +7911,9 @@
       "a shopping basket",
       "a gun"
     ],
-    "id": 275,
     "category": "Marine"
   },
-  {
+  "276": {
     "alternate_spellings": [
       "ass",
       "anus",
@@ -8218,10 +7943,9 @@
       "bed",
       "refrigerator"
     ],
-    "id": 276,
     "category": "Stallone"
   },
-  {
+  "277": {
     "alternate_spellings": [
       "heavy metal",
       "metal bands",
@@ -8249,10 +7973,9 @@
       "clown wigs",
       "playing slap bass"
     ],
-    "id": 277,
     "category": "Swedish"
   },
-  {
+  "278": {
     "alternate_spellings": [
       "dog",
       "doggie",
@@ -8282,10 +8005,9 @@
       "large blonde woman",
       "fur coat rack"
     ],
-    "id": 278,
     "category": "lion"
   },
-  {
+  "279": {
     "alternate_spellings": [
       "shapeshifter"
     ],
@@ -8311,10 +8033,9 @@
       "long hair",
       "wealthy wanderer"
     ],
-    "id": 279,
     "category": "Johnny Depp"
   },
-  {
+  "280": {
     "alternate_spellings": [],
     "question": "Strange brand name for the cigarettes sold by The Enlightened Tobacco Company in the 1990s.",
     "answer": "Death",
@@ -8338,10 +8059,9 @@
       "Farts",
       "Cancer Stix"
     ],
-    "id": 280,
     "category": "cigarettes"
   },
-  {
+  "281": {
     "alternate_spellings": [],
     "question": "In 1518, hundreds of people in Strasbourg became afflicted with a bizarre condition that rendered them unable to stop <BLANK>.",
     "answer": "dancing",
@@ -8365,10 +8085,9 @@
       "juggling",
       "crying"
     ],
-    "id": 281,
     "category": "France"
   },
-  {
+  "282": {
     "alternate_spellings": [
       "firefighter",
       "fire man",
@@ -8397,10 +8116,9 @@
       "Satan",
       "leprechaun"
     ],
-    "id": 282,
     "category": "shirtless"
   },
-  {
+  "283": {
     "alternate_spellings": [],
     "question": "CELEBRITY TWEET! 12:44 AM - 10 Dec 2013 @SimonCowell Tweeted: \u201CStill not sure what a <BLANK> is.\u201D",
     "answer": "baby shower",
@@ -8424,10 +8142,9 @@
       "suit",
       "wine cooler"
     ],
-    "id": 283,
     "category": "Cowell"
   },
-  {
+  "284": {
     "alternate_spellings": [
       "work",
       "doing work",
@@ -8455,10 +8172,9 @@
       "humming",
       "not sleeping"
     ],
-    "id": 284,
     "category": "Lohan"
   },
-  {
+  "285": {
     "alternate_spellings": [
       "hampster wheel",
       "mouse wheel",
@@ -8486,10 +8202,9 @@
       "soap bubble",
       "snow globe"
     ],
-    "id": 285,
     "category": "orbit"
   },
-  {
+  "286": {
     "alternate_spellings": [],
     "question": "ROAD TRIP! When in Marfa, Texas check out the unusual art piece shaped like a <BLANK> store built right in the middle of the desert.",
     "answer": "Prada",
@@ -8513,10 +8228,9 @@
       "Dasani",
       "drug"
     ],
-    "id": 286,
     "category": "desert"
   },
-  {
+  "287": {
     "alternate_spellings": [],
     "question": "<i>Patton<\/i> actor George C. Scott refused to accept the Oscar he won in 1971, claiming the Academy Awards is a \u201Ctwo hour <BLANK> parade.\u201D",
     "answer": "meat",
@@ -8540,10 +8254,9 @@
       "booze",
       "phony"
     ],
-    "id": 287,
     "category": "Patton"
   },
-  {
+  "288": {
     "alternate_spellings": [],
     "question": "Mohammed Khurshid Hussain is in the <i>Guinness Book of World Records<\/i> because he is able to <BLANK> very quickly with his nose.",
     "answer": "type",
@@ -8567,10 +8280,9 @@
       "juggle",
       "do yoga"
     ],
-    "id": 288,
     "category": "nose"
   },
-  {
+  "289": {
     "alternate_spellings": [],
     "question": "Brand name of the (patented) synthetic testicles for pets.",
     "answer": "Neuticles",
@@ -8594,10 +8306,9 @@
       "HairBalls",
       "Ball Reunion"
     ],
-    "id": 289,
     "category": "synthetic"
   },
-  {
+  "290": {
     "alternate_spellings": [
       "bunnies",
       "a rabbit",
@@ -8629,10 +8340,9 @@
       "Santa Claus",
       "lots of gold coins"
     ],
-    "id": 290,
     "category": "birth"
   },
-  {
+  "291": {
     "alternate_spellings": [
       "at a bookstore",
       "standing in a bookstore",
@@ -8662,10 +8372,9 @@
       "crying",
       "running"
     ],
-    "id": 291,
     "category": "phenomenon"
   },
-  {
+  "292": {
     "alternate_spellings": [
       "rectum massage",
       "anal massage",
@@ -8699,10 +8408,9 @@
       "a good face slap",
       "candy diet"
     ],
-    "id": 292,
     "category": "hiccups"
   },
-  {
+  "293": {
     "alternate_spellings": [
       "hear music"
     ],
@@ -8728,10 +8436,9 @@
       "smell garbage",
       "get married"
     ],
-    "id": 293,
     "category": "Barcelona"
   },
-  {
+  "294": {
     "alternate_spellings": [],
     "question": "ROAD TRIP! When in the North Shore Mountains near Vancouver, British Columbia, be sure to climb the unusually named peak called <BLANK> Mountain.",
     "answer": "Unnecessary",
@@ -8755,10 +8462,9 @@
       "Stupid",
       "Go Away"
     ],
-    "id": 294,
     "category": "Peak"
   },
-  {
+  "295": {
     "alternate_spellings": [],
     "question": "A Rhode Island middle school discovered that some students were crushing Smarties candy and then snorting the dust. So they sent an email to parents, warning that a side effect of this activity could be <BLANK> in their kids\u2019 noses.",
     "answer": "maggots",
@@ -8783,10 +8489,9 @@
       "foam",
       "warts"
     ],
-    "id": 295,
     "category": "middle school"
   },
-  {
+  "296": {
     "alternate_spellings": [
       "the elves",
       "elfs",
@@ -8816,10 +8521,9 @@
       "tiny pandas",
       "time travelers"
     ],
-    "id": 296,
     "category": "construction"
   },
-  {
+  "297": {
     "alternate_spellings": [],
     "question": "In 2013, a man in Texas was diagnosed with a rare syndrome that turns the food he eats into <BLANK> in his stomach.",
     "answer": "beer",
@@ -8843,10 +8547,9 @@
       "tiny humans",
       "boogers"
     ],
-    "id": 297,
     "category": "rare"
   },
-  {
+  "298": {
     "alternate_spellings": [
       "game of dodgeball",
       "dodgeball match",
@@ -8875,10 +8578,9 @@
       "touch football game",
       "chili cook-off"
     ],
-    "id": 298,
     "category": "6,084"
   },
-  {
+  "299": {
     "alternate_spellings": [],
     "question": "A condiment popular in the Philippines is <BLANK>-flavored ketchup.",
     "answer": "banana",
@@ -8902,10 +8604,9 @@
       "beetle",
       "iron"
     ],
-    "id": 299,
     "category": "Philippines"
   },
-  {
+  "300": {
     "alternate_spellings": [
       "wizard hat",
       "wizards hat"
@@ -8932,10 +8633,9 @@
       "gold chain",
       "colorful beret"
     ],
-    "id": 300,
     "category": "psychiatrists"
   },
-  {
+  "301": {
     "alternate_spellings": [],
     "question": "Calum Wright, while a student at UC Berkeley, started an organization named \u201CStudents Against <BLANK> in Trees.\u201D",
     "answer": "Hippies",
@@ -8959,10 +8659,9 @@
       "Ghosts",
       "dorms"
     ],
-    "id": 301,
     "category": "trees"
   },
-  {
+  "302": {
     "alternate_spellings": [],
     "question": "A man in Watertown, New York, claims to have been happily married for over 25 years to his wife Teagan, who strangely is a <BLANK>.",
     "answer": "mannequin in a wheelchair",
@@ -8986,10 +8685,9 @@
       "mop wearing an apron",
       "pile of dirty underwear"
     ],
-    "id": 302,
     "category": "happily"
   },
-  {
+  "303": {
     "alternate_spellings": [],
     "question": "The fishing company E21 makes a very peculiar fishing rod that is composed of 70% <BLANK>.",
     "answer": "carrots",
@@ -9013,10 +8711,9 @@
       "eyebrows",
       "high fructose corn syrup"
     ],
-    "id": 303,
     "category": "fishing"
   },
-  {
+  "304": {
     "alternate_spellings": [],
     "question": "Wilma Flintstone\u2019s maiden name.",
     "answer": "Slaghoople",
@@ -9040,10 +8737,9 @@
       "Ug-Ug",
       "Cobblepot"
     ],
-    "id": 304,
     "category": "Flintstone"
   },
-  {
+  "305": {
     "alternate_spellings": [
       "electric saw",
       "chainsaw"
@@ -9070,10 +8766,9 @@
       "grenade",
       "can of beans"
     ],
-    "id": 305,
     "category": "Dahl"
   },
-  {
+  "306": {
     "alternate_spellings": [],
     "question": "Cambridge University economist Ha-Joon Chang holds an unpopular opinion. He insists that the <BLANK> changed the world more than the Internet.",
     "answer": "washing machine",
@@ -9097,10 +8792,9 @@
       "shower head",
       "fanny pack"
     ],
-    "id": 306,
     "category": "economist"
   },
-  {
+  "307": {
     "alternate_spellings": [
       "a mormon",
       "any mormon",
@@ -9129,10 +8823,9 @@
       "fast food workers",
       "smokers"
     ],
-    "id": 307,
     "category": "crowd"
   },
-  {
+  "308": {
     "alternate_spellings": [
       "his own poop",
       "his shit",
@@ -9170,10 +8863,9 @@
       "eggs",
       "gasoline"
     ],
-    "id": 308,
     "category": "prison"
   },
-  {
+  "309": {
     "alternate_spellings": [
       "a coconut"
     ],
@@ -9199,10 +8891,9 @@
       "backpacks",
       "personal toiletries"
     ],
-    "id": 309,
     "category": "mail"
   },
-  {
+  "310": {
     "alternate_spellings": [
       "a unicorn",
       "for unicorns"
@@ -9229,10 +8920,9 @@
       "squirrels",
       "rainbows"
     ],
-    "id": 310,
     "category": "hunt"
   },
-  {
+  "311": {
     "alternate_spellings": [],
     "question": "On the northwest tower of the Washington National Cathedral, there hangs a gargoyle made to resemble <BLANK>.",
     "answer": "Darth Vader",
@@ -9256,10 +8946,9 @@
       "a clown",
       "a butt"
     ],
-    "id": 311,
     "category": "gargoyle"
   },
-  {
+  "312": {
     "alternate_spellings": [
       "count every grain",
       "count each rice",
@@ -9293,10 +8982,9 @@
       "take a nap",
       "eat all of it"
     ],
-    "id": 312,
     "category": "vampire"
   },
-  {
+  "313": {
     "alternate_spellings": [],
     "question": "The unusual things that reportedly rained down from the sky over Salta Province, Argentina on April 6, 2007.",
     "answer": "spiders",
@@ -9320,10 +9008,9 @@
       "men",
       "beer"
     ],
-    "id": 313,
     "category": "raining"
   },
-  {
+  "314": {
     "alternate_spellings": [
       "a cockroach",
       "roaches",
@@ -9355,10 +9042,9 @@
       "shower radios",
       "crabgrass"
     ],
-    "id": 314,
     "category": "control"
   },
-  {
+  "315": {
     "alternate_spellings": [
       "branch"
     ],
@@ -9384,10 +9070,9 @@
       "snake",
       "hot dog"
     ],
-    "id": 315,
     "category": "lung"
   },
-  {
+  "316": {
     "alternate_spellings": [
       "sit down when peeing",
       "sit when peeing",
@@ -9423,10 +9108,9 @@
       "fix their hair",
       "light a match"
     ],
-    "id": 316,
     "category": "instructed"
   },
-  {
+  "317": {
     "alternate_spellings": [
       "reefs"
     ],
@@ -9452,10 +9136,9 @@
       "cooking spices",
       "plates"
     ],
-    "id": 317,
     "category": "ashes"
   },
-  {
+  "318": {
     "alternate_spellings": [
       "the urine of young boys",
       "the urine of a young boy",
@@ -9489,10 +9172,9 @@
       "hot tub water",
       "sewage"
     ],
-    "id": 318,
     "category": "eggs"
   },
-  {
+  "319": {
     "alternate_spellings": [
       "red ink",
       "red ink pens",
@@ -9522,10 +9204,9 @@
       "grades",
       "the restroom"
     ],
-    "id": 319,
     "category": "Academy"
   },
-  {
+  "320": {
     "alternate_spellings": [],
     "question": "The Michelin Man\u2019s strange, official name.",
     "answer": "Bibendum",
@@ -9549,10 +9230,9 @@
       "Mickeldock",
       "Loo-loo"
     ],
-    "id": 320,
     "category": "Michelin"
   },
-  {
+  "321": {
     "alternate_spellings": [
       "lazy boy chair",
       "lazy boy",
@@ -9588,10 +9268,9 @@
       "hot dog cart",
       "dumpster"
     ],
-    "id": 321,
     "category": "Minnesota"
   },
-  {
+  "322": {
     "alternate_spellings": [
       "showers",
       "shower",
@@ -9619,10 +9298,9 @@
       "their pants",
       "cups"
     ],
-    "id": 322,
     "category": "rainforest"
   },
-  {
+  "323": {
     "alternate_spellings": [],
     "question": "A study published in the journal <i>Anthrozoo<\/i> reported that cows produce 5% more milk when they are given <BLANK>.",
     "answer": "names",
@@ -9646,10 +9324,9 @@
       "CPR",
       "water beds"
     ],
-    "id": 323,
     "category": "5% more milk"
   },
-  {
+  "324": {
     "alternate_spellings": [],
     "question": "After consuming antifreeze, a Maltese terrier in Australia had his life saved when vets then gave him <BLANK> to drink.",
     "answer": "vodka",
@@ -9673,10 +9350,9 @@
       "bile",
       "Vitamin Water"
     ],
-    "id": 324,
     "category": "antifreeze"
   },
-  {
+  "325": {
     "alternate_spellings": [
       "pet horse"
     ],
@@ -9702,10 +9378,9 @@
       "pen name",
       "worst fear"
     ],
-    "id": 325,
     "category": "Snickers"
   },
-  {
+  "326": {
     "alternate_spellings": [
       "glow-in-the-dark"
     ],
@@ -9731,10 +9406,9 @@
       "give birth",
       "bark songs"
     ],
-    "id": 326,
     "category": "beagle"
   },
-  {
+  "327": {
     "alternate_spellings": [],
     "question": "Since 1912, South Dakota State University\u2019s homecoming week has culminated in a celebration oddly named <BLANK> Day.",
     "answer": "Hobo",
@@ -9758,10 +9432,9 @@
       "Night",
       "Rick Moranis"
     ],
-    "id": 327,
     "category": "homecoming"
   },
-  {
+  "328": {
     "alternate_spellings": [
       "hair",
       "human\u2019s hair",
@@ -9791,10 +9464,9 @@
       "beards",
       "styrofoam"
     ],
-    "id": 328,
     "category": "solar"
   },
-  {
+  "329": {
     "alternate_spellings": [
       "Adolf Hitler",
       "Adolph Hitler"
@@ -9821,10 +9493,9 @@
       "Albert Einstein",
       "King Tut"
     ],
-    "id": 329,
     "category": "auto repair"
   },
-  {
+  "330": {
     "alternate_spellings": [
       "yell"
     ],
@@ -9850,10 +9521,9 @@
       "cry",
       "levitate"
     ],
-    "id": 330,
     "category": "tadpoles"
   },
-  {
+  "331": {
     "alternate_spellings": [
       "count all the",
       "add up all the",
@@ -9881,10 +9551,9 @@
       "drown",
       "set fire to"
     ],
-    "id": 331,
     "category": "squirrels"
   },
-  {
+  "332": {
     "alternate_spellings": [],
     "question": "In a 1999 interview with <i>US Weekly<\/i>, actress Lucy Liu revealed that she once had sex with a <BLANK>.",
     "answer": "ghost",
@@ -9908,10 +9577,9 @@
       "dog",
       "president"
     ],
-    "id": 332,
     "category": "Lucy"
   },
-  {
+  "333": {
     "alternate_spellings": [
       "nails",
       "finger nails"
@@ -9938,10 +9606,9 @@
       "corn stalks",
       "taste buds"
     ],
-    "id": 333,
     "category": "steroids"
   },
-  {
+  "334": {
     "alternate_spellings": [
       "poems",
       "hearing poetry",
@@ -9973,10 +9640,9 @@
       "sneezing",
       "khaki pants"
     ],
-    "id": 334,
     "category": "arousal"
   },
-  {
+  "335": {
     "alternate_spellings": [
       "run over by tractors",
       "squished by tractors",
@@ -10004,10 +9670,9 @@
       "yelled at",
       "used as a soccer ball"
     ],
-    "id": 335,
     "category": "Punjab"
   },
-  {
+  "336": {
     "alternate_spellings": [
       "under water",
       "in the ocean",
@@ -10037,10 +9702,9 @@
       "owned by George Clooney",
       "always on fire"
     ],
-    "id": 336,
     "category": "office"
   },
-  {
+  "337": {
     "alternate_spellings": [],
     "question": "Former first lady Barbara Bush wrote an official apology letter to this fictional character in 1990.",
     "answer": "Marge Simpson",
@@ -10064,10 +9728,9 @@
       "Little Orphan Annie",
       "Cap\u2019n Crunch"
     ],
-    "id": 337,
     "category": "Bush"
   },
-  {
+  "338": {
     "alternate_spellings": [
       "Axe spray"
     ],
@@ -10093,10 +9756,9 @@
       "dozens of balloons",
       "hummingbirds"
     ],
-    "id": 338,
     "category": "sixth-graders"
   },
-  {
+  "339": {
     "alternate_spellings": [
       "hideous",
       "hideously ugly",
@@ -10126,10 +9788,9 @@
       "depressed",
       "skinny"
     ],
-    "id": 339,
     "category": "faces"
   },
-  {
+  "340": {
     "alternate_spellings": [
       "hulaburger"
     ],
@@ -10155,10 +9816,9 @@
       "Mama Kroc\u2019s",
       "McMahi-Mahi"
     ],
-    "id": 340,
     "category": "pineapple"
   },
-  {
+  "341": {
     "alternate_spellings": [
       "Scroty"
     ],
@@ -10184,10 +9844,9 @@
       "Ding-A-Ling",
       "Rooster Cockburn"
     ],
-    "id": 341,
     "category": "hockey"
   },
-  {
+  "342": {
     "alternate_spellings": [
       "cat pee",
       "feline urine",
@@ -10217,10 +9876,9 @@
       "buffalo sauce",
       "licorice"
     ],
-    "id": 342,
     "category": "recall"
   },
-  {
+  "343": {
     "alternate_spellings": [],
     "question": "Jimmy Hoffa\u2019s unusual middle name.",
     "answer": "Riddle",
@@ -10244,10 +9902,9 @@
       "Frumble",
       "Tortelini"
     ],
-    "id": 343,
     "category": "Jimmy"
   },
-  {
+  "344": {
     "alternate_spellings": [],
     "question": "Brand name of the \u201Ccriminal dolls\u201D for children with names like Dickie the Dealer and Bonnie Anne Bribe.",
     "answer": "Thuggies",
@@ -10271,7 +9928,6 @@
       "Funny Felonies",
       "Mugshot Masters"
     ],
-    "id": 344,
     "category": "criminal"
   }
-]
+}
