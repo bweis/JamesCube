@@ -1,3 +1,5 @@
+var questions = require("./questions.json");
+
 // constructor
 function liarliar(room) {
   console.log("LiarLiar game created");
@@ -5,6 +7,9 @@ function liarliar(room) {
   this.room = room;
   this.scores = {};
   this.rounds = {};
+
+  // load in questions
+  console.log(questions);
 }
 
 // methods
