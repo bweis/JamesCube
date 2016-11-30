@@ -96,3 +96,7 @@ label {
 	color: #FFFFFF;
 }
 
+.roomUser {
+	max-height: 100px;
+	max-width: 100px;
+}
