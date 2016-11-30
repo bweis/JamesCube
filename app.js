@@ -20,8 +20,9 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 
 // Client HTML
 app.get('/', function(req,res) {
+  console.log(req);
   res.setHeader('Content-Type', 'text/html');
-  res.send(fs.readFileSync('./client/indexServer.html'));
+  res.send(fs.readFileSync('./client/index_pc.html'));
 });
 
 // GameServer Logic
