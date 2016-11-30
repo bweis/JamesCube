@@ -5,12 +5,48 @@
     <title>JamesCube</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheets/style.css">
   </head>
-
   <body>
+
+  <h1 style="color: #E9DBC0; text-align: center">
+    JamesCube
+  </h1>
+  <form class="container-fluid" style="padding-top: 10%">
+    <div class="form-group row">
+      <div class="col-lg-4 col-lg-offset-4 centered">
+        <input type="text" class="form-control" id="joinCode" placeholder="Room Code">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-lg-4 col-lg-offset-4 centered">
+        <input type="text" class="form-control" id="nickname" placeholder="Nickname">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-lg-4 col-lg-offset-4 centered">
+        <label class="custom-control custom-radio">
+          <input id="maleRadio" name="radio" type="radio" class="custom-control-input">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">Male</span>
+        </label>
+        <label class="custom-control custom-radio">
+          <input id="femaleRadio" name="radio" type="radio" class="custom-control-input">
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">Female</span>
+        </label>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="offset-lg-4 col-lg-4 text-center">
+        <button type="submit" class="btn btn-success btn-block">Join</button>
+      </div>
+    </div>
+  </form>
     <canvas id="sheet" width="400" height="400"></canvas>
+
   </body>
   <script src="net/socket.io/socket.io.js"></script>
   <script src="net/client/lobby.js"></script>

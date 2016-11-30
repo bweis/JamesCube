@@ -6,22 +6,50 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
 
   <body>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 centered">
+        <h3>
+          Visit <span style="font-weight: bold">jamescube.mybluemix.net</span> on your <span class="glyphicon glyphicon-phone"></span> with code:
+        </h3>
+        <h2 id="roomCode">
+          {{CODE}}
+        </h2>
+      </div>
+    </div>
+    <div class="row" style="padding-top: 10%">
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-4 centered">
+        <div class="col-md-10 col-md-offset-1 centered">
+        <div class="btn-group-vertical btn-block" role="group" aria-label="...">
+          <button type="button" class="btn btn-default btn-block btn-lg">
+            Game 1
+          </button>
+          <button type="button" class="btn btn-default btn-block btn-lg">
+            Game 2
+          </button>
+          <button type="button" class="btn btn-default btn-block btn-lg">
+            Game 3
+          </button>
+          <button type="button" class="btn btn-default btn-block btn-lg">
+            Game 4
+          </button>
+        </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+
+      </div>
+    </div>
     <canvas id="sheet" width="400" height="400"></canvas>
-    <table>
-      <tr>
-        <td style= "width:30%;">
-          <img class = "newappIcon" src="images/newapp-icon.png">
-        </td>
-        <td>
-          <h1 id="message">DESKTOP</h1>
-          <p class='description'></p> Thanks for creating a <span class = "blue">NodeJS Starter Application</span>.
-        </td>
-      </tr>
-    </table>
   </body>
   <script src="net/socket.io/socket.io.js"></script>
   <script src="net/host/lobby.js"></script>
