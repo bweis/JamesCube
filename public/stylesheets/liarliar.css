@@ -1,0 +1,26 @@
+body,html {
+    background-color: #F2EFDF; width : 100%;
+    height: 100%;
+    margin: 0 auto;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    overflow: hidden;
+}
+
+#questionContainer {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    min-height: 12%;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.centered {
+    text-align: center;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#countdownTimer {
+    margin: auto;
+}
