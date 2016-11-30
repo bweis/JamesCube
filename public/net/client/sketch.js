@@ -1,4 +1,31 @@
+var socket  = io();
+
+var canvas;
+var context;
+var width;
+var height;
+
+var clickX = [];
+var clickY = [];
+var clickDrag = [];
+var paint;
+var redrawStatus = true;
+
 document.addEventListener("DOMContentLoaded", function() {
+  configWindow();
+  createHandlers();
+});
+
+window.onresize = resizeWindow;
+
+function resizeWindow() {
+  redrawStatus = true;
+
+  configWindow();
+  redraw();
+}
+
+function configWindow() {
   var mouse = {
     click: false,
     move: false,
@@ -6,16 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
     pos_prev: false
   };
   // get canvas element and create context
-  var canvas  = document.getElementById('drawing');
-  var context = canvas.getContext('2d');
-  var width   = window.innerWidth;
-  var height  = window.innerHeight;
-  var socket  = io();
-
-  var clickX = [];
-  var clickY = [];
-  var clickDrag = [];
-  var paint;
+  canvas  = document.getElementById('drawing');
+  context = canvas.getContext('2d');
+  width   = window.innerWidth;
+  height  = window.innerHeight - $('#title').height();
 
   context.strokeStyle = "#000";
   context.lineJoin = "round";
@@ -24,62 +45,20 @@ document.addEventListener("DOMContentLoaded", function() {
   // set canvas to full browser width/height
   canvas.width = width;
   canvas.height = height;
+}
 
+function createHandlers() {
   function addClick(x, y, dragging) {
+
+    x = x/width;
+    y = y/height;
+
     clickX.push(x);
     clickY.push(y);
     clickDrag.push(dragging);
 
-    socket.emit('draw_line', {clickX: x, clickY: y, clickDrag: dragging});
-  }
-
-  /**
-  * Redraw the complete canvas.
-  */
-  function redraw() {
-    // Clears the canvas
-    context.clearRect(0, 0, context.canvas.width, context.canvas.height);
-
-    for (var i = 0; i < clickX.length; i += 1) {
-      if (!clickDrag[i] && i == 0) {
-        context.beginPath();
-        context.moveTo(clickX[i], clickY[i]);
-        context.stroke();
-      } else if (!clickDrag[i] && i > 0) {
-        context.closePath();
-
-        context.beginPath();
-        context.moveTo(clickX[i], clickY[i]);
-        context.stroke();
-      } else {
-        context.lineTo(clickX[i], clickY[i]);
-        context.stroke();
-      }
-    }
-  }
-
-  /**
-  * Draw the newly added point.
-  * @return {void}
-  */
-  function drawNew() {
-    var i = clickX.length - 1
-    if (!clickDrag[i]) {
-      if (clickX.length == 0) {
-        context.beginPath();
-        context.moveTo(clickX[i], clickY[i]);
-        context.stroke();
-      } else {
-        context.closePath();
-
-        context.beginPath();
-        context.moveTo(clickX[i], clickY[i]);
-        context.stroke();
-      }
-    } else {
-      context.lineTo(clickX[i], clickY[i]);
-      context.stroke();
-    }
+    socket.emit('draw_line', {clickX: x, clickY: y, clickDrag: dragging, redraw: redrawStatus});
+    redrawStatus = false;
   }
 
   function mouseDownEventHandler(e) {
@@ -151,4 +130,53 @@ document.addEventListener("DOMContentLoaded", function() {
 
   canvas.addEventListener('mousedown', mouseWins);
   canvas.addEventListener('touchstart', touchWins);
-});
+}
+
+/**
+* Redraw the complete canvas.
+*/
+function redraw() {
+  // Clears the canvas
+  context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+
+  for (var i = 0; i < clickX.length; i += 1) {
+    if (!clickDrag[i] && i == 0) {
+      context.beginPath();
+      context.moveTo(clickX[i] * width, clickY[i] * height);
+      context.stroke();
+    } else if (!clickDrag[i] && i > 0) {
+      context.closePath();
+
+      context.beginPath();
+      context.moveTo(clickX[i] * width, clickY[i] * height);
+      context.stroke();
+    } else {
+      context.lineTo(clickX[i] * width, clickY[i] * height);
+      context.stroke();
+    }
+  }
+}
+
+/**
+* Draw the newly added point.
+* @return {void}
+*/
+function drawNew() {
+  var i = clickX.length - 1
+  if (!clickDrag[i]) {
+    if (clickX.length == 0) {
+      context.beginPath();
+      context.moveTo(clickX[i] * width, clickY[i] * height);
+      context.stroke();
+    } else {
+      context.closePath();
+
+      context.beginPath();
+      context.moveTo(clickX[i] * width, clickY[i] * height);
+      context.stroke();
+    }
+  } else {
+    context.lineTo(clickX[i] * width, clickY[i] * height);
+    context.stroke();
+  }
+}

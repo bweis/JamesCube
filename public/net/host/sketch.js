@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var canvas  = document.getElementById('drawing');
   var context = canvas.getContext('2d');
   var width   = window.innerWidth;
-  var height  = window.innerHeight;
+  var height  = window.innerHeight - $('#title').height();
   var socket  = io();
 
   var clickX = [];
@@ -26,10 +26,14 @@ document.addEventListener("DOMContentLoaded", function() {
   canvas.height = height;
 
   socket.on('draw_line', function(data) {
-    clickX.push(data.clickX);
-    clickY.push(data.clickY);
+    console.log(data);
+    clickX.push(data.clickX * width);
+    clickY.push(data.clickY * height);
     clickDrag.push(data.clickDrag);
-    drawNew();
+    if(data.redraw)
+      redraw();
+    else
+      drawNew();
   });
 
   function drawNew() {
@@ -49,6 +53,28 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
       context.lineTo(clickX[i], clickY[i]);
       context.stroke();
+    }
+  }
+
+  function redraw() {
+    // Clears the canvas
+    context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+
+    for (var i = 0; i < clickX.length; i += 1) {
+      if (!clickDrag[i] && i == 0) {
+        context.beginPath();
+        context.moveTo(clickX[i], clickY[i]);
+        context.stroke();
+      } else if (!clickDrag[i] && i > 0) {
+        context.closePath();
+
+        context.beginPath();
+        context.moveTo(clickX[i], clickY[i]);
+        context.stroke();
+      } else {
+        context.lineTo(clickX[i], clickY[i]);
+        context.stroke();
+      }
     }
   }
 });
