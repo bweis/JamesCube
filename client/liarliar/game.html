@@ -14,16 +14,14 @@
             <h1 style="text-align:center">JAMESCUBE</h1>
         </div>
         <div class="container" id="questionContainer">
-            <h2 id="currentQuestion">How many fingers does Ben Weis have on his left hand?</h2>
+            <h2 id="currentQuestion"></h2>
         </div>
         <div id="stage1">
             <div class="col-md-6 col-md-offset-3" style="text-align:center; margin-top: 10%">
-                <form>
-                    <div class="form-group">
-                        <input class="form-control input-lg" type="text" id="userAnswer" placeholder="Answer" />
-                    </div>
-                    <button type="submit" class="btn btn-success btn-lg">Submit</button>
-                </form>
+            <div class="form-group">
+                <input id="submitAnswer" class="form-control input-lg" type="text" id="userAnswer" placeholder="Answer" />
+            </div>
+            <button id="submitAnswerButton" type="submit" class="btn btn-success btn-lg">Submit</button>
             </div>
         </div>
         <div id="stage2" hidden="hidden">

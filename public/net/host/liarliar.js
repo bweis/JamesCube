@@ -22,10 +22,13 @@ if(room === undefined)
   window.location = "/";
 
 socket.emit('join_game', {room: room}, function(data) {
-  console.log(data)
   if(data) {
     $('#currentQuestion').html(data.question);
   }else {
     window.location = "/";
   }
+});
+
+socket.on('answers_changed', function(data) {
+  console.log(data);
 });

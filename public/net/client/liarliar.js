@@ -12,8 +12,15 @@ if(room === undefined)
 
 socket.emit('join_game', {room: room}, function(data) {
   if(data) {
-    console.log('joined game');
+    $('#currentQuestion').html(data.question);
   }else {
     window.location = "/";
   }
+});
+
+$('#submitAnswerButton').click(function() {
+  var answer = $('#submitAnswer').val();
+  socket.emit('submit_answer', {answer: answer}, function(data) {
+    console.log(data);
+  });
 });
