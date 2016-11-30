@@ -1,7 +1,18 @@
 var socket = io();
 
+var room;
 socket.emit('create_lobby', function(lobbyID) {
+  room = lobbyID;
   document.getElementById("roomCode").innerHTML = lobbyID;
+});
+
+$('#liarliar').click(function() {
+  socket.emit('start_game', {gameType: 'liarliar', room: room}, function(data) {
+    if(data)
+      window.location = "/liarliar"+"?room="+room;
+    else
+      console.log('err starting game');
+  });
 });
 
 var context = document.getElementById('sheet').getContext("2d");
