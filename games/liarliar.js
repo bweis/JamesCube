@@ -8,7 +8,7 @@ function liarliar() {
 
 // methods
 liarliar.prototype.start = function(players) {
-  
+
 }
 
 module.exports = liarliar;

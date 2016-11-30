@@ -19,6 +19,10 @@ function joinRoom(form) {
   });
 }
 
+socket.on('game_started', function(data) {
+  window.location = data.gameUrl;
+})
+
 var context = document.getElementById('sheet').getContext("2d");
 var canvas = document.getElementById('sheet');
 context = canvas.getContext("2d");

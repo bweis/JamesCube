@@ -26,9 +26,9 @@ app.get('/', function(req,res) {
   var deviceType = req.device.type.toUpperCase();
   res.setHeader('Content-Type', 'text/html');
   if(deviceType == "DESKTOP")
-    res.send(fs.readFileSync('./host/liarliar/game.html'));
+    res.send(fs.readFileSync('./host/index.html'));
   else
-    res.send(fs.readFileSync('./client/liarliar/game.html'));
+    res.send(fs.readFileSync('./client/index.html'));
 });
 
 app.get('/liarliar', function(req,res) {
@@ -49,6 +49,25 @@ io.on('connection', function(socket){
     var lobbyID = rs.generate(4).toUpperCase();
     socket.join(lobbyID);
     fn(lobbyID);
+  });
+
+  socket.on('start_game', function(data, fn) {
+    if(data.gameType = 'lairliar') {
+      for(room in socket.rooms)
+        io.to(room).emit('game_started', {gameUrl: '/liarliar'});
+
+      // start game
+      fn(true);
+    }
+  });
+
+  socket.on('join_game', function(data, fn) {
+    if(data.room in io.sockets.adapter.rooms) {
+      socket.join(data.room);
+      fn(true)
+    } else {
+      fn(false);
+    }
   });
 
   // Client
