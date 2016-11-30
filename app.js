@@ -8,6 +8,8 @@ var fs = require('fs');
 var device = require('express-device');
 var rs = require('randomstring');
 
+var liarliar = require("./games/liarliar.js")
+
 var app = express();
 httpServer = http.createServer(app);
 io = socketio(httpServer);
@@ -24,12 +26,32 @@ app.get('/', function(req,res) {
   var deviceType = req.device.type.toUpperCase();
   res.setHeader('Content-Type', 'text/html');
   if(deviceType == "DESKTOP")
-    res.send(fs.readFileSync('./client/index_pc.html'));
+    res.send(fs.readFileSync('./host/index.html'));
   else
-    res.send(fs.readFileSync('./client/index_mobile.html'));
+    res.send(fs.readFileSync('./client/index.html'));
+});
+
+app.get('/liarliar', function(req,res) {
+  var deviceType = req.device.type.toUpperCase();
+  res.setHeader('Content-Type', 'text/html');
+  if(deviceType == "DESKTOP")
+    res.send(fs.readFileSync('./host/liarliar/game.html'));
+  else
+    res.send(fs.readFileSync('./client/liarliar/game.html'));
+});
+
+app.get('/sketch', function(req,res) {
+  var deviceType = req.device.type.toUpperCase();
+  res.setHeader('Content-Type', 'text/html');
+  if(deviceType == "DESKTOP")
+    res.send(fs.readFileSync('./host/sketch/game.html'));
+  else
+    res.send(fs.readFileSync('./client/sketch/game.html'));
 });
 
 // GameServer Logic
+
+var activeGames = {};
 
 io.on('connection', function(socket){
 
@@ -40,20 +62,49 @@ io.on('connection', function(socket){
     fn(lobbyID);
   });
 
+  socket.on('start_game', function(data, fn) {
+    if(data.gameType = 'lairliar') {
+      io.to(data.room).emit('game_started', {gameUrl: '/liarliar', room: data.room});
+      activeGames[data.room] = new liarliar();
+
+      fn(true);
+    }
+  });
+
+  // Both
+  socket.on('join_game', function(data, fn) {
+    if(data.room in activeGames) {
+      socket.join(data.room);
+      fn(true)
+    } else {
+      fn(false);
+    }
+  });
+
   // Client
   socket.on('join_lobby', function(data, fn){
     console.log(data);
     var lobbyID = data.lobbyID.toUpperCase();
     if(lobbyID in io.sockets.adapter.rooms) {
       socket.join(lobbyID);
-      io.to(lobbyID).emit('user_joined', {name: data.name, sex: data.sex});
+      io.to(lobbyID).emit('user_joined', {id: socket.id, name: data.name, sex: data.sex});
       fn(true);
     } else {
       fn(false);
     }
   });
 
-  socket.on('draw_pic', function(data){
-    socket.broadcast.emit('draw_pic', data);
+  var clickX = [];
+  var clickY = [];
+  var clickDrag = [];
+  socket.on('draw_line', function (data) {
+      clickX.push(data.clickX);
+      clickY.push(data.clickY);
+      clickDrag.push(data.clickDrag);
+      io.emit('draw_line', data);
+   });
+
+  socket.on('disconnect', function () {
+    io.emit('client_drop', {id: socket.id});
   });
 });

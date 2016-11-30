@@ -12,25 +12,30 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
 
-  <body style="min-width: 992px">
+  <body style="min-width: 992px; overflow: hidden">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3 centered">
-        <h3>
-          Visit <span style="font-weight: bold">jamescube.mybluemix.net</span> on your <span class="glyphicon glyphicon-phone"></span> with code:
-        </h3>
-        <h2 id="roomCode">
-        </h2>
-      </div>
+      <h1 style="text-align:center">JAMESCUBE</h1>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-3 roomUser">
+        <div class="col-md-2 roomUser">
           <img id="image1" src="/images/no_user.png"/>
-          <h4 id="user1">username</h4>
+          <div style="width:100px">
+            <h4 id="user1"></h4>
+          </div>
         </div>
-        <div class="col-md-2 col-md-offset-7 roomUser">
+        <div class="col-md-8 centered">
+          <h3>
+            Visit <span style="font-weight: bold">jamescube.mybluemix.net</span> on your <span class="glyphicon glyphicon-phone"></span> with code:
+          </h3>
+          <h2 id="roomCode">
+          </h2>
+        </div>
+        <div class="col-md-2 roomUser">
           <img id="image5" src="/images/no_user.png"/>
-          <h4 id="user5">username</h4>
+          <div style="width:100px">
+            <h4 id="user5"></h4>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -38,21 +43,25 @@
           <div class="row">
             <div class="col-md-2 col-md-offset-6 roomUser">
               <img id="image2" src="/images/no_user.png"/>
-              <h4 id="user2">username</h4>
+              <div style="width:100px">
+                <h4 id="user2"></h4>
+              </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-2 roomUser">
               <img id="image3" src="/images/no_user.png"/>
-              <h4 id="user3">username</h4>
+              <div style="width:100px">
+                <h4 id="user3"></h4>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-md-4 centered">
           <div class="col-md-10 col-md-offset-1 centered">
           <div class="btn-group-vertical btn-block" role="group" aria-label="...">
-            <button type="button" id="game1Btn" class="btn btn-default btn-block btn-lg">
-              Game 1
+            <button type="button" id="liarliar" class="btn btn-default btn-block btn-lg">
+              LiarLiar
             </button>
             <button type="button" id="game2Btn" class="btn btn-default btn-block btn-lg">
               Game 2
@@ -73,13 +82,17 @@
           <div class="row">
             <div class="col-md-2 roomUser">
               <img id="image6" src="/images/no_user.png"/>
-              <h4 id="user6">username</h4>
+              <div style="width:100px">
+                <h4 id="user6"></h4>
+              </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-2 col-md-offset-6 roomUser">
               <img id="image7" src="/images/no_user.png"/>
-              <h4 id="user7">username</h4>
+              <div style="width:100px">
+                <h4 id="user7"></h4>
+              </div>
             </div>
           </div>
         </div>
@@ -90,15 +103,18 @@
       <div class="row">
         <div class="col-md-2 col-md-offset-2 roomUser">
           <img id="image4" src="/images/no_user.png"/>
-          <h4 id="user4">username</h4>
+          <div style="width:100px">
+            <h4 id="user4"></h4>
+          </div>
         </div>
         <div class="col-md-2 col-md-offset-4 roomUser">
           <img id="image8" src="/images/no_user.png"/>
-          <h4 id="user8">username</h4>
+          <div style="width:100px">
+            <h4 id="user8"></h4>
+          </div>
         </div>
       </div>
     </div>
-    <canvas id="sheet" width="400" height="400"></canvas>
   </body>
   <script src="net/socket.io/socket.io.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
