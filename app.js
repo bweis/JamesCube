@@ -51,7 +51,7 @@ app.get('/sketch', function(req,res) {
 
 // GameServer Logic
 
-var activeGames = {};
+var activeGames = {}; // indexed by socket.room
 
 io.on('connection', function(socket){
 
@@ -85,10 +85,10 @@ io.on('connection', function(socket){
   socket.on('join_lobby', function(data, fn){
     console.log(data);
     var lobbyID = data.lobbyID.toUpperCase();
-    if(lobbyID in io.sockets.adapter.rooms) {
+    if(lobbyID in io.sockets.adapter.rooms && !(lobbyID in activeGames)) {
       socket.join(lobbyID);
       io.to(lobbyID).emit('user_joined', {id: socket.id, name: data.name, sex: data.sex});
-      fn(true);
+      fn(lobbyID);
     } else {
       fn(false);
     }
