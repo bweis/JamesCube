@@ -34,9 +34,9 @@ app.get('/', function(req,res) {
 io.on('connection', function(socket){
 
   // Host
-  socket.on('create_lobby', function(data) {
+  socket.on('create_lobby', function(fn) {
     var lobbyID = rs.generate(4).toUpperCase();
-    socket.emit("create_lobby", {lobbyID: lobbyID});
+    fn(lobbyID);
   });
 
   // Client

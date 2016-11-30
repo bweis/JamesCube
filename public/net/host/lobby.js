@@ -1,6 +1,8 @@
 var socket = io();
 
-socket.emit('create_lobby');
+socket.emit('create_lobby', function(lobbyID) {
+  console.log(lobbyID);
+});
 
 var context = document.getElementById('sheet').getContext("2d");
 var canvas = document.getElementById('sheet');
@@ -13,10 +15,6 @@ var clickX = [];
 var clickY = [];
 var clickDrag = [];
 var paint;
-
-socket.on('create_lobby', function(data) {
-  console.log("Lobby Created: ", data.lobbyID)
-});
 
 socket.on('user_joined', function(userData){
   // html render user joined
