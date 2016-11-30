@@ -26,7 +26,7 @@ function addClick(x, y, dragging) {
     clickY.push(y);
     clickDrag.push(dragging);
 
-    if(clickX.length % 10 == 0 || !paint)
+    //if(clickX.length % 10 == 0 || !paint)
       socket.emit('draw_pic', {clickX: clickX, clickY: clickY, clickDrag: clickDrag});
 }
 
