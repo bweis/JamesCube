@@ -26,9 +26,9 @@ app.get('/', function(req,res) {
   var deviceType = req.device.type.toUpperCase();
   res.setHeader('Content-Type', 'text/html');
   if(deviceType == "DESKTOP")
-    res.send(fs.readFileSync('./host/index.html'));
+    res.send(fs.readFileSync('./host/liarliar/game.html'));
   else
-    res.send(fs.readFileSync('./client/index.html'));
+    res.send(fs.readFileSync('./client/liarliar/game.html'));
 });
 
 app.get('/liarliar', function(req,res) {
