@@ -7,7 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/css/bootstrap2/bootstrap-switch.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.js" integrity="sha256-ecwfW9Xbfvty4r5TIOAOtN/aMiorvYMpfS2Og6H2HWs=" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="stylesheets/style.css">
+
   </head>
   <body>
 
@@ -28,14 +35,7 @@
     <div class="form-group row">
       <div class="col-lg-4 col-lg-offset-4 centered">
         <label class="custom-control custom-radio">
-          <input value="male" name="sex" type="radio" class="custom-control-input" checked>
-          <span class="custom-control-indicator"></span>
-          <span class="custom-control-description">Male</span>
-        </label>
-        <label class="custom-control custom-radio">
-          <input value="female" name="sex" type="radio" class="custom-control-input">
-          <span class="custom-control-indicator"></span>
-          <span class="custom-control-description">Female</span>
+          <input id="sexSwitch" name="sexSwitch" type="checkbox">
         </label>
       </div>
     </div>
@@ -49,7 +49,16 @@
 
   </body>
   <script src="net/socket.io/socket.io.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="net/client/lobby.js"></script>
+
+  <script>
+    $("[name='sexSwitch']").bootstrapSwitch("onText", "Male");
+    $("[name='sexSwitch']").bootstrapSwitch("offText", "Female");
+    $("[name='sexSwitch']").bootstrapSwitch("onColor", "success");
+    $("[name='sexSwitch']").bootstrapSwitch("offColor", "danger");
+    $("[name='sexSwitch']").bootstrapSwitch("labelText", "Choose Sex");
+    $("[name='sexSwitch']").bootstrapSwitch("indeterminate", "true");
+    $("[name='sexSwitch']").bootstrapSwitch("size", "large");
+  </script>
 
 </html>

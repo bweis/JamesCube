@@ -36,14 +36,21 @@ io.on('connection', function(socket){
   // Host
   socket.on('create_lobby', function(fn) {
     var lobbyID = rs.generate(4).toUpperCase();
+    socket.join(lobbyID);
     fn(lobbyID);
   });
 
   // Client
   socket.on('join_lobby', function(data, fn){
     console.log(data);
-    socket.broadcast.emit('user_joined', {name: data.name});
-    fn(true);
+    var lobbyID = data.lobbyID.toUpperCase();
+    if(lobbyID in io.sockets.adapter.rooms) {
+      socket.join(lobbyID);
+      io.to(lobbyID).emit('user_joined', {name: data.name, sex: data.sex});
+      fn(true);
+    } else {
+      fn(false);
+    }
   });
 
   socket.on('draw_pic', function(data){
