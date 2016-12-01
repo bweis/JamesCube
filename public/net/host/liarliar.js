@@ -1,28 +1,26 @@
 var socket = io();
 
 $(document).ready(function() {
-    // Instantiate a counter
-    var clock;
+  var clock;
 
-    $('#gameStartBtn').on("click", function() {
-        $('#instructions').hide();
-        $('#questionContainer').show();
-        $('#stage1').show();
-        // $('#stage2').show();
-        socket.emit('start_game', {room: room}, function(data) {
-          if(data) {
-              console.log('ayy');
-            clock = new FlipClock($('#countdownTimer'), 30, {
-                clockFace: 'Counter',
-                autoStart: true,
-                countdown: true
-            });
-            clock.setTime(30);
-          } else {
-            console.log('err');
-          }
+  $('#gameStartBtn').on("click", function() {
+    $('#instructions').hide();
+    $('#questionContainer').show();
+    $('#stage1').show();
+
+    socket.emit('start_game', {room: room}, function(data) {
+      if(data) {
+        clock = new FlipClock($('#countdownTimer'), 30, {
+          clockFace: 'Counter',
+          autoStart: true,
+          countdown: true
         });
+        clock.setTime(30);
+      } else {
+        console.log('err');
+      }
     });
+  });
 
 });
 
@@ -36,11 +34,11 @@ var room = data.room;
 window.history.pushState("", "", '/liarliar');
 
 if(room === undefined)
-  window.location = "/";
+window.location = "/";
 
 socket.emit('join_game', {room: room}, function(data) {
   if(!data)
-    window.location = "/";
+  window.location = "/";
 });
 
 socket.on('question_selected', function(data) {
@@ -48,7 +46,11 @@ socket.on('question_selected', function(data) {
 });
 
 socket.on('answers_posted', function(data) {
+  $('#stage1').hide();
+  $('#stage2').show();
   console.log(data);
-    $('#stage1').hide();
-    $('#stage2').show();
+  for(answer in data.answers) {
+    var div = '#answer'+(parseInt(answer)+1);
+    $(div).html(data.answers[answer]);
+  }
 });
