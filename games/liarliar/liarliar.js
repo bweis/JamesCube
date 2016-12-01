@@ -10,8 +10,11 @@ function liarliar(room, io) {
 
 // methods
 liarliar.prototype.submitAnswer = function(id, data, cb) {
-  this.activeQuestion.userAnswers[id] = data;
-  this.activeQuestion.userAnswers_arr.push(data.answer);
+  if(this.activeQuestion.userAnswers[data.answer] === undefined)
+    this.activeQuestion.userAnswers[data.answer] = [];
+
+  if(this.activeQuestion.userAnswers[data.answer].indexOf(id) == -1)
+    this.activeQuestion.userAnswers[data.answer].push(id);
   cb(true);
 }
 
@@ -27,14 +30,26 @@ liarliar.prototype.startRound = function() {
   this.questionID = parseInt(Math.random() * (Object.keys(questions).length - 1));
   this.activeQuestion = questions[this.questionID];
   this.activeQuestion.userAnswers = {};
-  this.activeQuestion.userAnswers_arr = [];
 
   this.io.to(this.room).emit('question_selected', {question: transformQuestion(this.activeQuestion.question)});
-  setTimeout(endSubmissionTime.bind(this), 30000);
+  setTimeout(endSubmissionTime.bind(this), 10000);
 }
 
 function endSubmissionTime() {
-  this.io.to(this.room).emit('answers_posted', {answers: this.activeQuestion.userAnswers_arr});
+  var answers = Object.keys(this.activeQuestion.userAnswers);
+  while(answers.length < 8) {
+    var index = Math.floor(Math.random() * (this.activeQuestion.suggestions.length));
+    var suggest = this.activeQuestion.suggestions[index];
+    if(answers.indexOf(suggest) == -1)
+      answers.push(suggest);
+  }
+  var shuffledAnswers = [];
+  while(shuffledAnswers.length < answers.length) {
+    var index = Math.floor(Math.random() * (answers.length));
+    if(shuffledAnswers.indexOf(answers[index]) == -1)
+      shuffledAnswers.push(answers[index]);
+  }
+  this.io.to(this.room).emit('answers_posted', {answers: shuffledAnswers});
 }
 
 module.exports = liarliar;

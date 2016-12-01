@@ -102,7 +102,7 @@ io.on('connection', function(socket){
   socket.on('submit_answer', function(data, fn) {
     for(room in socket.rooms)
       if(room != socket.id)
-        activeGames[room].submitAnswer(socket, data, fn);
+        activeGames[room].submitAnswer(socket.id, data, fn);
   });
 
   var clickX = [];
