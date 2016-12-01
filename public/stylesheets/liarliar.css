@@ -7,10 +7,25 @@ body,html {
     position: fixed;
 }
 
+h1, h2{
+    font-family: 'Cabin Sketch', cursive;
+}
+
+h3,h4,h5,h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
 .questionContainer {
     margin-top: 5%;
     margin-bottom: 5%;
     min-height: 12%;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.instructionsContainer {
+    margin-top: 3%;
+    margin-bottom: 3%;
     text-align: center;
     background-color: #FFFFFF;
 }
