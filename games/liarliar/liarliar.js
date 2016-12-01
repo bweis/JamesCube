@@ -31,7 +31,7 @@ liarliar.prototype.submitAnswer = function(id, data, cb) {
   this.activeQuestion.userAnswers[id] = data;
   this.activeQuestion.userAnswers_arr.push(data.answer);
   cb(true);
-
+  
   this.io.to(this.room).emit('answers_changed', {answers: this.activeQuestion.userAnswers_arr});
 }
 
