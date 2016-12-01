@@ -37,22 +37,33 @@ liarliar.prototype.startRound = function() {
 
 function endSubmissionTime() {
   var answers = Object.keys(this.activeQuestion.userAnswers);
-  while(answers.length < 8) {
+  answers.push(this.activeQuestion.answer);
+  while(answers.length < 9) {
     var index = Math.floor(Math.random() * (this.activeQuestion.suggestions.length));
     var suggest = this.activeQuestion.suggestions[index];
     if(answers.indexOf(suggest) == -1)
       answers.push(suggest);
   }
   var shuffledAnswers = [];
-  while(shuffledAnswers.length < 8) {
+  while(shuffledAnswers.length < 9) {
     var index = Math.floor(Math.random() * (answers.length));
     shuffledAnswers.push(answers[index]);
     answers.splice(index, 1);
   }
 
-  var clients = io.sockets.adapter.rooms[this.room];
-
-  this.io.to(this.room).emit('answers_posted', {answers: shuffledAnswers});
+  var clients = io.sockets.adapter.rooms[this.room].sockets;
+  for(client in clients) {
+    var ans = [];
+    for(a in shuffledAnswers) {
+      a = shuffledAnswers[a];
+      if(this.activeQuestion.userAnswers[a] === undefined) {
+        ans.push(a);
+      } else if(this.activeQuestion.userAnswers[a].indexOf(client) == -1) {
+        ans.push(a);
+      }
+    }
+    this.io.to(client).emit('answers_posted', {answers: ans});
+  }
 }
 
 module.exports = liarliar;

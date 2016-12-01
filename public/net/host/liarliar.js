@@ -44,6 +44,7 @@ socket.on('question_selected', function(data) {
 });
 
 socket.on('answers_posted', function(data) {
+  console.log(data.answers);
   $('#stage1').hide();
   $('#stage2').show();
   console.log(data);

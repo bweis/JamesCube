@@ -34,7 +34,7 @@ socket.on('question_selected', function(data) {
 });
 
 socket.on('answers_posted', function(data) {
-  console.log(data);
+  console.log(data.answers);
 });
 
 $(document).ready(function() {
