@@ -49,7 +49,9 @@ function endSubmissionTime() {
     shuffledAnswers.push(answers[index]);
     answers.splice(index, 1);
   }
-  
+
+  var clients = io.sockets.adapter.rooms[this.room];
+
   this.io.to(this.room).emit('answers_posted', {answers: shuffledAnswers});
 }
 
