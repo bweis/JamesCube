@@ -11,11 +11,8 @@ if(room === undefined)
   window.location = "/";
 
 socket.emit('join_game', {room: room}, function(data) {
-  if(data) {
-    $('#currentQuestion').html(data.question);
-  }else {
+  if(!data)
     window.location = "/";
-  }
 });
 
 $('#submitAnswerButton').click(function() {
@@ -23,4 +20,12 @@ $('#submitAnswerButton').click(function() {
   socket.emit('submit_answer', {answer: answer}, function(data) {
     console.log(data);
   });
+});
+
+socket.on('question_selected', function(data) {
+  $('#currentQuestion').html(data.question);
+});
+
+socket.on('answers_posted', function(data) {
+  console.log(data);
 });

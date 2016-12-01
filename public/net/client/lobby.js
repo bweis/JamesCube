@@ -21,6 +21,6 @@ function joinRoom(form) {
   });
 }
 
-socket.on('game_started', function(data) {
+socket.on('game_created', function(data) {
   window.location = data.gameUrl + "?room="+data.room;
 })

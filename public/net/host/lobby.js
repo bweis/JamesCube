@@ -7,7 +7,7 @@ socket.emit('create_lobby', function(lobbyID) {
 });
 
 $('#liarliar').click(function() {
-  socket.emit('start_game', {gameType: 'liarliar', room: room}, function(data) {
+  socket.emit('create_game', {gameType: 'liarliar', room: room}, function(data) {
     if(data)
       window.location = "/liarliar"+"?room="+room;
     else
