@@ -32,7 +32,7 @@ liarliar.prototype.startRound = function() {
   this.activeQuestion.userAnswers = {};
 
   this.io.to(this.room).emit('question_selected', {question: transformQuestion(this.activeQuestion.question)});
-  setTimeout(endSubmissionTime.bind(this), 10000);
+  setTimeout(endSubmissionTime.bind(this), 30000);
 }
 
 function endSubmissionTime() {
