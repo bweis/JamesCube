@@ -7,7 +7,7 @@ $(document).ready(function() {
     $('#gameStartBtn').on("click", function() {
         $('#instructions').hide();
         $('#questionContainer').show();
-        $('#stage1').show();
+        $('#stage2').show();
         clock = new FlipClock($('#countdownTimer'), 30, {
             clockFace: 'Counter',
             autoStart: true,
