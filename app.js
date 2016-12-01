@@ -72,7 +72,7 @@ io.on('connection', function(socket){
 
   socket.on('start_game', function(data, fn) {
     if(data.gameType = 'lairliar') {
-      activeGames[data.room] = new liarliar(data.room, io);
+      activeGames[data.room].start();
       fn(true);
     }
   });
