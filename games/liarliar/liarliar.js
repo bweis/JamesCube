@@ -44,10 +44,10 @@ function endSubmissionTime() {
       answers.push(suggest);
   }
   var shuffledAnswers = [];
-  while(shuffledAnswers.length < answers.length) {
+  while(shuffledAnswers.length < 8) {
     var index = Math.floor(Math.random() * (answers.length));
-    if(shuffledAnswers.indexOf(answers[index]) == -1)
-      shuffledAnswers.push(answers[index]);
+    shuffledAnswers.push(answers[index]);
+    answers.splice(index, 1);
   }
   this.io.to(this.room).emit('answers_posted', {answers: shuffledAnswers});
 }
