@@ -12,10 +12,10 @@ function joinRoom(form) {
     if(data) {
       console.log('joined room');
       $('#joinForm').css("display", "none");
-      $('#waitingPage').css("display", "inline-block");
+      $('#waitingPage').show();
       $("#roomCode").html(data);
     } else {
-      alert('Room does not exist')
+      alert('Room does not exist');
       console.log('could not join room');
     }
   });

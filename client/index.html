@@ -17,10 +17,10 @@
 
   </head>
   <body>
+    <h1 style="text-align: center">
+    JamesCube
+    </h1>
     <div id="joinForm">
-      <h1 style="color: #E9DBC0; text-align: center">
-        JamesCube
-      </h1>
       <form class="container-fluid" style="padding-top: 10%" action="#" onsubmit="joinRoom(this); return false;">
         <div class="form-group row">
           <div class="col-lg-4 col-lg-offset-4 centered">
@@ -46,23 +46,27 @@
         </div>
       </form>
     </div>
-    <div id="waitingPage" style="display:none;">
-      <div class="row">
-        <div class="col-md-8 centered">
-          <h3>
-            Waiting on game to start
-          </h3>
-          <h2 id="roomCode">
-          </h2>
-        </div>
-      </div>
-      <form class="container-fluid" style="padding-top: 10%" action="/">
-        <div class="form-group row">
-          <div class="col-lg-4 col-lg-offset-4 centered">
-            <button type="submit" class="btn btn-danger btn-block">Leave</button>
+    <div id="waitingPage" hidden="hidden">
+      <div class="container-fluid centered">
+        <div class="row"></div>
+          <div class="col-md-8 col-md-offset-2">
+            <h3>
+              Waiting on game to start
+            </h3>
+            <h2 id="roomCode">
+            </h2>
+            <img src="../images/box.gif" style="display: inline-block"/>
           </div>
-        </div>
-      </form>
+      </div>
+      <div class="row">
+        <form style="padding-top: 10%" action="/">
+          <div class="form-group row">
+            <div class="col-md-4 col-md-offset-4 centered">
+              <button type="submit" class="btn btn-danger btn-lg">Leave</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </body>
   <script src="net/socket.io/socket.io.js"></script>
