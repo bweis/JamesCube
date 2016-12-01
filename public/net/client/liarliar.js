@@ -34,7 +34,14 @@ socket.on('question_selected', function(data) {
 });
 
 socket.on('answers_posted', function(data) {
-  console.log(data);
+  $('#instructions').hide();
+  $('#stage1').hide();
+  $('#stage2').show();
+
+  for(answer in data.answers) {
+    var div = '#answer'+(parseInt(answer)+1);
+    $(div).html(data.answers[answer]);
+  }
 });
 
 $(document).ready(function() {

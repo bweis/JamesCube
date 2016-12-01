@@ -44,6 +44,7 @@ socket.on('question_selected', function(data) {
 });
 
 socket.on('answers_posted', function(data) {
+  console.log(data.answers);
   $('#stage1').hide();
     document.getElementById("questionContainer").className =
         document.getElementById("questionContainer").className.replace(/\bquestion-margin\b/,'');
