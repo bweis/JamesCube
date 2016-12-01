@@ -20,7 +20,9 @@ socket.on('user_joined', function(userData){
   for(var i = 1; i < 9; i++)
     if(users[i] === undefined) {
       users[i] = userData;
-      document.getElementById('image'+i).src = "http://eightbitavatar.herokuapp.com/?id="+userData.name+"&s="+userData.sex+"&size=100";
+      //document.getElementById('image'+i).src = "https://robohash.org/"+userData.name;
+      document.getElementById('image'+i).src = "https://api.adorable.io/avatars/285/"+userData.name;
+      //document.getElementById('image'+i).src = "http://eightbitavatar.herokuapp.com/?id="+userData.name+"&s="+userData.sex+"&size=100";
       document.getElementById('user'+i).innerHTML = userData.name;
       break;
     }
