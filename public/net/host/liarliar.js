@@ -24,8 +24,6 @@ $(document).ready(function() {
 
 });
 
-
-
 if(decodeURI(window.location.search.substring(1)) == "") {
   window.location = "/";
 }

@@ -21,7 +21,8 @@ socket.on('user_joined', function(userData){
     if(users[i] === undefined) {
       users[i] = userData;
       //document.getElementById('image'+i).src = "https://robohash.org/"+userData.name;
-      document.getElementById('image'+i).src = "https://api.adorable.io/avatars/285/"+userData.name;
+      console.log(socket.id)
+      document.getElementById('image'+i).src = "https://api.adorable.io/avatars/285/"+userData.id.substring(userData.id.length-5, userData.length);
       //document.getElementById('image'+i).src = "http://eightbitavatar.herokuapp.com/?id="+userData.name+"&s="+userData.sex+"&size=100";
       document.getElementById('user'+i).innerHTML = userData.name;
       break;
