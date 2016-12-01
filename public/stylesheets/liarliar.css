@@ -7,9 +7,12 @@ body,html {
     position: fixed;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'Open Sans', sans-serif;
+h1, h2{
+    font-family: 'Cabin Sketch', cursive;
+}
 
+h3,h4,h5,h6 {
+    font-family: 'Oswald', sans-serif;
 }
 
 .questionContainer {
