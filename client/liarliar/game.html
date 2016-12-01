@@ -16,6 +16,47 @@
         <div class="container" id="questionContainer">
             <h2 id="currentQuestion"></h2>
         </div>
+        <div id="instructions">
+            <h1 style="text-align:center">How to play Liar Liar</h1>
+            <div class="col-md-6 col-md-offset-3" style="text-align:center; margin-top: 2%">
+                <h3 class="container">Once prompted with a question, you must use your device to enter a bluff to fool your opponent
+                    into thinking it is true
+                    <br>
+                </h3>
+                <h4 class="container">The game consists of 3 rounds. Each round you get scored based on the following criteria</h4>
+                <br>
+                <table class="table table-bordered" style="text-align: center; font-weight: 600">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th class="table-active">Each player you fool</th>
+                        <th class="table-active">Finding the truth</th>
+                        <th class="table-active">For selecting our lie</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th class="table-active" scope="row">Round 1</th>
+                        <td class="table-success">+500 Points</td>
+                        <td class="table-success">+1000 Points</td>
+                        <td class="table-danger">-250 Points</td>
+                    </tr>
+                    <tr>
+                        <th class="table-active" scope="row">Round 2</th>
+                        <td class="table-success">+1000 Points</td>
+                        <td class="table-success">+2000 Points</td>
+                        <td class="table-danger">-500 Points</td>
+                    </tr>
+                    <tr>
+                        <th class="table-active" scope="row">Round 3</th>
+                        <td class="table-success">+1500 Points</td>
+                        <td class="table-success">+3000 Points</td>
+                        <td class="table-danger">-750 Points</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
         <div id="stage1" hidden="hidden">
             <div class="col-md-6 col-md-offset-3" style="text-align:center; margin-top: 10%">
                 <div class="form-group">
@@ -24,7 +65,7 @@
                 <button id="submitAnswerButton" type="submit" class="btn btn-success btn-lg">Submit</button>
             </div>
         </div>
-        <div class="container" id="stage2">
+        <div class="container" id="stage2" hidden="hidden">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 thumbnail">
                     <img class="img-responsive" src="../images/answer_bg.png"/>
