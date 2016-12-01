@@ -3,13 +3,22 @@ var socket = io();
 $(document).ready(function() {
     // Instantiate a counter
     var clock;
-    clock = new FlipClock($('#countdownTimer'), 30, {
-        clockFace: 'Counter',
-        autoStart: true,
-        countdown: true
+
+    $('#gameStartBtn').on("click", function() {
+        $('#instructions').hide();
+        $('#questionContainer').show();
+        $('#stage1').show();
+        clock = new FlipClock($('#countdownTimer'), 30, {
+            clockFace: 'Counter',
+            autoStart: true,
+            countdown: true
+        });
+        clock.setTime(30);
     });
-    clock.setTime(30);
+
 });
+
+
 
 if(decodeURI(window.location.search.substring(1)) == "") {
   window.location = "/";

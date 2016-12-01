@@ -25,3 +25,8 @@ body,html {
 #countdownTimer {
     margin: auto;
 }
+
+#instructions {
+    margin-top: 5%;
+    text-align: center;
+}
