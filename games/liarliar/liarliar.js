@@ -9,10 +9,6 @@ function liarliar(room, io) {
 }
 
 // methods
-liarliar.prototype.data = function() {
-  return {question: transformQuestion(this.activeQuestion.question)};
-}
-
 liarliar.prototype.submitAnswer = function(id, data, cb) {
   this.activeQuestion.userAnswers[id] = data;
   this.activeQuestion.userAnswers_arr.push(data.answer);
@@ -33,7 +29,7 @@ liarliar.prototype.startRound = function() {
   this.activeQuestion.userAnswers = {};
   this.activeQuestion.userAnswers_arr = [];
 
-  this.io.to(this.room).emit('question_selected', {question: this.activeQuestion.question});
+  this.io.to(this.room).emit('question_selected', {question: transformQuestion(this.activeQuestion.question)});
   setTimeout(endSubmissionTime.bind(this), 30000);
 }
 
