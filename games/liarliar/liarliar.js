@@ -15,28 +15,26 @@ function liarliar(room, io) {
   this.activeQuestion.userAnswers_arr = [];
 
   io.to(room).emit('question_selected', {question: this.activeQuestion.question});
+  setTimeout(timesUp.bind(this), 30000);
 }
 
 // methods
-liarliar.prototype.start = function(players) {
-
-}
-
 liarliar.prototype.data = function() {
   return {question: transformQuestion(this.activeQuestion.question)};
 }
 
 liarliar.prototype.submitAnswer = function(id, data, cb) {
-  console.log(data);
   this.activeQuestion.userAnswers[id] = data;
   this.activeQuestion.userAnswers_arr.push(data.answer);
   cb(true);
-  
-  this.io.to(this.room).emit('answers_changed', {answers: this.activeQuestion.userAnswers_arr});
 }
 
 function transformQuestion(question) {
   return question.replace("<BLANK>", "________");
+}
+
+function timesUp() {
+  this.io.to(this.room).emit('answers_posted', {answers: this.activeQuestion.userAnswers_arr});
 }
 
 module.exports = liarliar;

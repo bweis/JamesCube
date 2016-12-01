@@ -8,12 +8,19 @@ $(document).ready(function() {
         $('#instructions').hide();
         $('#questionContainer').show();
         $('#stage1').show();
-        clock = new FlipClock($('#countdownTimer'), 30, {
-            clockFace: 'Counter',
-            autoStart: true,
-            countdown: true
+
+        socket.emit('start_game', {room: room}, function(data) {
+          if(data) {
+            clock = new FlipClock($('#countdownTimer'), 30, {
+                clockFace: 'Counter',
+                autoStart: true,
+                countdown: true
+            });
+            clock.setTime(30);
+          } else {
+            console.log('err');
+          }
         });
-        clock.setTime(30);
     });
 
 });
@@ -31,13 +38,14 @@ if(room === undefined)
   window.location = "/";
 
 socket.emit('join_game', {room: room}, function(data) {
-  if(data) {
-    $('#currentQuestion').html(data.question);
-  }else {
+  if(!data)
     window.location = "/";
-  }
 });
 
-socket.on('answers_changed', function(data) {
+socket.on('question_selected', function(data) {
+  $('#currentQuestion').html(data.question);
+});
+
+socket.on('answers_posted', function(data) {
   console.log(data);
 });
