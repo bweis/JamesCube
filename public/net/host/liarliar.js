@@ -8,9 +8,10 @@ $(document).ready(function() {
         $('#instructions').hide();
         $('#questionContainer').show();
         $('#stage1').show();
-
+        // $('#stage2').show();
         socket.emit('start_game', {room: room}, function(data) {
           if(data) {
+              console.log('ayy');
             clock = new FlipClock($('#countdownTimer'), 30, {
                 clockFace: 'Counter',
                 autoStart: true,
@@ -48,4 +49,6 @@ socket.on('question_selected', function(data) {
 
 socket.on('answers_posted', function(data) {
   console.log(data);
+    $('#stage1').hide();
+    $('#stage2').show();
 });

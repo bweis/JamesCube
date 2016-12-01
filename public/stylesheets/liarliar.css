@@ -28,7 +28,6 @@ h1,h2,h3,h4,h5,h6 {
 
 .centered {
     text-align: center;
-    float: none;
     margin-left: auto;
     margin-right: auto;
 }
@@ -40,4 +39,20 @@ h1,h2,h3,h4,h5,h6 {
 #instructions {
     margin-top: 5%;
     text-align: center;
+}
+
+.answers {
+    margin-top: 5%;
+}
+.thumbnail {
+    position: relative;
+    background: none;
+    border: none;
+    text-align: center;
+}
+
+.caption {
+    position: absolute;
+    top: 40%;
+    width: 100%;
 }

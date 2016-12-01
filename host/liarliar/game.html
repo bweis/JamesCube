@@ -4,78 +4,127 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="../../net/flipclock/flipclock.min.js"></script>
     <script src="../../net/host/liarliar.js"></script>
     <link rel="stylesheet" href="../../net/flipclock/flipclock.css">
     <link rel="stylesheet" href="../../stylesheets/liarliar.css">
-    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Oswald" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Oswald" rel="stylesheet">
+</head>
 
 <body style="min-width: 992px; overflow: hidden">
-
-<div class="container" id="instructions">
-    <h1 style="color: #E74C3C; text-align: center; font-weight: bolder">How To Play Liar Liar</h1>
-
-    <h2 class="container">Once prompted with a question, you must use your device to enter a bluff to fool your opponent into thinking it is true
+    <div class="container" id="instructions">
+        <h2 class="container">Once prompted with a question, you must use your device to enter a bluff to fool your opponent
+            into thinking it is true
+            <br>
+            <br>
+            <br>
+        </h2>
+        <h4 class="container">The game consists of 3 rounds. Each round you get scored based on the following criteria</h4>
         <br>
-        <br>
-        <br>
-    </h2>
-    <h4 class="container">The game consists of 3 rounds.  Each round you get scored based on the following criteria</h4>
-    <br>
-    <table class="table table-bordered" style="text-align: center; font-weight: 600">
-        <thead>
-        <tr>
-            <th></th>
-            <th class="table-active">Each player you fool</th>
-            <th class="table-active">Finding the truth</th>
-            <th class="table-active">For selecting our lie</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th class="table-active" scope="row">Round 1</th>
-            <td class="table-success">+500 Points</td>
-            <td class="table-success">+1000 Points</td>
-            <td class="table-danger">-250 Points</td>
-        </tr>
-        <tr>
-            <th class="table-active" scope="row">Round 2</th>
-            <td class="table-success">+1000 Points</td>
-            <td class="table-success">+2000 Points</td>
-            <td class="table-danger">-500 Points</td>
-        </tr>
-        <tr>
-            <th class="table-active" scope="row">Round 3</th>
-            <td class="table-success">+1500 Points</td>
-            <td class="table-success">+3000 Points</td>
-            <td class="table-danger">-750 Points</td>
-        </tr>
-        </tbody>
-    </table>
-    <button type="submit" id="gameStartBtn" class="btn btn-success btn-lg" style="margin: auto">
-        Understand?  Let's Play!
-        <span class="glyphicon glyphicon-play"></span>
-    </button>
-</div>
-<div class="container questionContainer" id="questionContainer" hidden="hidden">
-    <h2 id="currentQuestion"></h2>
-</div>
-<div id="stage1" hidden="hidden">
-    <div class="col-md-4 col-md-offset-4" style="text-align: center">
-        <div id="countdownTimer" style="display: inline-block; width: auto;"></div>
+        <table class="table table-bordered" style="text-align: center; font-weight: 600">
+            <thead>
+            <tr>
+                <th></th>
+                <th class="table-active">Each player you fool</th>
+                <th class="table-active">Finding the truth</th>
+                <th class="table-active">For selecting our lie</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th class="table-active" scope="row">Round 1</th>
+                <td class="table-success">+500 Points</td>
+                <td class="table-success">+1000 Points</td>
+                <td class="table-danger">-250 Points</td>
+            </tr>
+            <tr>
+                <th class="table-active" scope="row">Round 2</th>
+                <td class="table-success">+1000 Points</td>
+                <td class="table-success">+2000 Points</td>
+                <td class="table-danger">-500 Points</td>
+            </tr>
+            <tr>
+                <th class="table-active" scope="row">Round 3</th>
+                <td class="table-success">+1500 Points</td>
+                <td class="table-success">+3000 Points</td>
+                <td class="table-danger">-750 Points</td>
+            </tr>
+            </tbody>
+        </table>
+        <button type="submit" id="gameStartBtn" class="btn btn-success btn-lg" style="margin: auto">
+            Understand? Let's Play!
+            <span class="glyphicon glyphicon-play"></span>
+        </button>
     </div>
-</div>
-<div id="stage2" hidden="hidden">
-    <h3>answers</h3>
-</div>
-<div id="stage3" hidden="hidden">
-    <h3>results and score</h3>
-</div>
+    </div>
+    <div class="container questionContainer" id="questionContainer" hidden="hidden">
+        <h2 id="currentQuestion"></h2>
+    </div>
+    <div id="stage1" hidden="hidden">
+        <div class="col-md-4 col-md-offset-4" style="text-align: center">
+            <div id="countdownTimer" style="display: inline-block; width: auto;"></div>
+        </div>
+    </div>
+    <div class="container" id="stage2" hidden="hidden">
+        <div class="row">
+            <div class="col-md-3 thumbnail">
+                <img class="img-responsive" src="../images/answer_bg.png"/>
+                <div class="caption">
+                    <h4 id="answer1"></h4>
+                </div>
+            </div>
+            <div class="col-md-3 thumbnail">
+                <img class="img-responsive" src="../images/answer_bg.png"/>
+                <div class="caption">
+                    <h4 id="answer2"></h4>
+                </div>
+            </div>
+            <div class="col-md-3 thumbnail">
+                <img class="img-responsive" src="../images/answer_bg.png"/>
+                <div class="caption">
+                    <h4 id="answer3"></h4>
+                </div>
+            </div>
+            <div class="col-md-3 thumbnail">
+                <img class="img-responsive" src="../images/answer_bg.png"/>
+                <div class="caption">
+                    <h4 id="answer4"></h4>
+                </div>
+            </div>
+        </div>
+        <div class="row answers">
+            <div class="col-md-3 thumbnail">
+                <img class="img-responsive" src="../images/answer_bg.png"/>
+                <div class="caption">
+                    <h4 id="answer5"></h4>
+                </div>
+            </div>
+            <div class="col-md-3 thumbnail">
+                <img class="img-responsive" src="../images/answer_bg.png"/>
+                <div class="caption">
+                    <h4 id="answer6"></h4>
+                </div>
+            </div>
+            <div class="col-md-3 thumbnail">
+                <img class="img-responsive" src="../images/answer_bg.png"/>
+                <div class="caption">
+                    <h4 id="answer7"></h4>
+                </div>
+            </div>
+            <div class="col-md-3 thumbnail">
+                <img class="img-responsive" src="../images/answer_bg.png"/>
+                <div class="caption">
+                    <h4 id="answer8"></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="stage3" hidden="hidden">
+        <h3>results and score</h3>
+    </div>
 </body>
 <script src="net/socket.io/socket.io.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
