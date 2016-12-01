@@ -29,3 +29,9 @@ socket.on('question_selected', function(data) {
 socket.on('answers_posted', function(data) {
   console.log(data);
 });
+
+$(document).ready(function() {
+  $('#mobileAnswersTable').on('click', '.clickable-row', function(event) {
+    $(this).addClass('active').siblings().removeClass('active');
+  });
+});
