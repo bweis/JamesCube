@@ -79,7 +79,7 @@ io.on('connection', function(socket){
   });
 
   socket.on('create_game', function(data, fn) {
-    if(data.gameType == 'lairliar') {
+    if(data.gameType == 'liarliar') {
       io.to(data.room).emit('game_created', {gameUrl: '/liarliar', room: data.room});
       activeGames[data.room] = new liarliar(data.room, io, endGame.bind(this));
       fn(true);

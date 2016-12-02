@@ -37,13 +37,24 @@ liarliar.prototype.submitAnswer = function(id, data, cb) {
     this.activeQuestion.userAnswers[data.answer].creators.push(id);
 
   cb(true);
+
+  if(Object.keys(this.activeQuestion.userAnswers).length >= Object.keys(io.sockets.adapter.rooms[this.room].sockets).length) {
+    clearTimeout(this.endSubTimer);
+    endSubmissionTime.bind(this)();
+  }
 }
 
 liarliar.prototype.selectAnswer = function(id, data, cb) {
   if(this.activeQuestion.userAnswers[data.answer].votes === undefined)
     this.activeQuestion.userAnswers[data.answer].votes = [];
 
+  this.activeQuestion.userVotes += 1;
   this.activeQuestion.userAnswers[data.answer].votes.push(id);
+
+  if(this.activeQuestion.userVotes >= Object.keys(io.sockets.adapter.rooms[this.room].sockets).length - 1) {
+    clearTimeout(this.endSelTimer);
+    endSelectionTime.bind(this)();
+  }
 
   // if(this.activeQuestion.userAnswers[data.answer] === undefined)
   //   this.activeQuestion.userAnswers[data.answer] = [];
@@ -66,13 +77,14 @@ liarliar.prototype.startRound = function() {
   this.activeQuestion = questions[this.questionID];
   this.activeQuestion.answer = this.activeQuestion.answer.toLowerCase();
   this.activeQuestion.userAnswers = {};
+  this.activeQuestion.userVotes = 0;
   this.activeQuestion.userAnswers[this.activeQuestion.answer] = {correct: true};
   this.activeQuestion.userAnswers[this.activeQuestion.answer].creators = [];
 
   console.log(this.activeQuestion.answer);
 
   this.io.to(this.room).emit('question_selected', {question: transformQuestion(this.activeQuestion.question)});
-  setTimeout(endSubmissionTime.bind(this), 5000);
+  this.endSubTimer = setTimeout(endSubmissionTime.bind(this), 30000);
 }
 
 liarliar.prototype.checkRoomStatus = function() {
@@ -129,7 +141,7 @@ function endSubmissionTime() {
     }
     this.io.to(client).emit('answers_posted', {answers: ans});
   }
-  setTimeout(endSelectionTime.bind(this), 5000);
+  this.endSelTimer = setTimeout(endSelectionTime.bind(this), 30000);
 }
 
 function endSelectionTime() {
