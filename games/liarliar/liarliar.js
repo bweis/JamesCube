@@ -5,18 +5,22 @@ function liarliar(room, io) {
   this.room = room;
   this.scores = {};
   this.rounds = {};
+  this.players = {};
   this.io = io;
 }
 
 // methods
+
+liarliar.prototype.addPlayer = function(id, name) {
+  this.players[id] = name;
+}
+
 liarliar.prototype.submitAnswer = function(id, data, cb) {
+  data.answer = data.answer.toLowerCase();
   if(this.activeQuestion.userAnswers[data.answer] === undefined) {
     this.activeQuestion.userAnswers[data.answer] = {};
     this.activeQuestion.userAnswers[data.answer].creators = [];
   }
-
-  if(this.activeQuestion.userAnswers[data.answer].creators.indexOf(id) == -1)
-    this.activeQuestion.userAnswers[data.answer].creators.push(id);
 
   var userAnswer = data.answer.toLowerCase();
   var realAnswers = [this.activeQuestion.answer.toLowerCase()];
@@ -27,6 +31,9 @@ liarliar.prototype.submitAnswer = function(id, data, cb) {
     cb(false);
     return;
   }
+
+  if(this.activeQuestion.userAnswers[data.answer].creators.indexOf(id) == -1)
+    this.activeQuestion.userAnswers[data.answer].creators.push(id);
 
   cb(true);
 }
@@ -55,14 +62,15 @@ liarliar.prototype.start = function() {
 liarliar.prototype.startRound = function() {
   this.questionID = parseInt(Math.random() * (Object.keys(questions).length - 1));
   this.activeQuestion = questions[this.questionID];
+  this.activeQuestion.answer = this.activeQuestion.answer.toLowerCase();
   this.activeQuestion.userAnswers = {};
   this.activeQuestion.userAnswers[this.activeQuestion.answer] = {correct: true};
-  this.activeQuestion.userAnswers[this.activeQuestion.answer].creators = []
+  this.activeQuestion.userAnswers[this.activeQuestion.answer].creators = [];
 
-  console.log("ANS: " + this.activeQuestion.answer);
+  console.log(this.activeQuestion.answer);
 
   this.io.to(this.room).emit('question_selected', {question: transformQuestion(this.activeQuestion.question)});
-  setTimeout(endSubmissionTime.bind(this), 10000);
+  setTimeout(endSubmissionTime.bind(this), 15000);
 }
 
 function endSubmissionTime() {
@@ -104,10 +112,43 @@ function endSubmissionTime() {
 }
 
 function endSelectionTime() {
-  console.log(this.activeQuestion);
 
+  var scores = {};
 
-  this.io.to(client).emit('scores_posted', {});
+  var roundAnswers = this.activeQuestion.userAnswers;
+
+  var clients = io.sockets.adapter.rooms[this.room].sockets;
+
+  for(client in clients) {
+    if(this.players[client] !== undefined) {
+      scores[client] = {
+        id: client,
+        nick: this.players[client],
+        score: 0
+      };
+    }
+    this.io.to(client).emit('scores_posted', {scores: scores});
+  }
+
+  for(ans in roundAnswers) {
+    var ans = roundAnswers[ans];
+    for(voter in ans.votes) {
+      voter = ans.votes[voter];
+      if(ans.correct) {
+        scores[voter].score += 1000;
+      } else {
+        for(crtr in ans.creators) {
+          crtr = ans.creators[crtr];
+          scores[crtr].score += 500;
+        }
+        if(ans.creators === undefined) {
+          scores[voter].score -= 250;
+        }
+      }
+    }
+  }
+
+  this.io.to(this.room).emit('scores_posted', {scores: scores});
 }
 
 module.exports = liarliar;

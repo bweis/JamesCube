@@ -5,12 +5,13 @@ if(decodeURI(window.location.search.substring(1)) == "") {
 }
 var data = JSON.parse('{"' + decodeURI(window.location.search.substring(1)).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}');
 var room = data.room;
+var nickname = data.nickname;
 window.history.pushState("", "", '/liarliar');
 
 if(room === undefined)
   window.location = "/";
 
-socket.emit('join_game', {room: room}, function(data) {
+socket.emit('join_game', {room: room, name: nickname}, function(data) {
   if(!data)
     window.location = "/";
 
@@ -47,6 +48,7 @@ socket.on('answers_posted', function(data) {
     $(div).html(data.answers[answer]);
     $(div).click(function() {
       socket.emit('select_answer', {answer: this.innerHTML});
+      $('#stage2').hide();
     })
   }
 });

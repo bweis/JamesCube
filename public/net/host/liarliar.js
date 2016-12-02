@@ -58,4 +58,5 @@ socket.on('answers_posted', function(data) {
 
 socket.on('scores_posted', function(data) {
   console.log('scores posted');
+  console.log(data);
 });

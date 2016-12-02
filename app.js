@@ -81,6 +81,7 @@ io.on('connection', function(socket){
   socket.on('join_game', function(data, fn) {
     if(data.room in activeGames) {
       socket.join(data.room);
+      activeGames[data.room].addPlayer(socket.id, data.name);
       fn(true)
     } else {
       fn(false);
