@@ -1,15 +1,33 @@
 var socket = io();
 
 var room;
-socket.emit('create_lobby', function(lobbyID) {
+
+if(decodeURI(window.location.search.substring(1)) !== "") {
+  var data = JSON.parse('{"' + decodeURI(window.location.search.substring(1)).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}');
+  room = data.room;
+}
+
+window.history.pushState("", "", '/');
+
+socket.emit('create_lobby', {room: room}, function(lobbyID) {
   room = lobbyID;
   document.getElementById("roomCode").innerHTML = lobbyID;
 });
+
 
 $('#liarliar').click(function() {
   socket.emit('create_game', {gameType: 'liarliar', room: room}, function(data) {
     if(data)
       window.location = "/liarliar"+"?room="+room;
+    else
+      console.log('err starting game');
+  });
+});
+
+$('#sketch').click(function() {
+  socket.emit('create_game', {gameType: 'sketch', room: room}, function(data) {
+    if(data)
+      window.location = "/sketch"+"?room="+room;
     else
       console.log('err starting game');
   });
@@ -22,7 +40,7 @@ socket.on('user_joined', function(userData){
       users[i] = userData;
       //document.getElementById('image'+i).src = "https://robohash.org/"+userData.name;
       console.log(socket.id)
-      document.getElementById('image'+i).src = "https://api.adorable.io/avatars/285/"+userData.id.substring(userData.id.length-5, userData.length);
+      document.getElementById('image'+i).src = "https://api.adorable.io/avatars/285/"+userData.name//userData.id.substring(userData.id.length-5, userData.length);
       //document.getElementById('image'+i).src = "http://eightbitavatar.herokuapp.com/?id="+userData.name+"&s="+userData.sex+"&size=100";
       document.getElementById('user'+i).innerHTML = userData.name;
       break;

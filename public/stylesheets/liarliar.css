@@ -3,15 +3,19 @@ body,html {
     height: 100%;
     margin: 0 auto;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    position: fixed;
 }
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Oswald', sans-serif;
 }
 
+.question-margin {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
 .questionContainer {
-    margin-top: 5%;
-    margin-bottom: 5%;
     min-height: 12%;
     text-align: center;
     background-color: #fbfaf3;
@@ -31,7 +35,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #countdownTimer {
-    margin: auto;
+    margin-top:20%;
 }
 
 #instructions {
@@ -39,9 +43,6 @@ h1,h2,h3,h4,h5,h6 {
     text-align: center;
 }
 
-.answers {
-    margin-top: 5%;
-}
 .thumbnail {
     position: relative;
     background: none;

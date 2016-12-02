@@ -8,7 +8,8 @@ var fs = require('fs');
 var device = require('express-device');
 var rs = require('randomstring');
 
-var liarliar = require("./games/liarliar/liarliar.js")
+var liarliar = require("./games/liarliar/liarliar.js");
+var sketch = require("./games/sketch/sketch.js");
 
 var app = express();
 httpServer = http.createServer(app);
@@ -52,20 +53,39 @@ app.get('/sketch', function(req,res) {
 // GameServer Logic
 
 var activeGames = {}; // indexed by socket.room
+function endGame(id) {
+  delete activeGames[id];
+  if(io.sockets.adapter.rooms[id] !== undefined) {
+    var clients = io.sockets.adapter.rooms[id].sockets;
+    for(client in clients) {
+      io.to(client).emit('game_ended');
+    }
+  }
+}
 
 io.on('connection', function(socket){
 
   // Host
-  socket.on('create_lobby', function(fn) {
+  socket.on('create_lobby', function(data, fn) {
+    if(data.room !== undefined) {
+      data.room = data.room.toUpperCase();
+      socket.join(data.room);
+      fn(data.room);
+      return;
+    }
     var lobbyID = rs.generate(4).toUpperCase();
     socket.join(lobbyID);
     fn(lobbyID);
   });
 
   socket.on('create_game', function(data, fn) {
-    if(data.gameType = 'lairliar') {
+    if(data.gameType == 'liarliar') {
       io.to(data.room).emit('game_created', {gameUrl: '/liarliar', room: data.room});
-      activeGames[data.room] = new liarliar(data.room, io);
+      activeGames[data.room] = new liarliar(data.room, io, endGame.bind(this));
+      fn(true);
+    } else if(data.gameType == 'sketch') {
+      io.to(data.room).emit('game_created', {gameUrl: '/sketch', room: data.room});
+      activeGames[data.room] = new sketch(data.room, io, endGame.bind(this));
       fn(true);
     }
   });
@@ -77,10 +97,15 @@ io.on('connection', function(socket){
     }
   });
 
+  socket.on('end_game', function(data, fn) {
+    activeGames[data.room].endGame();
+  });
+
   // Both
   socket.on('join_game', function(data, fn) {
     if(data.room in activeGames) {
       socket.join(data.room);
+      activeGames[data.room].addPlayer(socket.id, data.name);
       fn(true)
     } else {
       fn(false);
@@ -103,6 +128,12 @@ io.on('connection', function(socket){
     for(room in socket.rooms)
       if(room != socket.id)
         activeGames[room].submitAnswer(socket.id, data, fn);
+  });
+
+  socket.on('select_answer', function(data) {
+    for(room in socket.rooms)
+      if(room != socket.id)
+        activeGames[room].selectAnswer(socket.id, data);
   });
 
   var clickX = [];

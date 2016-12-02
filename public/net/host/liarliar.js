@@ -22,6 +22,10 @@ $(document).ready(function() {
     });
   });
 
+  $('#gameEndBtn').on("click", function() {
+    socket.emit('end_game', {room: room});
+    window.location = "/"+"?room="+room;
+  });
 });
 
 if(decodeURI(window.location.search.substring(1)) == "") {
@@ -32,7 +36,7 @@ var room = data.room;
 window.history.pushState("", "", '/liarliar');
 
 if(room === undefined)
-window.location = "/";
+  window.location = "/";
 
 socket.emit('join_game', {room: room}, function(data) {
   if(!data)
@@ -44,11 +48,21 @@ socket.on('question_selected', function(data) {
 });
 
 socket.on('answers_posted', function(data) {
+  console.log(data.answers);
   $('#stage1').hide();
+    document.getElementById("questionContainer").className =
+        document.getElementById("questionContainer").className.replace(/\bquestion-margin\b/,'');
   $('#stage2').show();
   console.log(data);
   for(answer in data.answers) {
     var div = '#answer'+(parseInt(answer)+1);
     $(div).html(data.answers[answer]);
   }
+});
+
+socket.on('scores_posted', function(data) {
+  $('#stage2').hide();
+  $('#stage3').show();
+  console.log('scores posted');
+  console.log(data);
 });

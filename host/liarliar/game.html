@@ -15,6 +15,9 @@
 </head>
 
 <body style="min-width: 992px; overflow: hidden">
+    <div class="row">
+        <h1 style="text-align:center">JAMESCUBE</h1>
+    </div>
     <div class="container" id="instructions">
         <h2 class="container">Once prompted with a question, you must use your device to enter a bluff to fool your opponent
             into thinking it is true
@@ -60,7 +63,7 @@
         </button>
     </div>
     </div>
-    <div class="container questionContainer" id="questionContainer" hidden="hidden">
+    <div class="container questionContainer question-margin" id="questionContainer" hidden="hidden">
         <h2 id="currentQuestion"></h2>
     </div>
     <div id="stage1" hidden="hidden">
@@ -70,60 +73,72 @@
     </div>
     <div class="container" id="stage2" hidden="hidden">
         <div class="row">
-            <div class="col-md-3 thumbnail">
+            <div class="col-md-4 thumbnail">
                 <img class="img-responsive" src="../images/answer_bg.png"/>
                 <div class="caption">
                     <h4 id="answer1"></h4>
                 </div>
             </div>
-            <div class="col-md-3 thumbnail">
+            <div class="col-md-4 thumbnail">
                 <img class="img-responsive" src="../images/answer_bg.png"/>
                 <div class="caption">
                     <h4 id="answer2"></h4>
                 </div>
             </div>
-            <div class="col-md-3 thumbnail">
+            <div class="col-md-4 thumbnail">
                 <img class="img-responsive" src="../images/answer_bg.png"/>
                 <div class="caption">
                     <h4 id="answer3"></h4>
                 </div>
             </div>
-            <div class="col-md-3 thumbnail">
+        </div>
+        <div class="row answers">
+            <div class="col-md-4 thumbnail">
                 <img class="img-responsive" src="../images/answer_bg.png"/>
                 <div class="caption">
                     <h4 id="answer4"></h4>
                 </div>
             </div>
-        </div>
-        <div class="row answers">
-            <div class="col-md-3 thumbnail">
+            <div class="col-md-4 thumbnail">
                 <img class="img-responsive" src="../images/answer_bg.png"/>
                 <div class="caption">
                     <h4 id="answer5"></h4>
                 </div>
             </div>
-            <div class="col-md-3 thumbnail">
+            <div class="col-md-4 thumbnail">
                 <img class="img-responsive" src="../images/answer_bg.png"/>
                 <div class="caption">
                     <h4 id="answer6"></h4>
                 </div>
             </div>
-            <div class="col-md-3 thumbnail">
+        </div>
+        <div class="row answers">
+            <div class="col-md-4 thumbnail">
                 <img class="img-responsive" src="../images/answer_bg.png"/>
                 <div class="caption">
                     <h4 id="answer7"></h4>
                 </div>
             </div>
-            <div class="col-md-3 thumbnail">
+            <div class="col-md-4 thumbnail">
                 <img class="img-responsive" src="../images/answer_bg.png"/>
                 <div class="caption">
                     <h4 id="answer8"></h4>
+                </div>
+            </div>
+            <div class="col-md-4 thumbnail">
+                <img class="img-responsive" src="../images/answer_bg.png"/>
+                <div class="caption">
+                    <h4 id="answer9"></h4>
                 </div>
             </div>
         </div>
     </div>
     <div id="stage3" hidden="hidden">
         <h3>results and score</h3>
+        <button type="submit" id="gameEndBtn" class="btn btn-success btn-lg" style="margin: auto">
+            Return to lobby
+            <span class="glyphicon glyphicon-play"></span>
+        </button>
     </div>
 </body>
 <script src="net/socket.io/socket.io.js"></script>
