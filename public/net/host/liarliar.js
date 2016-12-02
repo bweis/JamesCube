@@ -55,3 +55,7 @@ socket.on('answers_posted', function(data) {
     $(div).html(data.answers[answer]);
   }
 });
+
+socket.on('scores_posted', function(data) {
+  console.log('scores posted');
+});

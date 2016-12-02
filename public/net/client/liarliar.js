@@ -22,7 +22,11 @@ socket.emit('join_game', {room: room}, function(data) {
 $('#submitAnswerButton').click(function() {
   var answer = $('#submitAnswer').val();
   socket.emit('submit_answer', {answer: answer}, function(data) {
-    console.log(data);
+    if(data) {
+      $('#stage1').hide();
+    } else {
+      alert('That is the correct answer, try to fool your opponents');
+    }
   });
 });
 
@@ -41,7 +45,14 @@ socket.on('answers_posted', function(data) {
   for(answer in data.answers) {
     var div = '#answer'+(parseInt(answer)+1);
     $(div).html(data.answers[answer]);
+    $(div).click(function() {
+      socket.emit('select_answer', {answer: this.innerHTML});
+    })
   }
+});
+
+socket.on('scores_posted', function(data) {
+  console.log('scores posted');
 });
 
 $(document).ready(function() {

@@ -105,6 +105,12 @@ io.on('connection', function(socket){
         activeGames[room].submitAnswer(socket.id, data, fn);
   });
 
+  socket.on('select_answer', function(data) {
+    for(room in socket.rooms)
+      if(room != socket.id)
+        activeGames[room].selectAnswer(socket.id, data);
+  });
+
   var clickX = [];
   var clickY = [];
   var clickDrag = [];
