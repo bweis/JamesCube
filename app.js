@@ -52,11 +52,26 @@ app.get('/sketch', function(req,res) {
 // GameServer Logic
 
 var activeGames = {}; // indexed by socket.room
+function endGame(id) {
+  delete activeGames[id];
+  if(io.sockets.adapter.rooms[id] !== undefined) {
+    var clients = io.sockets.adapter.rooms[id].sockets;
+    for(client in clients) {
+      io.to(client).emit('game_ended');
+    }
+  }
+}
 
 io.on('connection', function(socket){
 
   // Host
-  socket.on('create_lobby', function(fn) {
+  socket.on('create_lobby', function(data, fn) {
+    if(data.room !== undefined) {
+      data.room = data.room.toUpperCase();
+      socket.join(data.room);
+      fn(data.room);
+      return;
+    }
     var lobbyID = rs.generate(4).toUpperCase();
     socket.join(lobbyID);
     fn(lobbyID);
@@ -65,7 +80,7 @@ io.on('connection', function(socket){
   socket.on('create_game', function(data, fn) {
     if(data.gameType = 'lairliar') {
       io.to(data.room).emit('game_created', {gameUrl: '/liarliar', room: data.room});
-      activeGames[data.room] = new liarliar(data.room, io);
+      activeGames[data.room] = new liarliar(data.room, io, endGame.bind(this));
       fn(true);
     }
   });
@@ -75,6 +90,10 @@ io.on('connection', function(socket){
       activeGames[data.room].start();
       fn(true);
     }
+  });
+
+  socket.on('end_game', function(data, fn) {
+    activeGames[data.room].endGame();
   });
 
   // Both

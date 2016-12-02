@@ -1,12 +1,13 @@
 var questions = require("./questions.json");
 
 // constructor
-function liarliar(room, io) {
+function liarliar(room, io, end) {
   this.room = room;
   this.scores = {};
   this.rounds = {};
   this.players = {};
   this.io = io;
+  this.end = end;
 }
 
 // methods
@@ -57,6 +58,7 @@ function transformQuestion(question) {
 
 liarliar.prototype.start = function() {
   this.startRound();
+  setTimeout(this.checkRoomStatus.bind(this), 5000);
 }
 
 liarliar.prototype.startRound = function() {
@@ -70,10 +72,29 @@ liarliar.prototype.startRound = function() {
   console.log(this.activeQuestion.answer);
 
   this.io.to(this.room).emit('question_selected', {question: transformQuestion(this.activeQuestion.question)});
-  setTimeout(endSubmissionTime.bind(this), 15000);
+  setTimeout(endSubmissionTime.bind(this), 5000);
+}
+
+liarliar.prototype.checkRoomStatus = function() {
+  if(this.io.sockets.adapter.rooms[this.room] === undefined) {
+    this.end(this.room);
+    return false;
+  }
+
+  return true;
+}
+
+liarliar.prototype.endGame = function() {
+  setTimeout(function() {
+    this.end(this.room)
+  }.bind(this), 500);
 }
 
 function endSubmissionTime() {
+  if(!this.checkRoomStatus()) {
+    return;
+  }
+
   if(this.activeQuestion.userAnswers[this.activeQuestion.answer] === undefined) {
     this.activeQuestion.userAnswers[this.activeQuestion.answer] = {};
   }
@@ -108,10 +129,13 @@ function endSubmissionTime() {
     }
     this.io.to(client).emit('answers_posted', {answers: ans});
   }
-  setTimeout(endSelectionTime.bind(this), 10000);
+  setTimeout(endSelectionTime.bind(this), 5000);
 }
 
 function endSelectionTime() {
+  if(!this.checkRoomStatus()) {
+    return;
+  }
 
   var scores = {};
 

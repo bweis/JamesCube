@@ -22,6 +22,10 @@ $(document).ready(function() {
     });
   });
 
+  $('#gameEndBtn').on("click", function() {
+    socket.emit('end_game', {room: room});
+    window.location = "/"+"?room="+room;
+  });
 });
 
 if(decodeURI(window.location.search.substring(1)) == "") {
@@ -32,7 +36,7 @@ var room = data.room;
 window.history.pushState("", "", '/liarliar');
 
 if(room === undefined)
-window.location = "/";
+  window.location = "/";
 
 socket.emit('join_game', {room: room}, function(data) {
   if(!data)
@@ -57,6 +61,8 @@ socket.on('answers_posted', function(data) {
 });
 
 socket.on('scores_posted', function(data) {
+  $('#stage2').hide();
+  $('#stage3').show();
   console.log('scores posted');
   console.log(data);
 });

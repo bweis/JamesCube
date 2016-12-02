@@ -57,6 +57,12 @@ socket.on('scores_posted', function(data) {
   console.log('scores posted');
 });
 
+
+socket.on('game_ended', function(data) {
+  console.log('game ended');
+  window.location = "/"+"?room="+room+"&nickname="+nickname;
+});
+
 $(document).ready(function() {
   $('#mobileAnswersTable').on('click', '.clickable-row', function(event) {
     $(this).addClass('active').siblings().removeClass('active');
