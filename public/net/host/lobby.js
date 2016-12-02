@@ -24,6 +24,15 @@ $('#liarliar').click(function() {
   });
 });
 
+$('#sketch').click(function() {
+  socket.emit('create_game', {gameType: 'sketch', room: room}, function(data) {
+    if(data)
+      window.location = "/sketch"+"?room="+room;
+    else
+      console.log('err starting game');
+  });
+});
+
 var users = {};
 socket.on('user_joined', function(userData){
   for(var i = 1; i < 9; i++)

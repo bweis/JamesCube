@@ -8,7 +8,8 @@ var fs = require('fs');
 var device = require('express-device');
 var rs = require('randomstring');
 
-var liarliar = require("./games/liarliar/liarliar.js")
+var liarliar = require("./games/liarliar/liarliar.js");
+var sketch = require("./games/sketch/sketch.js");
 
 var app = express();
 httpServer = http.createServer(app);
@@ -78,9 +79,13 @@ io.on('connection', function(socket){
   });
 
   socket.on('create_game', function(data, fn) {
-    if(data.gameType = 'lairliar') {
+    if(data.gameType == 'lairliar') {
       io.to(data.room).emit('game_created', {gameUrl: '/liarliar', room: data.room});
       activeGames[data.room] = new liarliar(data.room, io, endGame.bind(this));
+      fn(true);
+    } else if(data.gameType == 'sketch') {
+      io.to(data.room).emit('game_created', {gameUrl: '/sketch', room: data.room});
+      activeGames[data.room] = new sketch(data.room, io, endGame.bind(this));
       fn(true);
     }
   });
