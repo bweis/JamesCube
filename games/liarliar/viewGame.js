@@ -32,11 +32,13 @@ function getGameData(id, cb) {
     if (err) {
       response.status(500).send(err);
     } else {
-      dbClient.query('select gameobject from games where id=$1', [id], function (err,result){
+      dbClient.query('SELECT gameobject from games WHERE id = $1', [id], function (err,result){
         if (err) {
-          console.log(err)
+          console.log("DB Query Err:");
+          console.log(err);
+        } else {
+          cb(result);
         }
-        cb(result);
       });
     }
   });
