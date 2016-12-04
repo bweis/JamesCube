@@ -57,7 +57,7 @@ app.get('/view/:id', function(req,res) {
   console.log(id);
   viewLL(id, function(data) {
     res.setHeader('Content-Type', 'text/json');
-    res.send(viewLL(data));
+    res.send(data);
   });
 });
 

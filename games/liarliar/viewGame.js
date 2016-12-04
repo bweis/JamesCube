@@ -28,15 +28,11 @@ if(!local) {
 
 
 function getGameData(id, cb) {
-  console.log('Connecting to db');
   dbClient.connect(function(err) {
     if (err) {
       console.log('DB Connect Err');
     } else {
-      console.log('DB connected')
       dbClient.query('SELECT gameobject from games WHERE id = $1', [id], function (err,result){
-        console.log('DB Query Complete');
-        console.log(result);
         if (err) {
           console.log("DB Query Err:");
           console.log(err);
