@@ -189,7 +189,7 @@ function endSelectionTime() {
 
   var config = {
     user: 'admin', //env var: PGUSER
-    database: 'games', //env var: PGDATABASE
+    database: 'compose', //env var: PGDATABASE
     password: 'EYITCUGNGVZYPYEQ', //env var: PGPASSWORD
     port: 17203, //env var: PGPORT
     max: 1, // max number of clients in the pool
@@ -201,7 +201,7 @@ function endSelectionTime() {
     if(err) {
       return console.error('error fetching client from pool', err);
     }
-    client.query('INSERT $1::text AS id, $2::text as gameobject', [gameID, JSON.stringify(this.rounds)], function(err, result) {
+    client.query('INSERT into games $1::text AS id, $2::text as gameobject', [gameID, JSON.stringify(this.rounds)], function(err, result) {
       //call `done()` to release the client back to the pool
       done();
 
