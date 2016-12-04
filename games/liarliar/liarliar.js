@@ -55,12 +55,6 @@ liarliar.prototype.selectAnswer = function(id, data, cb) {
     clearTimeout(this.endSelTimer);
     endSelectionTime.bind(this)();
   }
-
-  // if(this.activeQuestion.userAnswers[data.answer] === undefined)
-  //   this.activeQuestion.userAnswers[data.answer] = [];
-  //
-  // if(this.activeQuestion.userAnswers[data.answer].indexOf(id) == -1)
-  //   this.activeQuestion.userAnswers[data.answer].push(id);
 }
 
 function transformQuestion(question) {
@@ -184,7 +178,7 @@ function endSelectionTime() {
     }
   }
 
-  this.io.to(this.room).emit('scores_posted', {scores: scores});
+  this.io.to(this.room).emit('scores_posted', {scores: scores, correctAnswer: this.activeQuestion.answer});
 }
 
 module.exports = liarliar;
