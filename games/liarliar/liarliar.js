@@ -2,6 +2,27 @@ var questions = require("./questions.json");
 var md5 = require('js-md5');
 var pg = require('pg');
 
+
+// DB STUFF
+var services = appenv.services;
+
+var pg_services = services["compose-for-postgresql"];
+
+var credentials = pg_services[0].credentials;
+
+var ca = new Buffer(credentials.ca_certificate_base64, 'base64');
+var connectionString = credentials.uri;
+
+var parse = require('pg-connection-string').parse;
+config = parse(connectionString);
+
+config.ssl = {
+  rejectUnauthorized: false,
+  ca: ca
+}
+
+var client = new pg.Client(config);
+
 // constructor
 function liarliar(room, io, end) {
   this.room = room;
@@ -187,30 +208,16 @@ function endSelectionTime() {
 
   var gameID = md5(new Date().valueOf());
 
-  var config = {
-    user: 'admin', //env var: PGUSER
-    database: 'compose', //env var: PGDATABASE
-    password: 'EYITCUGNGVZYPYEQ', //env var: PGPASSWORD
-    port: 17203, //env var: PGPORT
-    max: 1, // max number of clients in the pool
-    idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
-  };
-
-  var pool = new pg.Pool(config);
-  pool.connect(function(err, client, done) {
-    if(err) {
-      return console.error('error fetching client from pool', err);
+  client.connect(function(err) {
+    if (err) {
+     response.status(500).send(err);
+    } else {
+      client.query('INSERT into games $1::text AS id, $2::text as gameobject', [gameID, JSON.stringify(this.rounds)], function (err,result){
+        if (err) {
+          console.log(err)
+        }
+      });
     }
-    client.query('INSERT into games $1::text AS id, $2::text as gameobject', [gameID, JSON.stringify(this.rounds)], function(err, result) {
-      //call `done()` to release the client back to the pool
-      done();
-
-      if(err) {
-        return console.error('error running query', err);
-      }
-      console.log(result.rows[0].number);
-      //output: 1
-    });
   });
 
   this.io.to(this.room).emit('scores_posted', {scores: scores, correctAnswer: this.activeQuestion.answer, gameID: gameID});
