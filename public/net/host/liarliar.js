@@ -1,8 +1,6 @@
 var socket = io();
 
 $(document).ready(function() {
-  var clock;
-
   $('#gameStartBtn').on("click", function() {
     $('#instructions').hide();
     $('#questionContainer').show();
@@ -26,6 +24,10 @@ $(document).ready(function() {
     socket.emit('end_game', {room: room});
     window.location = "/"+"?room="+room;
   });
+
+  $('#roundBtn').on("click", function() {
+    socket.emit('next_round', {room: room});
+  });
 });
 
 if(decodeURI(window.location.search.substring(1)) == "") {
@@ -44,16 +46,23 @@ socket.emit('join_game', {room: room}, function(data) {
 });
 
 socket.on('question_selected', function(data) {
+  $('#stage1').show();
+  $('#stage3').hide();
   $('#currentQuestion').html(data.question);
+
+  var clock = new FlipClock($('#countdownTimer'), 30, {
+    clockFace: 'Counter',
+    autoStart: true,
+    countdown: true
+  });
+  clock.setTime(30);
 });
 
 socket.on('answers_posted', function(data) {
-  console.log(data.answers);
   $('#stage1').hide();
     document.getElementById("questionContainer").className =
         document.getElementById("questionContainer").className.replace(/\bquestion-margin\b/,'');
   $('#stage2').show();
-  console.log(data);
   for(answer in data.answers) {
     var div = '#answer'+(parseInt(answer)+1);
     $(div).html(data.answers[answer].toUpperCase());
@@ -65,6 +74,14 @@ socket.on('scores_posted', function(data) {
   $('#stage3').show();
 
   $('#gameID').html("View these resuls anytime at: <a href='http://jamescube.mybluemix.net/view/"+data.gameID+"'>http://jamescube.mybluemix.net/view/" + data.gameID + "</a>");
+
+  var roundNo = data.roundNo + 1;
+  console.log(roundNo);
+  if(roundNo != 4) {
+    $('#roundBtn').html("Round: " + roundNo);
+  } else {
+    $('#roundBtn').hide();
+  }
 
   var users = Object.keys(data.scores);
 

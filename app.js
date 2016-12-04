@@ -107,6 +107,12 @@ io.on('connection', function(socket){
     }
   });
 
+  socket.on('next_round', function(data) {
+    if(data.gameType = 'lairliar') {
+      activeGames[data.room].startRound();
+    }
+  });
+
   socket.on('end_game', function(data, fn) {
     activeGames[data.room].endGame();
   });
