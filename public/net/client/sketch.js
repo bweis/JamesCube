@@ -5,6 +5,17 @@ var context;
 var width;
 var height;
 
+var drawPoints = [];
+function drawPoint(x, y, drag, width, height) {
+  return {
+    x: x,
+    y: y,
+    drag: drag,
+    width: width,
+    height: height
+  };
+}
+
 var clickX = [];
 var clickY = [];
 var clickDrag = [];
@@ -17,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // prevent scroll to refresh
   $('body').delegate('*', 'touchstart',function(e) {
-          e.preventDefault();
+    e.preventDefault();
   });
 });
 
@@ -62,14 +73,13 @@ function configWindow() {
 function createHandlers() {
   function addClick(x, y, dragging) {
 
-    x = x/width;
-    y = y/height;
+    x = x;
+    y = y;
+    drag = dragging;
+    var dP = drawPoint(x, y, drag, width, height)
+    drawPoints.push(dP);
 
-    clickX.push(x);
-    clickY.push(y);
-    clickDrag.push(dragging);
-
-    socket.emit('draw_line', {clickX: x, clickY: y, clickDrag: dragging, redraw: redrawStatus});
+    socket.emit('draw_line', {drawPoint: dP, redraw: redrawStatus});
     redrawStatus = false;
   }
 
@@ -147,48 +157,49 @@ function createHandlers() {
 /**
 * Redraw the complete canvas.
 */
-function redraw() {
-  // Clears the canvas
-  context.clearRect(0, 0, context.canvas.width, context.canvas.height);
-
-  for (var i = 0; i < clickX.length; i += 1) {
-    if (!clickDrag[i] && i == 0) {
-      context.beginPath();
-      context.moveTo(clickX[i] * width, clickY[i] * height);
-      context.stroke();
-    } else if (!clickDrag[i] && i > 0) {
-      context.closePath();
-
-      context.beginPath();
-      context.moveTo(clickX[i] * width, clickY[i] * height);
-      context.stroke();
-    } else {
-      context.lineTo(clickX[i] * width, clickY[i] * height);
-      context.stroke();
-    }
-  }
-}
+// function redraw() {
+//   // Clears the canvas
+//   context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+//
+//   for (var i = 0; i < clickX.length; i += 1) {
+//     if (!clickDrag[i] && i == 0) {
+//       context.beginPath();
+//       context.moveTo(clickX[i] * width, clickY[i] * height);
+//       context.stroke();
+//     } else if (!clickDrag[i] && i > 0) {
+//       context.closePath();
+//
+//       context.beginPath();
+//       context.moveTo(clickX[i] * width, clickY[i] * height);
+//       context.stroke();
+//     } else {
+//       context.lineTo(clickX[i] * width, clickY[i] * height);
+//       context.stroke();
+//     }
+//   }
+// }
 
 /**
 * Draw the newly added point.
 * @return {void}
 */
 function drawNew() {
-  var i = clickX.length - 1
-  if (!clickDrag[i]) {
-    if (clickX.length == 0) {
+  var i = drawPoints.length - 1;
+  var dP = drawPoints[i];
+
+  if (!dP.drag) {
+    if (drawPoints.length == 0) {
       context.beginPath();
-      context.moveTo(clickX[i] * width, clickY[i] * height);
+      context.moveTo(dP.x, dP.y);
       context.stroke();
     } else {
       context.closePath();
-
       context.beginPath();
-      context.moveTo(clickX[i] * width, clickY[i] * height);
+      context.moveTo(dP.x, dP.y);
       context.stroke();
     }
   } else {
-    context.lineTo(clickX[i] * width, clickY[i] * height);
+    context.lineTo(dP.x, dP.y);
     context.stroke();
   }
 }

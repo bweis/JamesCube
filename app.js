@@ -27,27 +27,27 @@ app.get('/', function(req,res) {
   var deviceType = req.device.type.toUpperCase();
   res.setHeader('Content-Type', 'text/html');
   if(deviceType == "DESKTOP")
-    res.send(fs.readFileSync('./host/index.html'));
+  res.send(fs.readFileSync('./host/index.html'));
   else
-    res.send(fs.readFileSync('./client/index.html'));
+  res.send(fs.readFileSync('./client/index.html'));
 });
 
 app.get('/liarliar', function(req,res) {
   var deviceType = req.device.type.toUpperCase();
   res.setHeader('Content-Type', 'text/html');
   if(deviceType == "DESKTOP")
-    res.send(fs.readFileSync('./host/liarliar/game.html'));
+  res.send(fs.readFileSync('./host/liarliar/game.html'));
   else
-    res.send(fs.readFileSync('./client/liarliar/game.html'));
+  res.send(fs.readFileSync('./client/liarliar/game.html'));
 });
 
 app.get('/sketch', function(req,res) {
   var deviceType = req.device.type.toUpperCase();
   res.setHeader('Content-Type', 'text/html');
   if(deviceType == "DESKTOP")
-    res.send(fs.readFileSync('./host/sketch/game.html'));
+  res.send(fs.readFileSync('./host/sketch/game.html'));
   else
-    res.send(fs.readFileSync('./client/sketch/game.html'));
+  res.send(fs.readFileSync('./client/sketch/game.html'));
 });
 
 // GameServer Logic
@@ -126,25 +126,21 @@ io.on('connection', function(socket){
 
   socket.on('submit_answer', function(data, fn) {
     for(room in socket.rooms)
-      if(room != socket.id)
-        activeGames[room].submitAnswer(socket.id, data, fn);
+    if(room != socket.id)
+    activeGames[room].submitAnswer(socket.id, data, fn);
   });
 
   socket.on('select_answer', function(data) {
     for(room in socket.rooms)
-      if(room != socket.id)
-        activeGames[room].selectAnswer(socket.id, data);
+    if(room != socket.id)
+    activeGames[room].selectAnswer(socket.id, data);
   });
 
-  var clickX = [];
-  var clickY = [];
-  var clickDrag = [];
+  var drawPoints = [];
   socket.on('draw_line', function (data) {
-      clickX.push(data.clickX);
-      clickY.push(data.clickY);
-      clickDrag.push(data.clickDrag);
-      io.emit('draw_line', data);
-   });
+    drawPoints.push(data.drawPoint);
+    io.emit('draw_line', data);
+  });
 
   socket.on('disconnect', function () {
     io.emit('client_drop', {id: socket.id});
