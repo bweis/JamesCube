@@ -24,7 +24,7 @@ if(!local) {
     ca: ca
   }
 
-  var client = new pg.Client(config);
+  var dbClient = new pg.Client(config);
 }
 
 // constructor
@@ -213,11 +213,11 @@ function endSelectionTime() {
   var gameID = md5(new Date().valueOf());
 
   if(!local) {
-    client.connect(function(err) {
+    dbClient.connect(function(err) {
       if (err) {
        response.status(500).send(err);
       } else {
-        client.query('INSERT into games $1::text AS id, $2::text as gameobject', [gameID, JSON.stringify(this.rounds)], function (err,result){
+        dbClient.query('INSERT into games $1::text AS id, $2::text as gameobject', [gameID, JSON.stringify(this.rounds)], function (err,result){
           if (err) {
             console.log(err)
           }
