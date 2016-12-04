@@ -37,7 +37,7 @@ function getGameData(id, cb) {
           console.log("DB Query Err:");
           console.log(err);
         } else {
-          cb(result);
+          cb(result.rows);
         }
       });
     }
