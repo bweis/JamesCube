@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
   configWindow();
   createHandlers();
 
-  $('body').delegate('*', 'touchstart',function(e)
-  {
+  // prevent scroll to refresh
+  $('body').delegate('*', 'touchstart',function(e) {
           e.preventDefault();
   });
 });
