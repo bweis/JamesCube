@@ -37,7 +37,7 @@ socket.on('question_selected', function(data) {
   $('#instructions').hide();
   $('#stage1').show();
   $('#stage2').hide();
-  clock = new FlipClock($('#countdownTimer'), 30, {
+  clock = new FlipClock($('#mobileCountdownTimer'), 30, {
     clockFace: 'Counter',
     autoStart: true,
     countdown: true
