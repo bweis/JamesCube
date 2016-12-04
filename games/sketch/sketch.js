@@ -1,14 +1,14 @@
 // var questions = require("./questions.json");
 //
-// // constructor
-// function liarliar(room, io, end) {
-//   this.room = room;
-//   this.scores = {};
-//   this.rounds = {};
-//   this.players = {};
-//   this.io = io;
-//   this.end = end;
-// }
+// constructor
+function sketch(room, io, end) {
+  this.room = room;
+  this.scores = {};
+  this.rounds = {};
+  this.players = {};
+  this.io = io;
+  this.end = end;
+}
 //
 // // methods
 //
@@ -175,4 +175,4 @@
 //   this.io.to(this.room).emit('scores_posted', {scores: scores});
 // }
 //
-// module.exports = liarliar;
+module.exports = sketch;
