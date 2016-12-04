@@ -144,61 +144,62 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="clickable-row">
+      <tr class="clickable-row" id="player1" hidden="hidden">
         <td class="mobileScore" id="user1"></td>
         <td class="mobileScore" id="score1"></td>
         <td class="mobileScore" id="total1"></td>
       </tr>
-      <tr class="clickable-row">
+      <tr class="clickable-row" id="player2" hidden="hidden">
         <td class="mobileScore" id="user2"></td>
         <td class="mobileScore" id="score2"></td>
         <td class="mobileScore" id="total2"></td>
       </tr>
-      <tr class="clickable-row">
+      <tr class="clickable-row" id="player3" hidden="hidden">
         <td class="mobileScore" id="user3"></td>
         <td class="mobileScore" id="score3"></td>
         <td class="mobileScore" id="total3"></td>
       </tr>
-      <tr class="clickable-row">
+      <tr class="clickable-row" id="player4" hidden="hidden">
         <td class="mobileScore" id="user4"></td>
         <td class="mobileScore" id="score4"></td>
         <td class="mobileScore" id="total4"></td>
       </tr>
-      <tr class="clickable-row">
+      <tr class="clickable-row" id="player5" hidden="hidden">
         <td class="mobileScore" id="user5"></td>
         <td class="mobileScore" id="score5"></td>
         <td class="mobileScore" id="total5"></td>
       </tr>
-      <tr class="clickable-row">
+      <tr class="clickable-row" id="player6" hidden="hidden">
         <td class="mobileScore" id="user6"></td>
         <td class="mobileScore" id="score6"></td>
         <td class="mobileScore" id="total6"></td>
       </tr>
-      <tr class="clickable-row">
+      <tr class="clickable-row" id="player7" hidden="hidden">
         <td class="mobileScore" id="user7"></td>
         <td class="mobileScore" id="score7"></td>
         <td class="mobileScore" id="total7"></td>
       </tr>
-      <tr class="clickable-row">
+      <tr class="clickable-row" id="player8" hidden="hidden">
         <td class="mobileScore" id="user8"></td>
         <td class="mobileScore" id="score8"></td>
         <td class="mobileScore" id="total8"></td>
       </tr>
-      <tr class="clickable-row">
-        <td class="mobileScore" id="user9"></td>
-        <td class="mobileScore" id="score9"></td>
-        <td class="mobileScore" id="total9"></td>
-      </tr>
     </tbody>
   </table>
-  <button type="submit" id="gameEndBtn" class="btn btn-success btn-lg" style="margin: auto">
-    Return to lobby
-    <span class="glyphicon glyphicon-play"></span>
-  </button>
-  <button type="submit" id="roundBtn" class="btn btn-success btn-lg" style="margin: auto">
-    Round 2
-    <span class="glyphicon glyphicon-play"></span>
-  </button>
+  <div class="row">
+    <div class="col-md-6">
+      <button type="submit" id="gameEndBtn" class="btn btn-success btn-lg" style="margin: auto">
+        Return to lobby
+        <span class="glyphicon glyphicon-play"></span>
+      </button>
+    </div>
+    <div class="col-md-6">
+      <button type="submit" id="roundBtn" class="btn btn-success btn-lg" style="margin: auto">
+        Round 2
+        <span class="glyphicon glyphicon-play"></span>
+      </button>
+    </div>
+  </div>
 </div>
 </body>
 <script src="net/socket.io/socket.io.js"></script>

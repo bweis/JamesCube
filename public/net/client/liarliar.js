@@ -67,6 +67,11 @@ socket.on('scores_posted', function(data) {
   $('#stage2').hide();
   $('#stage3').show();
 
+
+  for(var i = 1; i <= 8; i++) {
+    $(('#player'+i)).hide();
+  }
+
   $('#gameID').html("View these resuls anytime at: <a href='http://jamescube.mybluemix.net/view/"+data.gameID+"'>http://jamescube.mybluemix.net/view/" + data.gameID + "</a>");
 
   var users = Object.keys(data.scores);
@@ -79,6 +84,7 @@ socket.on('scores_posted', function(data) {
     var user = data.scores[users[i - 1]];
     if(user.score < 0)
       user.score = 0;
+    $(('#player'+i)).show();
     $(('#user'+i)).html(user.nick);
     $(('#score'+i)).html(user.score);
   }

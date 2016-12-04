@@ -134,7 +134,7 @@ function endSubmissionTime() {
   while(answers.length < 9) {
     var index = Math.floor(Math.random() * (this.activeQuestion.suggestions.length));
     var suggest = this.activeQuestion.suggestions[index];
-    if(answers.indexOf(suggest) == -1) {
+    if(answers.indexOf(suggest.toLowerCase()) == -1) {
       answers.push(suggest.toLowerCase());
       this.activeQuestion.userAnswers[suggest.toLowerCase()] = {};
     }
@@ -192,16 +192,23 @@ function endSelectionTime() {
     for(voter in ans.votes) {
       voter = ans.votes[voter];
       if(ans.correct) {
-        scores[voter].score += 1000 * roundNo;
+        scores[voter].score += 1000 * (roundNo+1);
       } else {
         for(crtr in ans.creators) {
           crtr = ans.creators[crtr];
-          scores[crtr].score += 500 * roundNo;
+          scores[crtr].score += 500 * (roundNo+1);
         }
         if(ans.creators === undefined) {
-          scores[voter].score -= 250 * roundNo;
+          scores[voter].score -= 250 * (roundNo+1);
         }
       }
+    }
+  }
+
+  if(Object.keys(this.rounds).length > 0) {
+    var lastScores = this.rounds[roundNo-1].scores;
+    for(user in scores) {
+      scores[user].score += lastScores[user].score;
     }
   }
 

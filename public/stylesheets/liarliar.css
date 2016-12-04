@@ -37,6 +37,10 @@ h1,h2,h3,h4,h5,h6 {
     margin-top:20%;
 }
 
+#mobileCountdownTimer {
+    margin-top:20%;
+}
+
 #instructions {
     margin-top: 5%;
     text-align: center;
@@ -70,15 +74,21 @@ h1,h2,h3,h4,h5,h6 {
 #scoresTable {
     margin-top: 5%;
     text-align: center;
-    min-height: 50%;
     width: 70%;
     margin: auto;
+}
+
+#scoresTable tbody tr {
+    min-height: 5%;
 }
 
 #mobileScoresTable {
     margin-top: 5%;
     text-align: center;
-    min-height: 40%;
     width: 90%;
     margin: auto;
+}
+
+#mobileScoresTable tbody tr {
+    min-height: 5%;
 }
