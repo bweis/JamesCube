@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="container questionContainer" id="questionContainer" hidden="hidden">
-            <h2 id="currentQuestion"></h2>
+            <h3 id="currentQuestion"></h3>
         </div>
         <div id="instructions">
             <h1 style="text-align:center">How to play Liar Liar</h1>
@@ -57,12 +57,18 @@
             </div>
         </div>
         <div id="stage1" hidden="hidden">
-            <div class="col-md-6 col-md-offset-3" style="text-align:center; margin-top: 10%">
-                <div class="form-group">
-                    <input id="submitAnswer" class="form-control input-lg" type="text" id="userAnswer" placeholder="Answer" />
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3" style="text-align:center; margin-top: 10%">
+                    <div class="form-group">
+                        <input id="submitAnswer" class="form-control input-lg" type="text" id="userAnswer" placeholder="Answer" />
+                    </div>
+                    <button id="submitAnswerButton" type="submit" class="btn btn-success btn-lg">Submit</button>
                 </div>
-                <div id="mobileCountdownTimer" style="display: inline-block; width: auto;"></div>
-                <button id="submitAnswerButton" type="submit" class="btn btn-success btn-lg">Submit</button>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-3">
+                    <div id="mobileCountdownTimer" style="display: inline-block; width: auto;"></div>
+                </div>
             </div>
         </div>
         <div class="container" id="stage2" hidden="hidden">
@@ -96,47 +102,48 @@
             </table>
         </div>
         <div id="stage3" hidden="hidden">
+            <h3 id="answer"></h3>
             <h4 id="gameID" class="container"></h4>
-            <h3>results and score</h3>
             <table class="table table-bordered" id="mobileScoresTable">
                 <thead>
-                    <tr>Player</tr>
-                    <tr>Score</tr>
+                    <tr>
+                        <td>Player</td>
+                        <td>Score</td>
                 </thead>
                 <tbody>
-                <tr class="clickable-row">
+                <tr class="clickable-row" hidden="hidden">
                     <td class="mobileScore" id="user1"></td>
                     <td class="mobileScore" id="score1"></td>
                 </tr>
-                <tr class="clickable-row">
+                <tr class="clickable-row" hidden="hidden">
                     <td class="mobileScore" id="user2"></td>
                     <td class="mobileScore" id="score2"></td>
                 </tr>
-                <tr class="clickable-row">
+                <tr class="clickable-row" hidden="hidden">
                     <td class="mobileScore" id="user3"></td>
                     <td class="mobileScore" id="score3"></td>
                 </tr>
-                <tr class="clickable-row">
+                <tr class="clickable-row" hidden="hidden">
                     <td class="mobileScore" id="user4"></td>
                     <td class="mobileScore" id="score4"></td>
                 </tr>
-                <tr class="clickable-row">
+                <tr class="clickable-row" hidden="hidden">
                     <td class="mobileScore" id="user5"></td>
                     <td class="mobileScore" id="score5"></td>
                 </tr>
-                <tr class="clickable-row">
+                <tr class="clickable-row" hidden="hidden">
                     <td class="mobileScore" id="user6"></td>
                     <td class="mobileScore" id="score6"></td>
                 </tr>
-                <tr class="clickable-row">
+                <tr class="clickable-row" hidden="hidden">
                     <td class="mobileScore" id="user7"></td>
                     <td class="mobileScore" id="score7"></td>
                 </tr>
-                <tr class="clickable-row">
+                <tr class="clickable-row" hidden="hidden">
                     <td class="mobileScore" id="user8"></td>
                     <td class="mobileScore" id="score8"></td>
                 </tr>
-                <tr class="clickable-row">
+                <tr class="clickable-row" hidden="hidden">
                     <td class="mobileScore" id="user9"></td>
                     <td class="mobileScore" id="score9"></td>
                 </tr>
