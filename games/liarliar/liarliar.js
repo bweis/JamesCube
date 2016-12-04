@@ -2,28 +2,30 @@ var questions = require("./questions.json");
 var md5 = require('js-md5');
 var pg = require('pg');
 
+var local = false;
+if(!local) {
+  // DB STUFF
+  var cfenv = require('cfenv');
+  var appenv = cfenv.getAppEnv();
+  var services = appenv.services;
 
-// DB STUFF
-var cfenv = require('cfenv');
-var appenv = cfenv.getAppEnv();
-var services = appenv.services;
+  var pg_services = services["compose-for-postgresql"];
 
-var pg_services = services["compose-for-postgresql"];
+  var credentials = pg_services[0].credentials;
 
-var credentials = pg_services[0].credentials;
+  var ca = new Buffer(credentials.ca_certificate_base64, 'base64');
+  var connectionString = credentials.uri;
 
-var ca = new Buffer(credentials.ca_certificate_base64, 'base64');
-var connectionString = credentials.uri;
+  var parse = require('pg-connection-string').parse;
+  config = parse(connectionString);
 
-var parse = require('pg-connection-string').parse;
-config = parse(connectionString);
+  config.ssl = {
+    rejectUnauthorized: false,
+    ca: ca
+  }
 
-config.ssl = {
-  rejectUnauthorized: false,
-  ca: ca
+  var client = new pg.Client(config);
 }
-
-var client = new pg.Client(config);
 
 // constructor
 function liarliar(room, io, end) {
@@ -210,17 +212,19 @@ function endSelectionTime() {
 
   var gameID = md5(new Date().valueOf());
 
-  client.connect(function(err) {
-    if (err) {
-     response.status(500).send(err);
-    } else {
-      client.query('INSERT into games $1::text AS id, $2::text as gameobject', [gameID, JSON.stringify(this.rounds)], function (err,result){
-        if (err) {
-          console.log(err)
-        }
-      });
-    }
-  });
+  if(!local) {
+    client.connect(function(err) {
+      if (err) {
+       response.status(500).send(err);
+      } else {
+        client.query('INSERT into games $1::text AS id, $2::text as gameobject', [gameID, JSON.stringify(this.rounds)], function (err,result){
+          if (err) {
+            console.log(err)
+          }
+        });
+      }
+    });
+  }
 
   this.io.to(this.room).emit('scores_posted', {scores: scores, correctAnswer: this.activeQuestion.answer, gameID: gameID});
 }
