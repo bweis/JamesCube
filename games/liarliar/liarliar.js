@@ -1,6 +1,6 @@
 var questions = require("./questions.json");
 var md5 = require('js-md5');
-var db = require('pg');
+var pg = require('pg');
 
 // constructor
 function liarliar(room, io, end) {
