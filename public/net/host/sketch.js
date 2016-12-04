@@ -36,7 +36,8 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   function drawNew() {
-    var i = clickX.length - 1
+    console.log('drawing');
+        var i = clickX.length - 1
     if (!clickDrag[i]) {
       if (clickX.length == 0) {
         context.beginPath();
@@ -56,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function redraw() {
+    console.log('redrawing');
     // Clears the canvas
     context.clearRect(0, 0, context.canvas.width, context.canvas.height);
 

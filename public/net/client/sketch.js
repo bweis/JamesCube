@@ -14,6 +14,11 @@ var redrawStatus = true;
 document.addEventListener("DOMContentLoaded", function() {
   configWindow();
   createHandlers();
+
+  $('body').delegate('*', 'touchstart',function(e)
+  {
+          e.preventDefault();
+  });
 });
 
 window.onresize = resizeWindow;
