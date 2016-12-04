@@ -63,6 +63,19 @@ socket.on('answers_posted', function(data) {
 socket.on('scores_posted', function(data) {
   $('#stage2').hide();
   $('#stage3').show();
-  console.log('scores posted');
-  console.log(data);
+
+  var users = Object.keys(data.scores);
+
+  users.sort(function(a, b) {
+    return data.scores[b].score - data.scores[a].score
+  });
+
+  for(var i = 1; i <= users.length; i++) {
+    var user = data.scores[users[i - 1]];
+    if(user.score < 0)
+      user.score = 0;
+    $(('#user'+i)).html(user.nick);
+    $(('#score'+i)).html(user.score);
+    $(('#total'+i)).html(user.score);
+  }
 });
