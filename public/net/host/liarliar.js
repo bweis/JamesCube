@@ -77,7 +77,7 @@ socket.on('scores_posted', function(data) {
     $(('#player'+i)).hide();
   }
   var question = $('#currentQuestion').html();
-  question.replace("________", '<span style="color: #E74C3C">' + data.answer + '</span>');
+  question = question.replace("________", '<span style="color: #E74C3C">' + data.answer + '</span>');
   $('#currentQuestion').html(question);
   $('#gameID').html("View these resuls anytime at: <a href='http://jamescube.mybluemix.net/view/"+data.gameID+"'>http://jamescube.mybluemix.net/view/" + data.gameID + "</a>");
 
