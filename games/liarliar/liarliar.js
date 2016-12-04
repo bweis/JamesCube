@@ -202,6 +202,11 @@ function endSelectionTime() {
     }
   }
 
+  for(user in scores) {
+    if(scores[user].score < 0)
+      scores[user].score = 0;
+  }
+
   this.rounds[Object.keys(this.rounds).length] = {
     question: this.activeQuestion,
     scores: scores
