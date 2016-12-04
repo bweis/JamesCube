@@ -22,12 +22,11 @@ if(!local) {
     rejectUnauthorized: false,
     ca: ca
   }
-
-  var dbClient = new pg.Client(config);
 }
 
 
 function getGameData(id, cb) {
+  var dbClient = new pg.Client(config);
   dbClient.connect(function(err) {
     if (err) {
       console.log('DB Connect Err');

@@ -22,8 +22,6 @@ if(!local) {
     rejectUnauthorized: false,
     ca: ca
   }
-
-  var dbClient = new pg.Client(config);
 }
 
 // constructor
@@ -213,6 +211,8 @@ function endSelectionTime() {
   var gameobject = JSON.stringify(this.rounds);
 
   if(!local) {
+    var dbClient = new pg.Client(config);
+    
     dbClient.connect(function(err) {
       if (err) {
        response.status(500).send(err);
