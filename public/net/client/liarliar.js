@@ -37,6 +37,12 @@ socket.on('question_selected', function(data) {
   $('#instructions').hide();
   $('#stage1').show();
   $('#stage2').hide();
+  clock = new FlipClock($('#countdownTimer'), 30, {
+    clockFace: 'Counter',
+    autoStart: true,
+    countdown: true
+  });
+  clock.setTime(30);
 });
 
 socket.on('answers_posted', function(data) {
