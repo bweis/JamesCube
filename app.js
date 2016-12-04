@@ -11,6 +11,8 @@ var rs = require('randomstring');
 var liarliar = require("./games/liarliar/liarliar.js");
 var sketch = require("./games/sketch/sketch.js");
 
+var viewLL = require('./games/liarliar/viewGame.js')
+
 var app = express();
 httpServer = http.createServer(app);
 io = socketio(httpServer);
@@ -48,6 +50,14 @@ app.get('/sketch', function(req,res) {
   res.send(fs.readFileSync('./host/sketch/game.html'));
   else
   res.send(fs.readFileSync('./client/sketch/game.html'));
+});
+
+app.get('/view', function(req,res) {
+  var id = req.params.uid
+  viewLL(id, function(data) {
+    res.setHeader('Content-Type', 'text/json');
+    res.send(viewLL(data));
+  });
 });
 
 // GameServer Logic
