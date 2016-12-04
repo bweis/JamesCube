@@ -207,12 +207,12 @@ function endSelectionTime() {
     scores: scores
   };
 
-  var gameID = md5(new Date().valueOf());
+  var gameID = md5(String(new Date().valueOf()));
   var gameobject = JSON.stringify(this.rounds);
 
   if(!local) {
     var dbClient = new pg.Client(config);
-    
+
     dbClient.connect(function(err) {
       if (err) {
        response.status(500).send(err);

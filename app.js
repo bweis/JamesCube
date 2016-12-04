@@ -54,7 +54,6 @@ app.get('/sketch', function(req,res) {
 
 app.get('/view/:id', function(req,res) {
   var id = req.params.id;
-  console.log(id);
   viewLL(id, function(data) {
     res.setHeader('Content-Type', 'text/json');
     res.send(data);
