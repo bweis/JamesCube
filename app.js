@@ -52,8 +52,8 @@ app.get('/sketch', function(req,res) {
   res.send(fs.readFileSync('./client/sketch/game.html'));
 });
 
-app.get('/view', function(req,res) {
-  var id = req.params.uid
+app.get('/view/:id', function(req,res) {
+  var id = req.params.id
   viewLL(id, function(data) {
     res.setHeader('Content-Type', 'text/json');
     res.send(viewLL(data));
