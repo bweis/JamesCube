@@ -24,9 +24,6 @@ if(!local) {
     ca: ca
   }
 
-  console.log(JSON.stringify(pg_services));
-  console.log(JSON.stringify(config));
-
   var dbClient = new pg.Client(config);
 }
 
@@ -220,7 +217,7 @@ function endSelectionTime() {
       if (err) {
        response.status(500).send(err);
       } else {
-        dbClient.query('INSERT into games $1::text AS id, $2::text as gameobject', [gameID, JSON.stringify(this.rounds)], function (err,result){
+        dbClient.query('INSERT INTO games(id,gameobject) VALUES($1, $2)', [gameID, JSON.stringify(this.rounds)], function (err,result){
           if (err) {
             console.log(err)
           }
