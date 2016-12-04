@@ -64,6 +64,8 @@ socket.on('scores_posted', function(data) {
   $('#stage2').hide();
   $('#stage3').show();
 
+  $('#gameID').html("View these resuls anytime at: <a href='http://jamescube.mybluemix.net/view/"+data.gameID+"'>http://jamescube.mybluemix.net/view/" + data.gameID + "</a>");
+
   var users = Object.keys(data.scores);
 
   users.sort(function(a, b) {
