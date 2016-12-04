@@ -186,14 +186,20 @@
       </tr>
     </tbody>
   </table>
-  <button type="submit" id="gameEndBtn" class="btn btn-success btn-lg" style="margin: auto">
-    Return to lobby
-    <span class="glyphicon glyphicon-play"></span>
-  </button>
-  <button type="submit" id="roundBtn" class="btn btn-success btn-lg" style="margin: auto">
-    Round 2
-    <span class="glyphicon glyphicon-play"></span>
-  </button>
+  <div class="row">
+    <div class="col-md-6">
+      <button type="submit" id="gameEndBtn" class="btn btn-success btn-lg" style="margin: auto">
+        Return to lobby
+        <span class="glyphicon glyphicon-play"></span>
+      </button>
+    </div>
+    <div class="col-md-6">
+      <button type="submit" id="roundBtn" class="btn btn-success btn-lg" style="margin: auto">
+        Round 2
+        <span class="glyphicon glyphicon-play"></span>
+      </button>
+    </div>
+  </div>
 </div>
 </body>
 <script src="net/socket.io/socket.io.js"></script>

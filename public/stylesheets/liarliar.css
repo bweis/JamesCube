@@ -37,6 +37,10 @@ h1,h2,h3,h4,h5,h6 {
     margin-top:20%;
 }
 
+#mobileCountdownTimer {
+    margin-top:20%;
+}
+
 #instructions {
     margin-top: 5%;
     text-align: center;
