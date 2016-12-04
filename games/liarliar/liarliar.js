@@ -211,13 +211,14 @@ function endSelectionTime() {
   };
 
   var gameID = md5(new Date().valueOf());
+  var gameobject = JSON.stringify(this.rounds);
 
   if(!local) {
     dbClient.connect(function(err) {
       if (err) {
        response.status(500).send(err);
       } else {
-        dbClient.query('INSERT INTO games(id,gameobject) VALUES($1, $2)', [gameID, JSON.stringify(this.rounds)], function (err,result){
+        dbClient.query('INSERT INTO games(id,gameobject) VALUES($1, $2)', [gameID, gameobject], function (err,result){
           if (err) {
             console.log(err)
           }
