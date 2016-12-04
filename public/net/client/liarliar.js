@@ -36,8 +36,10 @@ socket.on('question_selected', function(data) {
   $('#questionContainer').show();
   $('#instructions').hide();
   $('#stage1').show();
-  $('#stage2').hide();
-  clock = new FlipClock($('#mobileCountdownTimer'), 30, {
+  $('#stage3').hide();
+  $('#submitAnswer').val('');
+
+  var clock = new FlipClock($('#mobileCountdownTimer'), 30, {
     clockFace: 'Counter',
     autoStart: true,
     countdown: true
@@ -53,6 +55,7 @@ socket.on('answers_posted', function(data) {
   for(answer in data.answers) {
     var div = '#answer'+(parseInt(answer)+1);
     $(div).html(data.answers[answer].toUpperCase());
+    $(div).prop('onclick',null).off('click');
     $(div).click(function() {
       socket.emit('select_answer', {answer: this.innerHTML});
       $('#stage2').hide();

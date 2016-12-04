@@ -135,8 +135,8 @@ function endSubmissionTime() {
     var index = Math.floor(Math.random() * (this.activeQuestion.suggestions.length));
     var suggest = this.activeQuestion.suggestions[index];
     if(answers.indexOf(suggest) == -1) {
-      answers.push(suggest);
-      this.activeQuestion.userAnswers[suggest] = {};
+      answers.push(suggest.toLowerCase());
+      this.activeQuestion.userAnswers[suggest.toLowerCase()] = {};
     }
   }
 
@@ -185,19 +185,21 @@ function endSelectionTime() {
     this.io.to(client).emit('scores_posted', {scores: scores});
   }
 
+  var roundNo = Object.keys(this.rounds).length;
+
   for(ans in roundAnswers) {
     var ans = roundAnswers[ans];
     for(voter in ans.votes) {
       voter = ans.votes[voter];
       if(ans.correct) {
-        scores[voter].score += 1000;
+        scores[voter].score += 1000 * roundNo;
       } else {
         for(crtr in ans.creators) {
           crtr = ans.creators[crtr];
-          scores[crtr].score += 500;
+          scores[crtr].score += 500 * roundNo;
         }
         if(ans.creators === undefined) {
-          scores[voter].score -= 250;
+          scores[voter].score -= 250 * roundNo;
         }
       }
     }
@@ -232,7 +234,7 @@ function endSelectionTime() {
     });
   }
 
-  this.io.to(this.room).emit('scores_posted', {scores: scores, correctAnswer: this.activeQuestion.answer, gameID: gameID});
+  this.io.to(this.room).emit('scores_posted', {scores: scores, correctAnswer: this.activeQuestion.answer, gameID: gameID, roundNo: Object.keys(this.rounds).length});
 }
 
 module.exports = liarliar;
