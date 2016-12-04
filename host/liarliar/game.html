@@ -65,6 +65,7 @@
 </div>
 <div class="container questionContainer question-margin" id="questionContainer" hidden="hidden">
   <h2 id="currentQuestion"></h2>
+  <h3 id="answer" style="color: #E74C3C"></h3>
 </div>
 <div id="stage1" hidden="hidden">
   <div class="col-md-4 col-md-offset-4" style="text-align: center">
@@ -187,13 +188,13 @@
     </tbody>
   </table>
   <div class="row">
-    <div class="col-md-6">
-      <button type="submit" id="gameEndBtn" class="btn btn-success btn-lg" style="margin: auto">
+    <div class="col-md-4 col-md-offset-4">
+      <button type="submit" id="gameEndBtn" class="btn btn-success btn-lg btn-block" style="margin: auto">
         Return to lobby
         <span class="glyphicon glyphicon-play"></span>
       </button>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4 col-md-offset-4">
       <button type="submit" id="roundBtn" class="btn btn-success btn-lg" style="margin: auto">
         Round 2
         <span class="glyphicon glyphicon-play"></span>

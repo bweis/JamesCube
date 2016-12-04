@@ -76,7 +76,9 @@ socket.on('scores_posted', function(data) {
   for(var i = 1; i <= 8; i++) {
     $(('#player'+i)).hide();
   }
-
+  var question = $('#currentQuestion').html();
+  question.replace("________", '<span style="color: #E74C3C">' + data.answer + '</span>');
+  $('#currentQuestion').html(question);
   $('#gameID').html("View these resuls anytime at: <a href='http://jamescube.mybluemix.net/view/"+data.gameID+"'>http://jamescube.mybluemix.net/view/" + data.gameID + "</a>");
 
   var roundNo = data.roundNo + 1;
