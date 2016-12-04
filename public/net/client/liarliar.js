@@ -33,6 +33,7 @@ $('#submitAnswerButton').click(function() {
 
 socket.on('question_selected', function(data) {
   $('#currentQuestion').html(data.question);
+  $('#questionContainer').show();
   $('#instructions').hide();
   $('#stage1').show();
   $('#stage2').hide();
