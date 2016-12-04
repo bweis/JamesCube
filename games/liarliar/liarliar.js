@@ -4,6 +4,8 @@ var pg = require('pg');
 
 
 // DB STUFF
+var cfenv = require('cfenv');
+var appenv = cfenv.getAppEnv();
 var services = appenv.services;
 
 var pg_services = services["compose-for-postgresql"];
