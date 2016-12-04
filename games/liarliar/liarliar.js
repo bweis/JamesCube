@@ -69,6 +69,7 @@ liarliar.prototype.submitAnswer = function(id, data, cb) {
 }
 
 liarliar.prototype.selectAnswer = function(id, data, cb) {
+  data.answer = data.answer.toLowerCase();
   if(this.activeQuestion.userAnswers[data.answer].votes === undefined)
     this.activeQuestion.userAnswers[data.answer].votes = [];
 
