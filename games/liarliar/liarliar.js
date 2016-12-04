@@ -24,6 +24,9 @@ if(!local) {
     ca: ca
   }
 
+  console.log(JSON.stringify(pg_services));
+  console.log(JSON.stringify(config));
+
   var dbClient = new pg.Client(config);
 }
 
