@@ -52,7 +52,7 @@ socket.on('answers_posted', function(data) {
 
   for(answer in data.answers) {
     var div = '#answer'+(parseInt(answer)+1);
-    $(div).html(data.answers[answer]);
+    $(div).html(data.answers[answer].toUpperCase());
     $(div).click(function() {
       socket.emit('select_answer', {answer: this.innerHTML});
       $('#stage2').hide();

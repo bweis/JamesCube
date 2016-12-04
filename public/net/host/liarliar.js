@@ -56,7 +56,7 @@ socket.on('answers_posted', function(data) {
   console.log(data);
   for(answer in data.answers) {
     var div = '#answer'+(parseInt(answer)+1);
-    $(div).html(data.answers[answer]);
+    $(div).html(data.answers[answer].toUpperCase());
   }
 });
 
