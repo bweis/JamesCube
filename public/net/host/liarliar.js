@@ -119,6 +119,6 @@ socket.on('scores_posted', function(data) {
     $(('#player'+i)).show();
     $(('#user'+i)).html(user.nick);
     $(('#score'+i)).html(user.score);
-    $(('#total'+i)).html(user.score);
+    $(('#total'+i)).html(user.totalScore);
   }
 });
