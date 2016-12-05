@@ -54,10 +54,8 @@ app.get('/sketch', function(req,res) {
 
 app.get('/view/:id', function(req,res) {
   var id = req.params.id;
-  viewLL(id, function(data) {
-    res.setHeader('Content-Type', 'text/html');
-    res.send(fs.readFileSync('./public/liarliargameview.html'));
-  });
+  res.setHeader('Content-Type', 'text/html');
+  res.send(fs.readFileSync('./public/net/liarliargameview.html'));
 });
 
 app.get('/get/:id', function(req,res) {
