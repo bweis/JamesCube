@@ -92,3 +92,10 @@ h1,h2,h3,h4,h5,h6 {
 #mobileScoresTable tbody tr {
     min-height: 5%;
 }
+
+.active {
+    background: none;
+}
+h3 {
+    color: #A7A37E;
+}
