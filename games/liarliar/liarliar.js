@@ -118,7 +118,7 @@ liarliar.prototype.checkRoomStatus = function() {
 liarliar.prototype.endGame = function() {
   setTimeout(function() {
     this.end(this.room)
-  }.bind(this), 500);
+  }.bind(this), 1000);
 }
 
 function endSubmissionTime() {
