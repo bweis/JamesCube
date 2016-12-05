@@ -100,6 +100,7 @@ h1,h2,h3,h4,h5,h6 {
 .active {
     background: none;
 }
-h3 {
+
+#waiting {
     color: #A7A37E;
 }
