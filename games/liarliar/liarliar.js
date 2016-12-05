@@ -41,7 +41,7 @@ liarliar.prototype.addPlayer = function(id, name) {
 }
 
 liarliar.prototype.submitAnswer = function(id, data, cb) {
-  data.answer = data.answer.toLowerCase();
+  data.answer = data.answer.toLowerCase().trim();
   if(this.activeQuestion.userAnswers[data.answer] === undefined) {
     this.activeQuestion.userAnswers[data.answer] = {};
     this.activeQuestion.userAnswers[data.answer].creators = [];

@@ -20,17 +20,6 @@ socket.emit('join_game', {room: room, name: nickname}, function(data) {
   $('#stage2').hide();
 });
 
-$('#submitAnswerButton').click(function() {
-  var answer = $('#submitAnswer').val();
-  socket.emit('submit_answer', {answer: answer}, function(data) {
-    if(data) {
-      $('#stage1').hide();
-    } else {
-      alert('That is the correct answer, try to fool your opponents');
-    }
-  });
-});
-
 socket.on('question_selected', function(data) {
   $('#currentQuestion').html(data.question);
   $('#questionContainer').show();
@@ -47,16 +36,30 @@ socket.on('question_selected', function(data) {
   clock.setTime(30);
 });
 
+$('#submitAnswerButton').click(function() {
+  var answer = $('#submitAnswer').val();
+  socket.emit('submit_answer', {answer: answer}, function(data) {
+    if(data) {
+      $('#stage1').hide();
+      $('#waiting').show();
+    } else {
+      alert('That is the correct answer, try to fool your opponents');
+    }
+  });
+});
+
 socket.on('answers_posted', function(data) {
   $('#instructions').hide();
   $('#stage1').hide();
   $('#stage2').show();
+  $('#waiting').hide();
 
   for(answer in data.answers) {
     var div = '#answer'+(parseInt(answer)+1);
     $(div).html(data.answers[answer].toUpperCase());
     $(div).prop('onclick',null).off('click');
     $(div).click(function() {
+      $('#waiting').show();
       socket.emit('select_answer', {answer: this.innerHTML});
       $('#stage2').hide();
     })
@@ -66,7 +69,15 @@ socket.on('answers_posted', function(data) {
 socket.on('scores_posted', function(data) {
   $('#stage2').hide();
   $('#stage3').show();
+  var question = $('#currentQuestion').html();
+  if (question.indexOf("________") == -1) {
+    question = question + '<br>' +  '<span style="color: #E74C3C; text-align: center">' + data.correctAnswer + '</span>';
+  } else {
+    question = question.replace("________", '<span style="color: #E74C3C">' + data.correctAnswer + '</span>');
+  }
+  $('#currentQuestion').html(question);
 
+  $('#waiting').hide();
 
   for(var i = 1; i <= 8; i++) {
     $(('#player'+i)).hide();
