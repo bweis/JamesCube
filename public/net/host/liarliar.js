@@ -86,9 +86,11 @@ socket.on('scores_posted', function(data) {
     question = question.replace("________", '<span style="color: #E74C3C">' + data.correctAnswer + '</span>');
   }
   $('#currentQuestion').html(question);
-  $('#gameID').html("View these resuls anytime at: <a href='http://jamescube.mybluemix.net/view/"+data.gameID+"'>http://jamescube.mybluemix.net/view/" + data.gameID + "</a>");
 
   var roundNo = data.roundNo + 1;
+
+  if(roundNo == 4)
+    $('#gameID').html("View these resuls anytime at: <a href='http://jamescube.mybluemix.net/view/"+data.gameID+"'>http://jamescube.mybluemix.net/view/" + data.gameID + "</a>");
 
   if(roundNo != 4) {
     var timer = 15;
