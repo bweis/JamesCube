@@ -61,6 +61,7 @@ app.get('/view/:id', function(req,res) {
 app.get('/get/:id', function(req,res) {
   var id = req.params.id;
   viewLL(id, function(data) {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:6001');
     res.setHeader('Content-Type', 'text/json');
     res.send(data);
   });

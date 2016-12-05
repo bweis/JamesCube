@@ -59,25 +59,26 @@
     </table>
   </body>
   <script>
-  console.log(window.location);
-  // $.ajax({
-  //   url: 'http://jamescube.mybluemix.net/get/'+id,
-  //   dataType: 'json',
-  //   cache: false,
-  //   method: 'GET',
-  //   async: false,
-  //   timeout: 4000,
-  //   accepts: {
-  //     json: 'application/json'
-  //   },
-  //   success: function(data) {
-  //     // use data
-  //
-  //   },
-  //   error: function(xhr, status, err) {
-  //     console.log(err);
-  //   }
-  // });
-}
+  var path = window.location.pathname;
+  var id = path.substring(path.lastIndexOf('/') + 1);
+
+  $.ajax({
+    url: 'http://jamescube.mybluemix.net/get/'+id,
+    dataType: 'json',
+    cache: false,
+    method: 'GET',
+    async: false,
+    timeout: 4000,
+    accepts: {
+      json: 'application/json'
+    },
+    success: function(data) {
+      // use data
+      console.log(data);
+    },
+    error: function(xhr, status, err) {
+      console.log(err);
+    }
+  });
 </script>
 </html>
