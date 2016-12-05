@@ -1,5 +1,7 @@
 var socket = io();
 
+var autoStartRound;
+
 $(document).ready(function() {
   $('#gameStartBtn').on("click", function() {
     $('#instructions').hide();
@@ -26,6 +28,7 @@ $(document).ready(function() {
   });
 
   $('#roundBtn').on("click", function() {
+    clearInterval(autoStartRound);
     socket.emit('next_round', {room: room});
   });
 });
@@ -86,9 +89,19 @@ socket.on('scores_posted', function(data) {
   $('#gameID').html("View these resuls anytime at: <a href='http://jamescube.mybluemix.net/view/"+data.gameID+"'>http://jamescube.mybluemix.net/view/" + data.gameID + "</a>");
 
   var roundNo = data.roundNo + 1;
-  console.log(roundNo);
+
   if(roundNo != 4) {
-    $('#roundBtn').html("Round: " + roundNo);
+    var timer = 15;
+    $('#roundBtn').html("Next Round: " + timer);
+
+    autoStartRound = setInterval(function() {
+      timer -= 1;
+      $('#roundBtn').html("Next Round: " + timer);
+      if(timer <= 0) {
+        clearInterval(autoStartRound);
+        socket.emit('next_round', {room: room});
+      }
+    }, 1000);
   } else {
     $('#roundBtn').hide();
   }
@@ -106,6 +119,6 @@ socket.on('scores_posted', function(data) {
     $(('#player'+i)).show();
     $(('#user'+i)).html(user.nick);
     $(('#score'+i)).html(user.score);
-    $(('#total'+i)).html(user.score);
+    $(('#total'+i)).html(user.totalScore);
   }
 });

@@ -118,7 +118,7 @@ liarliar.prototype.checkRoomStatus = function() {
 liarliar.prototype.endGame = function() {
   setTimeout(function() {
     this.end(this.room)
-  }.bind(this), 500);
+  }.bind(this), 1000);
 }
 
 function endSubmissionTime() {
@@ -179,10 +179,10 @@ function endSelectionTime() {
       scores[client] = {
         id: client,
         nick: this.players[client],
-        score: 0
+        score: 0,
+        totalScore: 0
       };
     }
-    this.io.to(client).emit('scores_posted', {scores: scores});
   }
 
   var roundNo = Object.keys(this.rounds).length;
@@ -205,16 +205,20 @@ function endSelectionTime() {
     }
   }
 
-  if(Object.keys(this.rounds).length > 0) {
-    var lastScores = this.rounds[roundNo-1].scores;
-    for(user in scores) {
-      scores[user].score += lastScores[user].score;
-    }
-  }
-
   for(user in scores) {
     if(scores[user].score < 0)
       scores[user].score = 0;
+  }
+
+  for(user in scores) {
+    scores[user].totalScore = scores[user].score;
+  }
+
+  if(Object.keys(this.rounds).length > 0) {
+    var lastScores = this.rounds[roundNo-1].scores;
+    for(user in scores) {
+      scores[user].totalScore += lastScores[user].score;
+    }
   }
 
   this.rounds[Object.keys(this.rounds).length] = {
