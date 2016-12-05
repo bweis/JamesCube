@@ -74,7 +74,22 @@
     },
     success: function(data) {
       // use data
-      console.log(data);
+      var game = JSON.parse(data[0].gameobject);
+      var lastRound = game[2].scores;
+      var users = Object.keys(lastRound);
+
+      users.sort(function(a, b) {
+        return lastRound[b].score - lastRound[a].score
+      });
+
+      for(var i = 1; i <= users.length; i++) {
+        var user = lastRound[users[i - 1]];
+        if(user.score < 0)
+          user.score = 0;
+        $(('#player'+i)).show();
+        $(('#user'+i)).html(user.nick);
+        $(('#score'+i)).html(user.totalScore);
+      }
     },
     error: function(xhr, status, err) {
       console.log(err);
