@@ -93,8 +93,6 @@ socket.on('scores_posted', function(data) {
 
   for(var i = 1; i <= users.length; i++) {
     var user = data.scores[users[i - 1]];
-    if(user.score < 0)
-      user.score = 0;
     $(('#player'+i)).show();
     $(('#user'+i)).html(user.nick);
     $(('#score'+i)).html(user.score);
