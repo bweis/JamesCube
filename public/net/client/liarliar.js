@@ -67,6 +67,13 @@ socket.on('scores_posted', function(data) {
   $('#stage2').hide();
   $('#stage3').show();
 
+  var question = $('#currentQuestion').html();
+  if (question.indexOf("________") == -1) {
+    question = question + '<br>' +  '<span style="color: #E74C3C; text-align: center">' + data.correctAnswer + '</span>';
+  } else {
+    question = question.replace("________", '<span style="color: #E74C3C">' + data.correctAnswer + '</span>');
+  }
+  $('#currentQuestion').html(question);
 
   for(var i = 1; i <= 8; i++) {
     $(('#player'+i)).hide();
