@@ -82,7 +82,7 @@ socket.on('scores_posted', function(data) {
   $('#gameID').html("View these resuls anytime at: <a href='http://jamescube.mybluemix.net/view/"+data.gameID+"'>http://jamescube.mybluemix.net/view/" + data.gameID + "</a>");
 
   var roundNo = data.roundNo + 1;
-  console.log(roundNo);
+
   if(roundNo != 4) {
     $('#roundBtn').html("Round: " + roundNo);
   } else {

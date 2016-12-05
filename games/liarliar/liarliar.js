@@ -182,7 +182,6 @@ function endSelectionTime() {
         score: 0
       };
     }
-    this.io.to(client).emit('scores_posted', {scores: scores});
   }
 
   var roundNo = Object.keys(this.rounds).length;
