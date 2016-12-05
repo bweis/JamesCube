@@ -35,7 +35,6 @@ function liarliar(room, io, end) {
 }
 
 // methods
-
 liarliar.prototype.addPlayer = function(id, name) {
   this.players[id] = name;
 }
