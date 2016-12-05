@@ -205,11 +205,6 @@ function endSelectionTime() {
   }
 
   for(user in scores) {
-    if(scores[user].score < 0)
-      scores[user].score = 0;
-  }
-
-  for(user in scores) {
     scores[user].totalScore = scores[user].score;
   }
 
