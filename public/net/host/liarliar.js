@@ -77,7 +77,11 @@ socket.on('scores_posted', function(data) {
     $(('#player'+i)).hide();
   }
   var question = $('#currentQuestion').html();
-  question = question.replace("________", '<span style="color: #E74C3C">' + data.answer + '</span>');
+  if (question.indexOf("________") == -1) {
+    question = question + '<br>' +  '<span style="color: #E74C3C; text-align: center">' + data.correctAnswer + '</span>';
+  } else {
+    question = question.replace("________", '<span style="color: #E74C3C">' + data.correctAnswer + '</span>');
+  }
   $('#currentQuestion').html(question);
   $('#gameID').html("View these resuls anytime at: <a href='http://jamescube.mybluemix.net/view/"+data.gameID+"'>http://jamescube.mybluemix.net/view/" + data.gameID + "</a>");
 
